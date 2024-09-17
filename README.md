@@ -11,7 +11,7 @@ A estrutura deste site foi inspirada em um blog de Minecraft para a instalação
 Você pode conferir o site que me inspirou [aqui](https://exalpha-dev.github.io/). Agradeço ao criador do site por ter me inspirado, mesmo que sem querer, a desenvolver este projeto :)
 
 ## O Ruffle
-O [Ruffle](https://ruffle.rs/) é o emulador de Flash usado neste site. Ele foi desenvolvido como uma forma de preservar o legado do Flash Player e está em desenvolvimento há pelo menos quatro anos. Desde então, ele melhorou muito, mas vale lembrar que, sendo um emulador, pode apresentar algumas falhas comparadas ao Flash original, o que pode ocasioar no não funcionamento de alguns jogos.
+O [Ruffle](https://ruffle.rs/) é o emulador de Flash usado neste site. Ele foi desenvolvido como uma forma de preservar o legado do Flash Player e está em desenvolvimento há pelo menos quatro anos. Desde então, ele melhorou muito, mas vale lembrar que, sendo um emulador, pode apresentar algumas falhas (ou ocasionar o não funcionamento) em alguns jogos comparados ao Flash original,.
 
 Mesmo assim, o Ruffle possibilitou o desenvolvimento e a inspiração para este site.
 
