@@ -50,7 +50,7 @@ const items = [
     'BubbleShooter',
     'BucketBall',
     'BucketBall 2',
-    'Bullet Bill 3',
+    'Bullet bill 3',
     'Burrito Bison',
     'Burrito Bison Revenge',
     'Canary',
