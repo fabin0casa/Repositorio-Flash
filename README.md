@@ -1,4 +1,4 @@
-# Repositório Flash
+# Repositório Flash <img src="https://github.com/user-attachments/assets/7f6ae1e3-85b2-4a7a-91b5-062e7cff1499" alt="flash" width="50" height="50">
 
 **Este projeto é um site com 249 jogos em Flash player, mais especificamente aqueles que eu jogava quando era pequeno, ou que passei a gostar depois.** Ao longo de vários anos, reuni vários desses jogos com a extensão `.swf` para preservar esses arquivos e evitar perdê-los quando a Adobe anunciou o fim do Flash em 2020. Criei este site com o objetivo de preservar esses jogos e realizar meu desejo de ter um site de joguinhos em Flash para mim :)
 
