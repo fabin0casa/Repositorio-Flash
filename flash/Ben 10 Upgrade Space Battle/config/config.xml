@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<!--  GENERAL  -->
+	<!--  =======  -->
+	<term key="nivel_inicial">1</term>
+	<term key="language">eng</term>
+	<term key="online">false</term>
+	<term key="num_levels">5</term>
+	
+	
+	<!--  TUTOR  -->
+	<!--  =====  -->
+	<term key="mostrar_tutor">true</term>
+	<term key="time_for_possession_reminder_seconds">5</term>
+	
+	
+	<!--  PRIMER NIVEL  -->
+	<!--  ============  -->
+	<term key="posesion_inicial_nave">6</term>
+	<term key="posesion_inicial_energia">100</term>
+	
+	
+	<!--  FORMACIONES  -->
+	<!--  ===========  -->
+	<term key="formations_order_level_1">Tutorial,7,tres,2,muyjuntas,2,tresu,2,dos,2,bajo,2,complejau</term>
+	<term key="formations_order_level_2">3,cinco,1,tabd,mitadc,1,dosc,1,centromedio,centromedio,drce,1,a,1,guitar,checkpoint,3,bossjefe-l-k-c</term>
+	<term key="formations_order_level_3">3,complejau,1,trampa,1,dasher,jd,1,tabd,1,tescudos,a,checkpoint,cruzado,1,cescudo,1,cruzado,1,rc,dashe,dashtc</term>
+	<term key="formations_order_level_4">3,Bordecentro,Bordecentro,1,dashtc,semisemi,1,nueva,1,atras,a,1,adnc,1,adndash,edash,nueva,arribajo,1,grandet,1,am,checkpoint,1,escudoataca,1,escudasher,1,Bordecentro,1,cg,1,cruzado,1,Bordecentro,grande</term>
+	<term key="formations_order_level_5">3,sn,1,matack,1,redondo,escaler,ges,1,fcdash,1,cruzadae,1,gdcruz,1,pared,checkpoint,esperma,edash,1,b,arribajo,gadn,1,rc,1,grande,adnc,1,adndash,cg,caracol,checkpoint,grande,bossVilgax-d-gg-l-ñ-qn-rr-hh-k</term>
+	<!--  Nivel 0: Free Mode - Estas aparecen al azar ad infinitum  -->
+	<term key="formations_order_level_0">tres,2,muyjuntas,2,tresu,2,dos,2,bajo,2,complejau,3,cinco,1,tabd,mitadc,1,dosc,1,centromedio,drce,1,a,1,guitar,3,l,k,c,3,complejau,1,trampa,1,dasher,jd,1,tabd,1,tescudos,a,cruzado,1,cescudo,1,cruzado,1,rc,dashe,dashtc,3,Bordecentro,Bordecentro,1,dashtc,semisemi,1,nueva,1,atras,a,1,adnc,1,adndash,edash,nueva,arribajo,1,grandet,1,am,1,escudoataca,1,escudasher,1,Bordecentro,1,cg,1,cruzado,1,grande,3,sn,1,matack,1,redondo,escaler,ges,1,fcdash,1,cruzadae,1,gdcruz,1,pared,esperma,edash,1,b,arribajo,gadn,1,rc,1,grande,adnc,1,adndash,cg,caracol,grande,d,gg,l,ñ,qn,rr,hh,k</term>
+	
+	
+	<!--  SPLASH  -->
+	<!--  ======  -->
+	<term key="splash_transformation_time_seconds">1.8</term>
+	
+	
+	<!--  VOLUMENES  -->
+	<!--  =========  -->
+	<term key="master_volume">1</term>
+	<term key="Volume_MusicSplash">1</term>
+	<term key="Volume_MusicInGame1">0.6</term>
+	<term key="Volume_MusicInGame2">0.6</term>
+	<term key="Volume_MusicInGame3">0.6</term>
+	<term key="Volume_MusicInGame4">0.6</term>
+	<term key="Volume_MusicInGame5">0.6</term>
+	<term key="Volume_Possess">1</term>
+	<term key="Volume_Dispossess">1</term>
+	<term key="Volume_Fire">1</term>
+	<term key="Volume_EnemyKilled">1</term>
+	<term key="Volume_ShieldActivado">1</term>
+	<term key="Volume_ShotHit1">0.6</term>
+	<term key="Volume_ShotHit2">0.6</term>
+	<term key="Volume_ShotHit3">0.6</term>
+	<term key="Volume_Dash">1</term>
+	<term key="Volume_ShotBlaster">1.76</term>
+	<term key="Volume_ShotMedio">.4</term>
+	<term key="Volume_ShotGrande">0.4</term>
+	<term key="Volume_ShotExplorer">.4</term>
+	<term key="Volume_ShotFast">.4</term>
+	<term key="Volume_ShotReflected">1</term>
+	<term key="Volume_ShipExplodes1">0.8</term>
+	<term key="Volume_ShipExplodes2">0.8</term>
+	<term key="Volume_ShipExplodes3">1</term>
+	<term key="Volume_ShipExplodes4">1</term>
+	<term key="Volume_ShipExplodes5">1</term>
+	<term key="Volume_LevelComplete">1</term>
+	<term key="Volume_OmnitrixLow">1</term>
+	<term key="Volume_RollOver1">1</term>
+	<term key="Volume_RollOver2">1</term>
+	<term key="Volume_RollOver3">1</term>
+	<term key="Volume_RollOver4">1</term>
+	<term key="Volume_TutorOk">.7</term>
+	<term key="Volume_ArmaTitulo">0.8</term>
+	<term key="Volume_Interferencia">.5</term>
+	<term key="Volume_SfxGameLost">1</term>
+	<term key="Volume_ArmaMenu">1</term>
+	<term key="Volume_ArmaTutor">1</term>
+	<term key="Volume_TransitionSimple">0.7</term>
+	<term key="Volume_TransitionPreLevel">0.7</term>
+	<term key="Volume_CargaArma">1</term>
+	
+	
+	<!--  MUSICAS POR NIVEL  -->
+	<!--  =================  -->
+	<term key="music_idx_level_1">MusicInGame1</term>
+	<term key="music_idx_level_2">MusicInGame2</term>
+	<term key="music_idx_level_3">MusicInGame3</term>
+	<term key="music_idx_level_4">MusicInGame5</term>
+	<term key="music_idx_level_5">MusicInGame4</term>
+	<!--  Nivel 0: Free Mode -->
+	<term key="music_idx_level_0">MusicInGame2</term>
+	
+	
+	<!--  ESCALAS  -->
+	<!--  =======  -->
+	<term key="player_scale">.7</term>
+	<term key="shot_scale">.7</term>
+	
+	
+	<!--  TIEMPO "MUERTO" AL PASAR NIVEL  -->
+	<!--  ==============================  -->
+	<term key="end_level_time_seconds_level_1">3</term>
+	<term key="end_level_time_seconds_level_2">6</term>
+	<term key="end_level_time_seconds_level_3">3</term>
+	<term key="end_level_time_seconds_level_4">3</term>
+	<term key="end_level_time_seconds_level_5">6</term>
+	
+	
+	<!--  BARRA DE ENERGIA DE JEFES  -->
+	<!--  =========================  -->
+	<term key="enemy_energy_bar_appearance_time_seconds">2</term>
+	
+	
+	<!--  ESTELAS BEN  -->
+	<!--  ===========  -->
+	<term key="estela_ben_velocidad_capa">.4</term>
+	<term key="estela_ben_usar_graphics">true</term>
+	<term key="estela_ben_usar_mcs">true</term>
+	
+	<term key="estela_ben_alpha_step">.02</term>
+	<term key="estela_ben_cant_trazos">20</term>
+	<term key="estela_ben_line_size">6</term>
+	<term key="estela_ben_color">0xe2dec7</term>
+	
+	<term key="estela_ben_cant_mcs">44</term>
+	
+	
+	<!--  ESTELAS ENEMIGOS  -->
+	<!--  ================  -->
+	<term key="estela_enemies_velocidad_capa">-.4</term>
+	<term key="estela_enemies_usar_graphics">true</term>
+	<term key="estela_enemies_usar_mcs">true</term>
+	
+	<term key="estela_enemies_alpha_step">.02</term>
+	<term key="estela_enemies_cant_trazos">20</term>
+	<term key="estela_enemies_line_size">6</term>
+	<term key="estela_enemies_color">0xe2dec7</term>
+	
+	<term key="estela_enemies_cant_mcs">44</term>
+	
+	
+	<!--  LIMITES PANTALLA BEN  -->
+	<!--  ====================  -->
+	<term key="player_min_screen_x">50</term>
+	<term key="player_max_screen_x">550</term>
+	<term key="player_min_screen_y">50</term>
+	<term key="player_max_screen_y">350</term>
+	
+	
+	<!--  SCENERIES  -->
+	<!--  =========  -->
+	<term key="scenery_nbr_level_1">1</term>
+	<term key="background_1_depth_horizontal_level_1">.002</term>
+	<term key="background_1_depth_vertical_level_1">0</term>
+	<term key="background_2_depth_horizontal_level_1">.2</term>
+	<term key="background_2_depth_vertical_level_1">.2</term>
+	<term key="background_3_depth_horizontal_level_1">.5</term>
+	<term key="background_3_depth_vertical_level_1">.5</term>
+	<term key="background_4_depth_horizontal_level_1">.8</term>
+	<term key="background_4_depth_vertical_level_1">.8</term>
+	<term key="foreground_1_depth_horizontal_level_1">4.5</term>
+	<term key="foreground_1_depth_vertical_level_1">4.5</term>
+	<term key="scroll_speed_level_1">.3</term>
+	
+	<term key="scenery_nbr_level_2">2</term>
+	<term key="background_1_depth_horizontal_level_2">0</term>
+	<term key="background_1_depth_vertical_level_2">0</term>
+	<term key="background_2_depth_horizontal_level_2">.015</term>
+	<term key="background_2_depth_vertical_level_2">.2</term>
+	<term key="background_3_depth_horizontal_level_2">.19</term>
+	<term key="background_3_depth_vertical_level_2">.5</term>
+	<term key="background_4_depth_horizontal_level_2">.7</term>
+	<term key="background_4_depth_vertical_level_2">.8</term>
+	<term key="foreground_1_depth_horizontal_level_2">4.5</term>
+	<term key="foreground_1_depth_vertical_level_2">4.5</term>
+	<term key="scroll_speed_level_2">.3</term>
+	
+	<term key="scenery_nbr_level_3">3</term>
+	<term key="background_1_depth_horizontal_level_3">.005</term>
+	<term key="background_1_depth_vertical_level_3">0</term>
+	<term key="background_2_depth_horizontal_level_3">.0</term>
+	<term key="background_2_depth_vertical_level_3">.2</term>
+	<term key="background_3_depth_horizontal_level_3">.5</term>
+	<term key="background_3_depth_vertical_level_3">.5</term>
+	<term key="background_4_depth_horizontal_level_3">.5</term>
+	<term key="background_4_depth_vertical_level_3">.8</term>
+	<term key="foreground_1_depth_horizontal_level_3">.93</term>
+	<term key="foreground_1_depth_vertical_level_3">3</term>
+	<term key="scroll_speed_level_3">.4</term>
+	
+	<term key="scenery_nbr_level_4">4</term>
+	<term key="background_1_depth_horizontal_level_4">.002</term>
+	<term key="background_1_depth_vertical_level_4">0</term>
+	<term key="background_2_depth_horizontal_level_4">.01</term>
+	<term key="background_2_depth_vertical_level_4">.2</term>
+	<term key="background_3_depth_horizontal_level_4">.19</term>
+	<term key="background_3_depth_vertical_level_4">.5</term>
+	<term key="background_4_depth_horizontal_level_4">.7</term>
+	<term key="background_4_depth_vertical_level_4">.8</term>
+	<term key="foreground_1_depth_horizontal_level_4">4.5</term>
+	<term key="foreground_1_depth_vertical_level_4">4.5</term>
+	<term key="scroll_speed_level_4">.3</term>
+	
+	<term key="scenery_nbr_level_5">5</term>
+	<term key="background_1_depth_horizontal_level_5">0</term>
+	<term key="background_1_depth_vertical_level_5">0</term>
+	<term key="background_2_depth_horizontal_level_5">.2</term>
+	<term key="background_2_depth_vertical_level_5">.2</term>
+	<term key="background_3_depth_horizontal_level_5">.5</term>
+	<term key="background_3_depth_vertical_level_5">.5</term>
+	<term key="background_4_depth_horizontal_level_5">.8</term>
+	<term key="background_4_depth_vertical_level_5">.8</term>
+	<term key="foreground_1_depth_horizontal_level_5">4.5</term>
+	<term key="foreground_1_depth_vertical_level_5">4.5</term>
+	<term key="scroll_speed_level_5">.3</term>
+	
+	<!--  Nivel 0: Free Mode - Conviene que el fondo no scrolee	-->
+	<term key="scenery_nbr_level_0">2</term>
+	<term key="background_1_depth_horizontal_level_0">0</term>
+	<term key="background_1_depth_vertical_level_0">0</term>
+	<term key="background_2_depth_horizontal_level_0">.2</term>
+	<term key="background_2_depth_vertical_level_0">.2</term>
+	<term key="background_3_depth_horizontal_level_0">.5</term>
+	<term key="background_3_depth_vertical_level_0">.5</term>
+	<term key="background_4_depth_horizontal_level_0">.8</term>
+	<term key="background_4_depth_vertical_level_0">.8</term>
+	<term key="foreground_1_depth_horizontal_level_0">4.5</term>
+	<term key="foreground_1_depth_vertical_level_0">4.5</term>
+	<term key="scroll_speed_level_0">.3</term>
+	
+	
+	<!--  PERDIDA DE ENERGIA OMNITRIX AL DESPOSESIONAR  -->
+	<!--  ============================================  -->
+	<term key="omnitrix_energy_drop_when_dispossess">30</term>
+	
+	
+	<!--  MOVIMIENTO BEN  -->
+	<!--  ==============  -->
+	<term key="player_diagonal_angle_deg_movimiento">15</term>
+	<term key="player_diagonal_angle_deg_vista">13</term>
+	<term key="rotation_step">4</term>
+	
+	
+	<!--  ENERGIA ULTA-T: RECUPERACION  -->
+	<!--  ============================  -->
+	<term key="omnitrix_energy_recover_per_second_level_1">7</term>
+	<term key="omnitrix_energy_recover_per_second_level_2">7</term>
+	<term key="omnitrix_energy_recover_per_second_level_3">7</term>
+	<term key="omnitrix_energy_recover_per_second_level_4">7</term>
+	<term key="omnitrix_energy_recover_per_second_level_5">7</term>
+	<!--  Nivel 0: Free Mode -->
+	<term key="omnitrix_energy_recover_per_second_level_0">7</term>
+	
+	
+	<!--  ENERGIA ULTRA-T: PERDIDA  -->
+	<!--  ========================  -->
+	<term key="omnitrix_energy_drop_per_second_level_1">1</term>
+	<term key="omnitrix_energy_drop_per_second_level_2">2</term>
+	<term key="omnitrix_energy_drop_per_second_level_3">3</term>
+	<term key="omnitrix_energy_drop_per_second_level_4">4</term>
+	<term key="omnitrix_energy_drop_per_second_level_5">4</term>
+	<!--  Nivel 0: Free Mode -->
+	<term key="omnitrix_energy_drop_per_second_level_0">4</term>
+	
+	
+	<!--  VARIABLES ULTRA-T  -->
+	<!--  =================  -->
+	<term key="ultra_t_velocity_horizontal">.4</term>
+	<term key="ultra_t_velocity_vertical">.33</term>
+	<term key="ultra_t_velocity_diagonal_horizontal">.38</term>
+	<term key="ultra_t_velocity_diagonal_vertical">.1</term>
+	<term key="ultra_t_max_energy">150</term>
+	<term key="ultra_t_alarm_energy">20</term>
+	
+	
+	<!--  VARIABLES SHOOTER MEDIO  -->
+	<!--  =======================  -->
+	<term key="shooter_medio_velocity_horizontal">.3</term>
+	<term key="shooter_medio_velocity_vertical">.25</term>
+	<term key="shooter_medio_velocity_diagonal_horizontal">.29</term>
+	<term key="shooter_medio_velocity_diagonal_vertical">.08</term>
+	<term key="shooter_medio_max_energy">60</term>
+	<term key="shooter_medio_shot_strength">30</term>
+	<term key="shooter_medio_shot_strength_reflected">130</term>
+	<term key="shooter_medio_reload_time_ms">375</term>
+	<term key="shooter_medio_shot_speed">.7</term>
+	<term key="shooter_medio_score_given">100</term>
+	
+	
+	<!--  VARIABLES SHIELDED  -->
+	<!--  ==================  -->
+	<term key="shielded_velocity_horizontal">.3</term>
+	<term key="shielded_velocity_vertical">.25</term>
+	<term key="shielded_velocity_diagonal_horizontal">.29</term>
+	<term key="shielded_velocity_diagonal_vertical">.08</term>
+	<term key="shielded_max_energy">70</term>
+	<term key="shielded_score_given">150</term>
+	<term key="reflect_offset_angle_small_deg">10</term>
+	<term key="reflect_offset_angle_medium_deg">20</term>
+	<term key="reflect_offset_angle_large_deg">40</term>
+	
+	
+	<!--  VARIABLES DASHER  -->
+	<!--  ================  -->
+	<term key="dasher_velocity_horizontal">.4</term>
+	<term key="dasher_velocity_vertical">.25</term>
+	<term key="dasher_velocity_diagonal_horizontal">.38</term>
+	<term key="dasher_velocity_diagonal_vertical">.1</term>
+	<term key="dasher_max_energy">50</term>
+	<term key="dasher_dash_strength_enemy">30</term>
+	<term key="dasher_dash_strength_ben">100</term>
+	<term key="dasher_reload_time_ms">1000</term>
+	<term key="dasher_dash_speed_factor">3</term>
+	<term key="dasher_score_given">125</term>
+	
+	
+	<!--  VARIABLES SHOOTER FAST  -->
+	<!--  ======================  -->
+	<term key="shooter_fast_velocity_horizontal">.44</term>
+	<term key="shooter_fast_velocity_vertical">.4</term>
+	<term key="shooter_fast_velocity_diagonal_horizontal">.35</term>
+	<term key="shooter_fast_velocity_diagonal_vertical">.15</term>
+	<term key="shooter_fast_max_energy">20</term>
+	<term key="shooter_fast_shot_strength">20</term>
+	<term key="shooter_fast_shot_strength_reflected">130</term>
+	<term key="shooter_fast_reload_time_ms">250</term>
+	<term key="shooter_fast_shot_speed">.9</term>
+	<term key="shooter_fast_score_given">25</term>
+	
+	
+	<!--  VARIABLES SHOOTER EXPLORER  -->
+	<!--  ==========================  -->
+	<term key="shooter_explorer_velocity_horizontal">.2</term>
+	<term key="shooter_explorer_velocity_vertical">.22</term>
+	<term key="shooter_explorer_velocity_diagonal_horizontal">.26</term>
+	<term key="shooter_explorer_velocity_diagonal_vertical">.06</term>
+	<term key="shooter_explorer_max_energy">75</term>
+	<term key="shooter_explorer_shot_strength">25</term>
+	<term key="shooter_explorer_shot_strength_reflected">130</term>
+	<term key="shooter_explorer_reload_time_ms">550</term>
+	<term key="shooter_explorer_shot_speed">.7</term>
+	<term key="shooter_explorer_score_given">100</term>
+	
+	
+	<!--  VARIABLES SHOOTER GRANDE  -->
+	<!--  ========================  -->
+	<term key="shooter_grande_velocity_horizontal">.4</term>
+	<term key="shooter_grande_velocity_vertical">.25</term>
+	<term key="shooter_grande_velocity_diagonal_horizontal">.29</term>
+	<term key="shooter_grande_velocity_diagonal_vertical">.08</term>
+	<term key="shooter_grande_max_energy">100</term>
+	<term key="shooter_grande_shot_strength">40</term>
+	<term key="shooter_grande_shot_strength_reflected">130</term>
+	<term key="shooter_grande_reload_time_ms">850</term>
+	<term key="shooter_grande_shot_speed">.7</term>
+	<term key="shooter_grande_score_given">200</term>
+	
+	
+	<!--  VARIABLES SHOOTER BLASTER  -->
+	<!--  =========================  -->
+	<term key="shooter_blaster_velocity_horizontal">.15</term>
+	<term key="shooter_blaster_velocity_vertical">.18</term>
+	<term key="shooter_blaster_velocity_diagonal_horizontal">.22</term>
+	<term key="shooter_blaster_velocity_diagonal_vertical">.04</term>
+	<term key="shooter_blaster_max_energy">230</term>
+	<term key="shooter_blaster_shot_strength">20</term>
+	<term key="shooter_blaster_shot_strength_reflected">130</term>
+	<term key="shooter_blaster_reload_time_ms">2000</term>
+	<term key="shooter_blaster_shot_speed">.81</term>
+	<term key="shooter_blaster_score_given">500</term>
+	
+	
+	<!--  VARIABLES JEFE BLASTER  -->
+	<!--  ======================  -->
+	<term key="boss_shooter_blaster_max_energy">2000</term>
+	<term key="boss_shooter_blaster_shot_speed">5</term>
+	<term key="boss_shooter_blaster_shot_strength">15</term>
+	<term key="boss_shooter_blaster_shot_strength_reflected">130</term>
+	<term key="boss_shooter_blaster_strength">2</term>
+	<term key="boss_shooter_blaster_score_given">3000</term>
+	<term key="boss_shooter_blaster_falling_velocity">.12</term>
+	<term key="boss_shooter_blaster_min_time_between_explosions_ms">150</term>
+	<term key="boss_shooter_blaster_max_time_between_explosions_ms">800</term>
+	
+	
+	<!--  VARIABLES JEFE VILGAX  -->
+	<!--  =====================  -->
+	<term key="boss_vilgax_max_energy">2150</term>
+	<term key="boss_vilgax_shot_speed">.3</term>
+	<term key="boss_vilgax_shot_strength">40</term>
+	<term key="boss_vilgax_shot_strength_reflected">130</term>
+	<term key="boss_vilgax_strength">3</term>
+	<term key="boss_vilgax_score_given">10000</term>
+	<term key="boss_vilgax_min_dx_inclinar">.3</term>
+	<term key="boss_vilgax_min_dy_inclinar">.2</term>
+	<term key="boss_vilgax_falling_velocity">.12</term>
+	<term key="boss_vilgax_min_time_between_explosions_ms">150</term>
+	<term key="boss_vilgax_max_time_between_explosions_ms">800</term>
+	
+	
+	<!--  EFECTO TINT AL RECIBIR DAÑO: ENEMIGOS  -->
+	<!--  =====================================  -->
+	<term key="enemy_hit_tint_color">0xFFFFFF</term>
+	<term key="enemy_hit_tint_amount">1.2</term>
+	<term key="enemy_hit_tint_brightness">1.5</term>
+	<term key="enemy_hit_tint_time_seconds">.3</term>
+	
+	
+	<!--  EFECTO TINT AL RECIBIR DAÑO: BEN  -->
+	<!--  ================================  -->
+	<term key="ben_hit_tint_color">0xFFFFFF</term>
+	<term key="ben_hit_tint_amount">1.4</term>
+	<term key="ben_hit_tint_brightness">1.7</term>
+	<term key="ben_hit_tint_time_seconds">.4</term>
+	
+	
+	<!--  ACHIEVEMENTS  -->
+	<!--  ============  -->
+	<term key="reset_achievements_each_session">false</term>
+	
+	<!--  Naves a destruir para Combo "A"  -->
+	<term key="combo_a_ships_destroyed">3</term>
+	
+	<!--  Naves a destruir para Combo "B"  -->
+	<term key="combo_b_ships_destroyed">5</term>
+	
+	<!--  Naves a destruir con el escudo "A"  -->
+	<term key="dest_shield_a_ships_destroyed">1</term>
+	
+	<!--  Naves a destruir con el escudo "B"  -->
+	<term key="dest_shield_b_ships_destroyed">4</term>
+	
+	<!--  Naves a destruir con dash  -->
+	<term key="dest_combo_dash_a_ships_destroyed">3</term>
+	
+	<!--  Pacifista: Tiempo a estar sin disparar (milisegundos)  -->
+	<term key="pacifist_a_ms">300000</term>
+	
+	<!--  Destroyer "A": Naves a destruir  -->
+	<term key="destroyer_a_ships_destroyed">100</term>
+	
+	<!--  Destroyer "B": Naves a destruir  -->
+	<term key="destroyer_b_ships_destroyed">200</term>
+	
+	<!--  Destroyer "C": Naves a destruir  -->
+	<term key="destroyer_c_ships_destroyed">300</term>
+	
+	<!--  Frenzy: Naves a destruir  -->
+	<term key="frenzy_a_ships_destroyed">10</term>
+	<!--  Frenzy: Tiempo para destruir las naves de la linea anterior (milisegundos)  -->
+	<term key="frenzy_a_ms">10000</term>
+	
+	<!--  Survival "A": Tiempo a sobrevivir (ms)  -->
+	<term key="survival_a_ms">1200000</term>
+	
+	<!--  Survival "B": Tiempo a sobrevivir (ms)  -->
+	<term key="survival_b_ms">1800000</term>
+	
+	<!--  Intocable "A": Tiempo sin recibir daño (ms)  -->
+	<term key="untouchable_a_ms">60000</term>
+	
+	<!--  Intocable "B": Tiempo sin recibir daño (ms)  -->
+	<term key="untouchable_b_ms">300000</term>
+	
+	<!--  Close Call: Energía máxima con la cual el jugador se salva poseyendo una nave, al borde de la muerte  -->
+	<term key="close_call_a_energy">20</term>
+	
+</config>

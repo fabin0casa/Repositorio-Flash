@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<texts>
+	
+	<!--  GENERAL  -->
+	<!--  =======  -->
+	<term key="ContextMenuItems">Ben 10: Alien Force</term>
+	
+	<!--  MAIN MENU  -->
+	<!--  =========  -->
+	<term key="PlayBtn">PLAY</term>
+	
+	<!--  RESULTS  -->
+	<!--  =======  -->
+	<term key="PlayAgainBtn">PLAY          AGAIN</term>
+	<term key="MainMenuBtn">MAIN          MENU</term>
+	<term key="FinalScoreLabel">FINAL SCORE:</term>
+		<!--  GAME LOST  -->
+		<!--  =========  -->
+		<term key="GameLostSubtitle"><![CDATA[<TEXTFORMAT LEADING="-2"><P ALIGN="CENTER"><FONT FACE="HelveticaNeueLT Pro 57 Cn" SIZE="16" COLOR="#DEFE5F" LETTERSPACING="0" KERNING="0"><B>You didn't make Ben defeat the DNAliens. Try Again!</B></FONT></P></TEXTFORMAT>]]></term>
+		<!--  GAME LOST  -->
+		<!--  =========  -->
+		<term key="GameWonSubtitle"><![CDATA[<TEXTFORMAT LEADING="-2"><P ALIGN="CENTER"><FONT FACE="HelveticaNeueLT Pro 57 Cn" SIZE="16" COLOR="#DEFE5F" LETTERSPACING="0" KERNING="0"><B>Ben stopped the DNAliens</B></FONT></P></TEXTFORMAT>]]></term>
+	
+	<!--  INSTRUCTIONS  -->
+	<!--  ============  -->
+	<term key="InstructionsText"><![CDATA[<TEXTFORMAT LEADING="-2"><P ALIGN="CENTER"><FONT FACE="HelveticaNeueLT Pro 57 Cn" SIZE="14" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"><B>Stop the DNAliens </B></FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="-2"><P ALIGN="CENTER"><FONT FACE="HelveticaNeueLT Pro 57 Cn" SIZE="14" COLOR="#FFFFFF" LETTERSPACING="0" KERNING="0"><B>turning into a powerful Humungosaurus!</B></FONT></P></TEXTFORMAT>]]></term>
+	<term key="MoveText">move</term>
+	<term key="DefendText">defense</term>
+	<term key="HitText">hit</term>
+	<term key="ContinueBtn">continue</term>
+	
+</texts>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Ben10 Cannonbolt Strikes! Configuration File -->
+<Config>
+	
+	<MaxLevels> 5 </MaxLevels>
+	
+	<ScrollSpeed> 4 </ScrollSpeed>
+	
+	<ClippingEnabled> true </ClippingEnabled>
+	
+	<ClippingThreshold> 120 </ClippingThreshold>
+	
+	<IsoAngle> 28 </IsoAngle>
+	
+	<TileWidth> 63 </TileWidth>
+	
+	<TileDepth> 62 </TileDepth>
+	
+	<TileHeight> 63 </TileHeight>
+	
+	<!-- Language Id. It can be one of the following: esp, eng, por -->
+	<Language>eng</Language>
+	
+	<LoadingEsp>CARGANDO</LoadingEsp>
+	
+	<LoadingEng>LOADING</LoadingEng>
+	
+	<LoadingPor>CARREGANDO</LoadingPor>
+
+</Config>

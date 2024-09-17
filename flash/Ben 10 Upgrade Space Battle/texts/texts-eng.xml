@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<texts>
+	
+	<!--  GENERAL  -->
+	<!--  =======  -->
+	<term key="ContextMenuItems">Purple Tree Studio</term>	<!--  Ítem de menú contextual customizado (para que no haya menú customizado, borrar esta línea)  -->
+	<term key="frame_label_default">eng</term>
+	
+	<!--  MAIN MENU  -->
+	<!--  =========  -->
+	<term key="click_to_continue">click to continue</term>
+	<term key="new_game">new game</term>
+	<term key="continue_splash">continue</term>
+	<term key="free_mode">challenge</term>
+	<term key="extras">extras</term>
+	<term key="loading">loading</term>
+	
+	<!--  EXTRAS  -->
+	<!--  ======  -->
+	<term key="extras_title">ACHIEVEMENTS</term>
+	<term key="achievements_text">Play Challenge Mode and accomplish them all!</term>
+	<term key="achievement_name_1">COMBO x3</term>
+	<term key="achievement_description_1">Destroy 3 ships from a squad</term>
+	<term key="achievement_name_2">COMBO x5</term>
+	<term key="achievement_description_2">Destroy 5 ships from a squad</term>
+	<term key="achievement_name_3">MULTIPLE POSSESSION</term>
+	<term key="achievement_description_3">Possess every type of ship</term>
+	<term key="achievement_name_4">DESTROYER SHIELD</term>
+	<term key="achievement_description_4">Destroy 1 ship while shielded</term>
+	<term key="achievement_name_5">SUPER SHIELD</term>
+	<term key="achievement_description_5">Destroy 4 ships while shielded</term>
+	<term key="achievement_name_6">SUPER DASH</term>
+	<term key="achievement_description_6">Destroy 3 ships with a dash</term>
+	<term key="achievement_name_7">PACIFIST</term>
+	<term key="achievement_description_7">Don't shoot for 5 mins</term>
+	<term key="achievement_name_8">DESTROYER</term>
+	<term key="achievement_description_8">Destroy 100 ships</term>
+	<term key="achievement_name_9">SUPER DESTROYER</term>
+	<term key="achievement_description_9">Destroy 200 ships</term>
+	<term key="achievement_name_10">ULTIMATE DESTROYER</term>
+	<term key="achievement_description_10">Destroy 300 ships</term>
+	<term key="achievement_name_11">FRENZY</term>
+	<term key="achievement_description_11">Destroy 10 ships in 10 secs</term>
+	<term key="achievement_name_12">SURVIVAL</term>
+	<term key="achievement_description_12">Stay with energy for 20 mins</term>
+	<term key="achievement_name_13">SUPREME SURVIVAL</term>
+	<term key="achievement_description_13">Stay with energy for 30 mins</term>
+	<term key="achievement_name_14">UNTOUCHABLE</term>
+	<term key="achievement_description_14">Don't get hit for 1 mins</term>
+	<term key="achievement_name_15">ULTRA UNTOUCHABLE</term>
+	<term key="achievement_description_15">Don't get hit for 5 mins</term>
+	<term key="achievement_name_16">CLOSE CALL</term>
+	<term key="achievement_description_16">Possess with little energy</term>
+
+	
+	<!--  VIDEOS  -->
+	<!--  ======  -->
+	<term key="video_skip">skip</term>
+	
+	<!--  VIDEO 1  -->
+	<!--  =======  -->
+	<term key="v1_outer_space">OUTER SPACE</term>
+	<term key="v1_time_and_place_outer_space"><![CDATA[Vilgax's ship<br/>2:00pm]]></term>
+	<term key="v1_nombre_vilgax">VILGAX</term>
+	<term key="v1_vilgax_1"><![CDATA[I'll find the creator of the Omnitrix, and that way I'll destroy Tenyson!<br/>HAHAHAHAHAHAHAHAHAHAHA!]]></term>
+	<term key="v1_nombre_tetrax">TETRAX</term>
+	<term key="v1_tetrax_1"><![CDATA[I must warn Ben of this danger!<br/>I'l go to the Earth and find him...]]></term>
+	<term key="v1_earth">EARTH</term>
+	<term key="v1_time_and_place_earth"><![CDATA[Tetrax's ship<br/>11:00pm]]></term>
+	<term key="v1_tetrax_2">Ben! Vilgax has returned and wants to capture the creator of the Omnitrix to destroy you...</term>
+	<term key="v1_nombre_ben">BEN</term>
+	<term key="v1_ben_1"><![CDATA[What?? How is that possible?<br/>What can I do to stop him?]]></term>
+	<term key="v1_tetrax_3">Transform into Upgrade and I'll show you how you can fight Vilgax and his fleet of ships!</term>
+	<term key="to_battle">TO BATTLE!!!</term>
+	
+	<!--  EXIT POPUP  -->
+	<!--  ==========  -->
+	<term key="exit_question">are you sure you want to quit?</term>
+	<term key="exit_yes">yes</term>
+	<term key="exit_no">no</term>
+	
+	<!--  HUD  -->
+	<!--  ===  -->
+	<term key="combo">combo</term>
+	<term key="checkpoint">checkpoint</term>
+	<term key="achievement">ACHIEVEMENT ACCOMPLISHED</term>
+	
+	<!--  HELP  -->
+	<!--  ====  -->
+	<term key="help_nombre_tetrax">TETRAX</term>
+	<term key="help_title">INSTRUCTIONS</term>
+	<term key="help_instructions"><![CDATA[<P ALIGN="LEFT"><FONT FACE="DIN Next LT Pro Light" SIZE="15" COLOR="#CCCCCC" LETTERSPACING="-1" KERNING="1">Use Upgrade's powers to stop Vilgax's fleet of ships! <FONT FACE="DIN Next LT Pro Bold" COLOR="#D4FD56">Remember to possess and try all the different ships you find!</FONT></FONT></P><P ALIGN="LEFT"><FONT FACE="DIN Next LT Pro Light" SIZE="15" COLOR="#CCCCCC" LETTERSPACING="-1" KERNING="1"></FONT></P><P ALIGN="LEFT"><FONT FACE="DIN Next LT Pro Light" SIZE="15" COLOR="#CCCCCC" LETTERSPACING="-1" KERNING="1"></FONT></P>]]></term>
+	<term key="help_controls">CONTROLS</term>
+	<term key="help_move">move</term>
+	<term key="help_abandon">abandon ship</term>
+	<term key="help_fire">possessed ability</term>
+	<term key="help_possess">possess ship</term>
+	
+	<!--  GAME WON  -->
+	<!--  ========  -->
+	<term key="gwon_title">CONGRATULATIONS!</term>
+	<term key="gwon_text">You defeated Vilgax. Well done! You're a true hero for the Galaxy.</term>
+	<term key="gwon_score_label">final score:</term>
+	<term key="gwon_play_again">continue</term>
+	
+	<!--  GAME LOST  -->
+	<!--  =========  -->
+	<term key="glost_title">GAME OVER</term>
+	<term key="glost_text"><![CDATA[The Earth is not safe from Vilgax..<br/>Try again and save everybody like a true hero!]]></term>
+	<term key="glost_score_label">score</term>
+	<term key="glost_level_label">Level</term>
+	<term key="glost_level_name_level_1">Earth</term>
+	<term key="glost_level_name_level_2">Encarcecon I</term>
+	<term key="glost_level_name_level_3">Encarcecon II</term>
+	<term key="glost_level_name_level_4">Xenon I</term>
+	<term key="glost_level_name_level_5">Xenon II</term>
+	<term key="glost_play_again">continue</term>
+	<term key="glost_menu">menu</term>
+	<!--  Nivel 0: Free Mode -->
+	<term key="glost_free_mode_label">challenge</term>
+	<term key="glost_text_free_mode"><![CDATA[That was good, but...<br/>... are you prepared to fight Vilgax?]]></term>
+	
+	<!--  TUTOR  -->
+	<!--  =====  -->
+	<term key="tutor_tetrax_name">TUTOR</term>
+	<term key="tutor_move">Use the arrow keys to move</term>
+	<term key="tutor_fire"><![CDATA[Use Z<br/>to fire]]></term>
+	<term key="tutor_abandon"><![CDATA[Use X <br/>to abandon your <br/>current ship]]></term>
+	<term key="tutor_possess"><![CDATA[Touch a ship<br/>to possess and use its abilities]]></term>
+	<term key="tutor_complete"><![CDATA[You know all the moves you need to complete your mission.<br/>Good luck, Ben!]]></term>	
+	<term key="tutor_reminder">Remember: Touch a ship to possess it and use its abilities</term>
+	
+	<!--  TRANSITION PRE-LEVEL  -->
+	<!--  ====================  -->
+	<term key="tr_pre_level_label">Level</term>
+	<term key="tr_pre_name_level_1">battle in Earth</term>
+	<term key="tr_pre_name_level_2">the way to Encarcecon</term>
+	<term key="tr_pre_name_level_3">escape from Encarcecon</term>
+	<term key="tr_pre_name_level_4">the way to Xenon</term>
+	<term key="tr_pre_name_level_5">battle at Xenon</term>
+	<!--  Nivel 0: Free Mode -->
+	<term key="tr_pre_free_mode_label">Challenge</term>
+	<term key="tr_pre_name_level_0">survive and unlock all achievements!</term>
+	
+	
+	<!--  TRANSITION POST-LEVEL  -->
+	<!--  =====================  -->
+	<term key="tr_post_level_title">Level [X] complete</term>
+	<term key="tr_post_level_text_level_1">Now go to Encarcecon and find the creator of the Omnitrix!</term>
+	<term key="tr_post_level_text_level_2">Vilgax got there too! Escape from his fleet at full speed!</term>
+	<term key="tr_post_level_text_level_3">That was close! Now.. Go get Vilgax!</term>
+	<term key="tr_post_level_text_level_4">Well done! You've reached Azmuth's planet!</term>
+	<term key="tr_post_level_text_level_5">Well done!</term>
+	<!--  Nivel 0: Free Mode -->
+	<term key="tr_post_level_text_level_0">Well done!</term>
+	
+	
+	<!--  BOSSES  -->
+	<!--  ======  -->
+	<term key="boss_vilgax_name">VILGAX</term>
+	<term key="boss_blaster_name">BOSS</term>
+	
+	
+</texts>

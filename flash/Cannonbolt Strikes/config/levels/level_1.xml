@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Level>
+    
+	<Music type="String">Slow</Music>
+	
+	<Background type="String">Mountain1</Background>
+	
+	<LightColor type="String">Green</LightColor>
+	
+    <MapTiles type="ClassArray">
+        <Map>'Array', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 </Map>
+        <Map>'Array', 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0 </Map>
+        <Map>'Array', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0 </Map>
+        <Map>'Array', 0, 0, 3, 2, 2, 2, 2, 2, 2, 2, 2, 3, 0, 2, 2, 2, 2, 2, 2, 2, 4, 0 </Map>
+        <Map>'Array', 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0 </Map>
+        <Map>'Array', 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0 </Map>
+        <Map>'Array', 0, 0, 2, 2, 2, 0, 0, 0, 0, 2, 2, 2, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0 </Map>
+        <Map>'Array', 0, 0, 2, 2, 2, 0, 0, 0, 0, 2, 2, 2, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0 </Map>
+        <Map>'Array', 0, 0, 2, 2, 2, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0 </Map>
+        <Map>'Array', 0, 0, 2, 2, 2, 0, 0, 0, 0, 2, 2, 2, 2, 2, 2, 2, 0, 0, 3, 2, 6, 0 </Map>
+        <Map>'Array', 0, 0, 2, 2, 2, 0, 0, 0, 0, 3, 2, 2, 2, 2, 2, 3, 0, 0, 2, 2, 2, 0 </Map>
+        <Map>'Array', 3, 2, 2, 3, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0 </Map>
+        <Map>'Array', 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0 </Map>
+        <Map>'Array', 2, 2, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0 </Map>
+        <Map>'Array', 3, 2, 2, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 2, 2, 2, 0 </Map>
+        <Map>'Array', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0 </Map>
+        <Map>'Array', 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 2, 0 </Map>
+        <Map>'Array', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 5, 5, 3, 2, 2, 2, 2, 2, 2, 2, 2, 0 </Map>
+        <Map>'Array', 0, 0, 0, 0, 0, 0, 0, 0, 2, 2, 5, 5, 2, 2, 2, 2, 2, 2, 2, 2, 2, 0 </Map>
+        <Map>'Array', 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 3, 0 </Map>
+        <Map>'Array', 0, 0, 0, 0, 0, 0, 0, 0, 5, 5, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0 </Map>
+        <Map>'Array', 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0 </Map>
+        <Map>'Array', 0, 0, 2, 2, 2, 2, 2, 2, 2, 2, 0, 0, 2, 2, 2, 0, 0, 2, 0, 0, 0, 0 </Map>
+        <Map>'Array', 0, 0, 2, 1, 2, 2, 2, 2, 3, 0, 0, 0, 2, 2, 2, 0, 0, 0, 0, 0, 0, 0 </Map>
+        <Map>'Array', 0, 0, 3, 2, 3, 0, 0, 0, 0, 0, 0, 0, 3, 3, 3, 0, 0, 0, 0, 0, 0, 0 </Map>
+    </MapTiles>
+	
+	<PortalPos type="Point">23,3</PortalPos>
+	
+	<Ben10 type="Class">'model.Ben', 13, 1 </Ben10>
+	
+	<Enemies type="ClassArray">
+		<Enemy>'model.Limax','Limax0', 1, 4 </Enemy>
+		<Enemy>'model.StillMechadroid','Limax1', 14, 13 </Enemy>
+		<Enemy>'model.Limax','Limax2', 22, 17 </Enemy>
+		<Enemy>'model.MovingMechadroid','MM0', 2, 13 </Enemy>
+		<Enemy>'model.MovingMechadroid','MM1', 10, 19 </Enemy>
+	</Enemies>
+	
+	<Items type="ClassArray">
+		<Item>'model.Crystal', 'Item0', 14, 2 </Item>
+		<Item>'model.Crystal', 'Item1', 5, 10 </Item>
+		<Item>'model.Crystal', 'Item2', 1, 20 </Item>
+		<Item>'model.Crystal', 'Item3', 22, 3 </Item>
+		<Item>'model.Crystal', 'Item4', 24, 14 </Item>
+		<Item>'model.Question', 'Item5', 10, 3, "Attack" </Item>
+		<Item>'model.Question', 'Item6', 2, 16, "Defense" </Item>
+		<Item>'model.EnergyUp', 'Item7', 17, 8 </Item>
+	</Items>
+	
+    
+</Level>

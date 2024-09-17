@@ -1,0 +1,960 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<!--  GENERAL  -->
+	<!--  =======  -->
+	<term key="shared_object_string">heroes-united</term>
+	<term key="language">eng</term>
+	<term key="online">false</term>
+	<term key="num_levels">5</term>
+	<term key="load_level_assets">true</term>
+	<term key="game_width">850</term>
+	<term key="game_height">500</term>
+	<term key="num_players">1</term>
+	<term key="player_1">Rex</term>
+	<term key="level_won_wait_to_capture_ms">2001</term>
+	<term key="nivel_inicial">0</term>
+	
+	<!--  DEBUG  -->
+	<!--  =====  -->
+	<term key="skip_video"></term>
+	<term key="debug"></term>
+	<term key="debug_attack_area"></term>
+	
+	
+	<!--  LIVES & ENERGY  -->
+	<!--  ==============  -->
+	<term key="num_lives_2_player_mode">2</term>
+	<term key="reload_energy_in_new_level">false</term>
+	
+	<!--  CHEAT CODES  -->
+	<!--  ===========  -->
+	<term key="codes-invincibility">1,invencible,invencibilidad,invincibility</term>
+	<term key="codes-fragile">2,ultrahard,desafio,fragil</term>
+	<term key="codes-colossus">3,colossus,strength,superheroe</term>
+	<term key="codes-friendlyfire">4,antiheroes,enemigos,versus</term>
+	<term key="codes-doubleenergy">5,energy,energia</term>
+	<term key="codes-morelives">6,lives,vidas</term>
+	<term key="morelives_num_lives_2_player_mode">4</term>
+	<term key="codes-resetenergy">6,resetenergy</term>
+	<term key="codes-allpowerups">6,powerups</term>
+	<term key="allpowerups_powerup_probability">.9</term>
+	
+	<!--  CARGAS SEPARADAS  -->
+	<!--  ================  -->
+	<term key="game_swf_weight">241135</term>
+	<term key="sounds_swf_weight">376820</term>
+	<term key="widgets_swf_weight">4204301</term>
+	<term key="widgets_2_swf_weight">453525</term>
+	<term key="rex_swf_weight">436464</term>
+	<term key="ben_swf_weight">638466</term>
+	<term key="enemy_1_weight">198378</term>
+	<term key="enemy_2_weight">133308</term>
+	<term key="enemy_3_weight">155535</term>
+	<term key="enemy_boss_weight">261959</term>
+	<term key="fx_swf_weight">711731</term>
+	<term key="intro_nivel_inicial_weight">1362516</term>
+	<term key="intro_nivel_vs_weight">315906</term>
+	
+	<term key="scenery_1_weight">732672</term>
+	<term key="scenery_2_weight">1074496</term>
+	<term key="scenery_3_weight">1008158</term>
+	<term key="scenery_4_weight">922893</term>
+	<term key="level_0_weight">38093</term>
+	<term key="level_1_weight">41655</term>
+	<term key="level_2_weight">39188</term>
+	<term key="level_3_weight">39564</term>
+	<term key="level_4_weight">37387</term>
+	<term key="level_5_weight">44496</term>
+	<term key="level_99_weight">37697</term>
+	<term key="intro_level_0_weight">1362563</term>
+	<term key="intro_level_1_weight">1264147</term>
+	<term key="intro_level_2_weight">275969</term>
+	<term key="intro_level_3_weight">949263</term>
+	<term key="intro_level_4_weight">1129752</term>
+	<term key="intro_level_5_weight">1193179</term>
+	<term key="intro_level_99_weight">315971</term>
+	<term key="game_won_video_weight">1739360</term>
+	
+	<!--  SFXs Y MUSICAS GLOBALES  -->
+	<!--  =======================  -->
+	<term key="global_sfx_ids">PlayerHitEnemy1,PlayerHitEnemy2,PlayerHitEnemy3,Enemy1Headbutt,EnemyHitPlayer1,EnemyHitPlayer2,EnemyHitPlayer3,Jump,JumpToGround,Dash,FallToGround,Shot1,Walk1,Walk2,Run1,Run2,BtnOver,BtnOut,BarrelHit,BarrelBroken,MainMenuFadeIn,FlipPage,ElevatorDoorOpen,Go,Elevator,benSpecial1,benSpecial2,rexSpecial1,rexSpecial2,FenceHit,SplashFadeIn,BtnSelectOver,SelectBen,SelectRex,Intro,BossAttack1,BossFire,PlayerHitBoss,BossKilled,SfxGameLost,BarrelBounce,PowerupGrabbed</term>
+	<term key="global_music_ids">MusicSilence,MusicSplash,MusicGameWon</term>
+	
+	
+	<!--  MUSICAS POR NIVEL  -->
+	<!--  =================  -->
+	<term key="music_id_level_99">MusicScenery1_1</term>
+	<term key="music_id_level_0">MusicScenery1_1</term>
+	<term key="music_id_level_1">MusicScenery1_1</term>
+	<term key="music_id_level_2">MusicScenery1_2</term>
+	<term key="music_id_level_3">MusicScenery2</term>
+	<term key="music_id_level_4">MusicScenery3</term>
+	<term key="music_id_level_5">MusicScenery4</term>
+	
+	<!--  VOLUMENES  -->
+	<!--  =========  -->
+	<term key="master_volume">.7</term>
+	<term key="Volume_MusicSplash">.6</term>
+	<term key="Volume_MusicScenery1_1">.5</term>
+	<term key="Volume_MusicScenery1_2">.5</term>
+	<term key="Volume_MusicScenery2">.5</term>
+	<term key="Volume_MusicScenery3">.5</term>
+	<term key="Volume_MusicScenery4">.5</term>
+	<term key="Volume_PlayerHitEnemy1">.6</term>
+	<term key="Volume_PlayerHitEnemy2">.6</term>
+	<term key="Volume_PlayerHitEnemy3">.6</term>
+	<term key="Volume_Enemy1Headbutt">.5</term>
+	<term key="Volume_EnemyHitPlayer1">.5</term>
+	<term key="Volume_EnemyHitPlayer2">.5</term>
+	<term key="Volume_EnemyHitPlayer3">.5</term>
+	<term key="Volume_Jump">.7</term>
+	<term key="Volume_JumpToGround">.6</term>
+	<term key="Volume_Dash">.5</term>
+	<term key="Volume_FallToGround">.6</term>
+	<term key="Volume_Shot1">.55</term>
+	<term key="Volume_Walk1">.55</term>
+	<term key="Volume_Walk2">.55</term>
+	<term key="Volume_Run1">.35</term>
+	<term key="Volume_Run2">.35</term>
+	<term key="Volume_BtnOver">.8</term>
+	<term key="Volume_BtnOut">.5</term>
+	<term key="Volume_BarrelHit">.15</term>
+	<term key="Volume_BarrelBroken">.1</term>
+	<term key="Volume_MainMenuFadeIn">.3</term>
+	<term key="Volume_FlipPage">.8</term>
+	<term key="Volume_ElevatorDoorOpen">.4</term>
+	<term key="Volume_Go">.35</term>
+	<term key="Volume_Elevator">.9</term>
+	<term key="Volume_benSpecial1">1.3</term>
+	<term key="Volume_benSpecial2">1.3</term>
+	<term key="Volume_rexSpecial1">1.3</term>
+	<term key="Volume_rexSpecial2">1.3</term>
+	<term key="Volume_FenceHit">.4</term>
+	<term key="Volume_SplashFadeIn">.6</term>
+	<term key="Volume_BtnSelectOver">1</term>
+	<term key="Volume_SelectBen">1.3</term>
+	<term key="Volume_SelectRex">1.3</term>
+	<term key="Volume_Intro">.8</term>
+	<term key="Volume_BossAttack1">1</term>
+	<term key="Volume_BossFire">1</term>
+	<term key="Volume_PlayerHitBoss">1</term>
+	<term key="Volume_BossKilled">1</term>
+	<term key="Volume_SfxGameLost">1</term>
+	<term key="Volume_MusicGameWon">1</term>
+	<term key="Volume_BarrelBounce">.18</term>
+	<term key="Volume_PowerupGrabbed">.4</term>
+	
+	
+	<!--  SHADOWS  -->
+	<!--  =======  -->
+	<term key="shadow_max_z">300</term>
+	<term key="shadow_max_alpha">.9</term>
+	<term key="shadow_min_scale_x">.4</term>
+	<term key="shadow_min_scale_y">.4</term>
+	
+	
+	<!--  VIDEOS  -->
+	<!--  ======  -->
+	<term key="game_won_video_swf_path">game_won.swf</term>
+	<term key="game_won_video_id">GameWonVideo</term>
+	
+	
+	<!--  FX  -->
+	<!--  ==  -->
+	<term key="special_shake_time_ms">1000</term>
+	<term key="special_shake_strength">10</term>
+	<term key="barrel_bounce_shake_strength">7</term>
+	<term key="barrel_bounce_shake_time_ms">3000</term>
+	<term key="barrel_bounce_long_shake_strength">6</term>
+	<term key="barrel_bounce_long_shake_time_ms">3000</term>
+	
+	
+	<!--  CAMERA  -->
+	<!--  ======  -->
+	<term key="allow_scroll_back_in_transition">false</term>
+	<term key="max_scroll_step_px_level_99">15</term>
+	<term key="max_scroll_step_px_level_0">15</term>
+	<term key="max_scroll_step_px_level_1">15</term>
+	<term key="max_scroll_step_px_level_2">999999</term>
+	<term key="max_scroll_step_px_level_3">15</term>
+	<term key="max_scroll_step_px_level_4">0</term>
+	<term key="max_scroll_step_px_level_5">15</term>
+	<!--  MARGINS TO START SCROLLING  -->
+	<term key="screen_margin_left_level_99">400</term>
+	<term key="screen_margin_right_level_99">400</term>
+	<term key="screen_margin_top_level_99">300</term>
+	<term key="screen_margin_bottom_level_99">200</term>
+	<term key="screen_margin_left_level_0">400</term>
+	<term key="screen_margin_right_level_0">400</term>
+	<term key="screen_margin_top_level_0">300</term>
+	<term key="screen_margin_bottom_level_0">200</term>
+	<term key="screen_margin_left_level_1">400</term>
+	<term key="screen_margin_right_level_1">400</term>
+	<term key="screen_margin_top_level_1">300</term>
+	<term key="screen_margin_bottom_level_1">200</term>
+	<term key="screen_margin_left_level_2">400</term>
+	<term key="screen_margin_right_level_2">400</term>
+	<term key="screen_margin_top_level_2">300</term>
+	<term key="screen_margin_bottom_level_2">200</term>
+	<term key="screen_margin_left_level_3">400</term>
+	<term key="screen_margin_right_level_3">400</term>
+	<term key="screen_margin_top_level_3">300</term>
+	<term key="screen_margin_bottom_level_3">200</term>
+	<term key="screen_margin_left_level_4">400</term>
+	<term key="screen_margin_right_level_4">400</term>
+	<term key="screen_margin_top_level_4">300</term>
+	<term key="screen_margin_bottom_level_4">200</term>
+	<term key="screen_margin_left_level_5">400</term>
+	<term key="screen_margin_right_level_5">400</term>
+	<term key="screen_margin_top_level_5">300</term>
+	<term key="screen_margin_bottom_level_5">200</term>
+	<!--  MARGIN TO STOP PLAYER AT CAMERA LIMITS  -->
+	<term key="camera_limit_left_margin_level_99">60</term>
+	<term key="camera_limit_right_margin_level_99">60</term>
+	<term key="camera_limit_up_margin_level_99">150</term>
+	<term key="camera_limit_down_margin_level_99">60</term>
+	<term key="camera_limit_left_margin_level_0">60</term>
+	<term key="camera_limit_right_margin_level_0">60</term>
+	<term key="camera_limit_up_margin_level_0">150</term>
+	<term key="camera_limit_down_margin_level_0">60</term>
+	<term key="camera_limit_left_margin_level_1">60</term>
+	<term key="camera_limit_right_margin_level_1">60</term>
+	<term key="camera_limit_up_margin_level_1">150</term>
+	<term key="camera_limit_down_margin_level_1">60</term>
+	<term key="camera_limit_left_margin_level_2">60</term>
+	<term key="camera_limit_right_margin_level_2">60</term>
+	<term key="camera_limit_up_margin_level_2">150</term>
+	<term key="camera_limit_down_margin_level_2">60</term>
+	<term key="camera_limit_left_margin_level_3">60</term>
+	<term key="camera_limit_right_margin_level_3">60</term>
+	<term key="camera_limit_up_margin_level_3">150</term>
+	<term key="camera_limit_down_margin_level_3">60</term>
+	<term key="camera_limit_left_margin_level_4">60</term>
+	<term key="camera_limit_right_margin_level_4">60</term>
+	<term key="camera_limit_up_margin_level_4">150</term>
+	<term key="camera_limit_down_margin_level_4">60</term>
+	<term key="camera_limit_left_margin_level_5">60</term>
+	<term key="camera_limit_right_margin_level_5">60</term>
+	<term key="camera_limit_up_margin_level_5">150</term>
+	<term key="camera_limit_down_margin_level_5">60</term>
+			
+	<term key="level_design_x_scale">10</term>
+	<term key="level_design_y_scale">10</term>
+	
+	
+	<!--  SCENERIES LAYERS  -->
+	<!--  ================  -->
+	<term key="scenery_type_for_level_99">regular</term>
+	<term key="scenery_nbr_for_level_99">1</term>
+	<term key="scenery_type_for_level_0">regular</term>
+	<term key="scenery_nbr_for_level_0">1</term>
+	<term key="scenery_type_for_level_1">regular</term>
+	<term key="scenery_nbr_for_level_1">1</term>
+	<term key="scenery_type_for_level_2">boards</term>
+	<term key="scenery_nbr_for_level_2">1</term>
+	<term key="scenery_type_for_level_3">regular</term>
+	<term key="scenery_nbr_for_level_3">2</term>
+	<term key="scenery_type_for_level_4">elevator</term>
+	<term key="scenery_nbr_for_level_4">3</term>
+	<term key="scenery_type_for_level_5">regular</term>
+	<term key="scenery_nbr_for_level_5">4</term>
+	
+	<!--  SCENERY LAYERS SCROLL  -->
+	<!--  =====================  -->
+	<!--  SCENERY 1 - Puente  -->
+	<term key="scenery_1_background_1_depth_horizontal">1</term>
+	<term key="scenery_1_background_1_depth_vertical">1</term>
+	<term key="scenery_1_background_1_loop_horizontal">true</term>
+	<term key="scenery_1_background_2_depth_horizontal">1</term>
+	<term key="scenery_1_background_2_depth_vertical">1</term>
+	<term key="scenery_1_background_2_loop_horizontal">true</term>
+	<term key="scenery_1_background_3_depth_horizontal">0</term>
+	<term key="scenery_1_background_3_depth_vertical">0</term>
+	<term key="scenery_1_foreground_1_depth_horizontal">1.6</term>
+	<term key="scenery_1_foreground_1_depth_vertical">1</term>
+	<term key="scenery_1_foreground_1_loop_horizontal">true</term>
+	<!--  SCENERY 2 - Ciudad  -->
+	<term key="scenery_2_background_1_depth_horizontal">1</term>
+	<term key="scenery_2_background_1_depth_vertical">1</term>
+	<term key="scenery_2_background_1_loop_horizontal">true</term>
+	<term key="scenery_2_background_2_depth_horizontal">1</term>
+	<term key="scenery_2_background_2_depth_vertical">1</term>
+	<term key="scenery_2_background_2_loop_horizontal">true</term>
+	<term key="scenery_2_background_3_depth_horizontal">0</term>
+	<term key="scenery_2_background_3_depth_vertical">0</term>
+	<term key="scenery_2_foreground_1_depth_horizontal">1.6</term>
+	<term key="scenery_2_foreground_1_depth_vertical">.75</term>
+	<term key="scenery_2_foreground_1_loop_horizontal">true</term>
+	<!--  SCENERY 3 - Ascensor  -->
+	<term key="scenery_3_background_1_depth_horizontal">1</term>
+	<term key="scenery_3_background_1_depth_vertical">1</term>
+	<term key="scenery_3_background_1_loop_horizontal">false</term>
+	<term key="scenery_3_background_2_depth_horizontal">1</term>
+	<term key="scenery_3_background_2_depth_vertical">1</term>
+	<term key="scenery_3_background_2_loop_horizontal">false</term>
+	<term key="scenery_3_background_3_depth_horizontal">0</term>
+	<term key="scenery_3_background_3_depth_vertical">0</term>
+	<term key="scenery_3_foreground_1_depth_horizontal">1.6</term>
+	<term key="scenery_3_foreground_1_depth_vertical">1</term>
+	<term key="scenery_3_foreground_1_loop_horizontal">false</term>
+	<!--  SCENERY 4 - Ciudad rota  -->
+	<term key="scenery_4_background_1_depth_horizontal">1</term>
+	<term key="scenery_4_background_1_depth_vertical">1</term>
+	<term key="scenery_4_background_1_loop_horizontal">true</term>
+	<term key="scenery_4_background_2_depth_horizontal">1</term>
+	<term key="scenery_4_background_2_depth_vertical">1</term>
+	<term key="scenery_4_background_2_loop_horizontal">true</term>
+	<term key="scenery_4_background_3_depth_horizontal">0</term>
+	<term key="scenery_4_background_3_depth_vertical">0</term>
+	<term key="scenery_4_foreground_1_depth_horizontal">1.6</term>
+	<term key="scenery_4_foreground_1_depth_vertical">1</term>
+	<term key="scenery_4_foreground_1_loop_horizontal">true</term>
+	
+	<!-- SPECIAL SCENERIES -->
+	<!-- ================= -->
+	<!-- BOARDS -->
+	<term key="boards_speed">.6</term>
+	
+	
+	
+	<!--  GO!  -->
+	<!--  ===  -->
+	<term key="time_to_show_go_ms">3000</term>
+	
+	
+	<!--  PLAYERS  -->
+	<!--  =======  -->
+	<term key="special_attack_frames_tolerance">10</term>
+	
+	
+	<!--  REX  -->
+	<!--  ===  -->
+	<term key="rex_max_energy">270</term>
+	<term key="rex_max_energy_tutor">1000</term>
+	<term key="rex_max_energy_vs">1000</term>
+	<!--  Walk  -->
+	<term key="rex_walk_speed_x">.11</term>
+	<term key="rex_walk_speed_x_diagonal">.09</term>
+	<term key="rex_walk_speed_y">.1</term>
+	<term key="rex_walk_speed_y_diagonal">.09</term>
+	<!--  Run  -->
+	<term key="rex_run_speed_x">.40</term>
+	<term key="rex_run_speed_x_diagonal">.19</term>
+	<term key="rex_run_speed_y">.22</term>
+	<term key="rex_run_speed_y_diagonal">.252</term>
+	<!--  Jump  -->
+	<term key="rex_jump_init_z_speed">1.05</term>
+	<term key="rex_jump_gravity">.0028</term>
+	<term key="rex_jump_z_falling_max_speed">99999999</term>
+	<term key="rex_jump_walk_speed_x">.19</term>
+	<term key="rex_jump_walk_speed_x_diagonal">.1</term>
+	<term key="rex_jump_walk_speed_y">.05</term>
+	<term key="rex_jump_walk_speed_y_diagonal">.05</term>
+	<term key="rex_jump_run_speed_x">.8</term>
+	<term key="rex_jump_run_speed_x_diagonal">.8</term>
+	<term key="rex_jump_run_speed_y">.36</term>
+	<term key="rex_jump_run_speed_y_diagonal">.276</term>
+	<term key="rex_jumping_resistance_to_knock_down">0</term>
+	<!--  JumpAttack 1  -->
+	<term key="rex_jump_attack_1_multiple_attacks">false</term>
+	<term key="rex_attack_jump_1_power_to_knock_down">0</term>
+	<term key="rex_attack_jump_1_power">15</term>
+	<term key="rex_attack_jump_1_height">2</term>
+	<term key="rex_attack_jump_1_special_points_given">1</term>
+	<!--  JumpAttack 2  -->
+	<term key="rex_jump_attack_2_multiple_attacks">false</term>
+	<term key="rex_jump_attack_2_speed_z">.4</term>
+	<term key="rex_jump_attack_2_speed_x">.65</term>
+	<term key="rex_jump_attack_2_speed_x_diagonal">.15</term>
+	<term key="rex_jump_attack_2_speed_y">.15</term>
+	<term key="rex_jump_attack_2_speed_y_diagonal">.15</term>
+	<term key="rex_attack_jump_2_power_to_knock_down">5</term>
+	<term key="rex_attack_jump_2_power">10</term>
+	<term key="rex_attack_jump_2_height">2</term>
+	<term key="rex_attack_jump_2_special_points_given">1</term>
+	<!--  RunAttack 1  -->
+	<term key="rex_run_attack_1_init_speed">.4</term>
+	<term key="rex_run_attack_1_friction">.00045</term>
+	<term key="rex_attack_run_1_power_to_knock_down">100</term>
+	<term key="rex_attack_run_1_power">25</term>
+	<term key="rex_attack_run_1_height">2</term>
+	<term key="rex_attack_run_1_special_points_given">1</term>
+	<!--  RunAttack 2  -->
+	<term key="rex_run_attack_2_init_speed">.4</term>
+	<term key="rex_run_attack_2_friction">.00045</term>
+	<term key="rex_attack_run_2_power_to_knock_down">100</term>
+	<term key="rex_attack_run_2_power">25</term>
+	<term key="rex_attack_run_2_height">1</term>
+	<term key="rex_attack_run_2_special_points_given">1</term>
+	<!--  Attack 1  -->
+	<term key="rex_attack_1_power_to_knock_down">0</term>
+	<term key="rex_attack_1_power">20</term>
+	<term key="rex_attack_1_height">1</term>
+	<term key="rex_attack_1_special_points_given">1</term>
+	<!--  Attack 2  -->
+	<term key="rex_attack_2_power_to_knock_down">0</term>
+	<term key="rex_attack_2_power">25</term>
+	<term key="rex_attack_2_height">2</term>
+	<term key="rex_attack_2_special_points_given">1</term>
+	<!--  Attack 3  -->
+	<term key="rex_attack_3_power_to_knock_down">50</term>
+	<term key="rex_attack_3_power">30</term>
+	<term key="rex_attack_3_height">1</term>
+	<term key="rex_attack_3_special_points_given">2</term>
+	<!--  Attack 4  -->
+	<term key="rex_attack_4_power_to_knock_down">0</term>
+	<term key="rex_attack_4_power">20</term>
+	<term key="rex_attack_4_height">1</term>
+	<term key="rex_attack_4_special_points_given">1</term>
+	<!--  Attack 5  -->
+	<term key="rex_attack_5_power_to_knock_down">0</term>
+	<term key="rex_attack_5_power">25</term>
+	<term key="rex_attack_5_height">2</term>
+	<term key="rex_attack_5_special_points_given">1</term>
+	<!--  Attack 6  -->
+	<term key="rex_attack_6_power_to_knock_down">50</term>
+	<term key="rex_attack_6_power">30</term>
+	<term key="rex_attack_6_height">1</term>
+	<term key="rex_attack_6_special_points_given">2</term>
+	<!--  Attack 7  -->
+	<term key="rex_attack_7_power_to_knock_down">60</term>
+	<term key="rex_attack_7_power">100</term>
+	<term key="rex_attack_7_height">1</term>
+	<term key="rex_attack_7_special_points_given">0</term>
+	<!--  Attack 8  -->
+	<term key="rex_attack_8_power_to_knock_down">160</term>
+	<term key="rex_attack_8_power">150</term>
+	<term key="rex_attack_8_height">1</term>
+	<term key="rex_attack_8_special_points_given">0</term>
+	<!-- Knocked Down  -->
+	<term key="rex_resistance_to_knock_down">10</term>
+	<term key="rex_invulnerability_time_ms_after_knocked_down">1500</term>
+	<term key="rex_invulnerability_time_ms_after_killed">3000</term>
+	<term key="rex_invulnerability_tint_color">0xCCCCCC</term>
+	<term key="rex_invulnerability_tint_amount">0.5</term>
+	<term key="rex_invulnerability_fx_on_frames">2</term>
+	<term key="rex_invulnerability_fx_off_frames">2</term>
+	<term key="rex_knocked_down_init_speed_z">.45</term>
+	<term key="rex_knocked_down_gravity">.002</term>
+	<term key="rex_knocked_down_init_speed_x">.5</term>
+	<term key="rex_knocked_down_friction">.00001</term>
+	<!-- Knocked Down Killed  -->
+	<term key="rex_knocked_down_killed_init_speed_z">.45</term>
+	<term key="rex_knocked_down_killed_gravity">.002</term>
+	<term key="rex_knocked_down_killed_init_speed_x">.5</term>
+	<term key="rex_knocked_down_killed_friction">.00001</term>
+	<!-- Hit Killed  -->
+	<term key="rex_hit_killed_init_speed_z">.5</term>
+	<term key="rex_hit_killed_gravity">.0014</term>
+	<term key="rex_hit_killed_init_speed_x">.25</term>
+	<term key="rex_hit_killed_friction">.000011</term>
+	<!-- Combos (botón1, botón2, botón3,..-ataque1,ataque2,ataque3,...) -->
+	<term key="rex_combo_1">K1,K1,K1-1,2,3</term>
+	<term key="rex_combo_2">K2,K2,K2-4,5,6</term>
+	<term key="rex_combo_3">K1,K1,K2,K2,K1-1,2,4,5,3</term>
+	<term key="rex_combo_4">K1,K1,K2,K1,K1-1,2,4,2,3</term>
+	<term key="rex_combo_5">K1,K2,K1,K2-1,4,2,6</term>
+	<term key="rex_combo_6">K2,K1,K1,K1-4,1,2,3</term>
+	<term key="rex_combo_7">K2,K2,K1,K1,K2-4,5,1,2,6</term>
+	<term key="rex_combo_8">K2,K1,K2,K2,K1-4,1,5,5,3</term>
+	<term key="rex_combo_9">K1,K2,K1,K1,K2-1,4,2,2,6</term>
+	<!-- Default attacks  -->
+	<term key="rex_deffault_attack_1">1</term>
+	<term key="rex_deffault_attack_2">4</term>
+	<term key="rex_deffault_attack_1_2">7</term>
+	<!-- Special attacks  -->
+	<term key="rex_special_points_for_special_1">10</term>
+	<term key="rex_special_points_for_special_2">16</term>
+	<!--  Boards  -->
+	<term key="rex_boards_speed_factor_horizontal">2</term>
+	<term key="rex_boards_speed_factor_vertical">1.5</term>
+	
+	
+	<!--  BEN  -->
+	<!--  ======  -->
+	<term key="ben_max_energy">250</term>
+	<term key="ben_max_energy_tutor">900</term>
+	<term key="ben_max_energy_vs">900</term>
+	<!--  Walk  -->
+	<term key="ben_walk_speed_x">.13</term>
+	<term key="ben_walk_speed_x_diagonal">.1</term>
+	<term key="ben_walk_speed_y">.11</term>
+	<term key="ben_walk_speed_y_diagonal">.1</term>
+	<!--  Run  -->
+	<term key="ben_run_speed_x">.42</term>
+	<term key="ben_run_speed_x_diagonal">.25</term>
+	<term key="ben_run_speed_y">.32</term>
+	<term key="ben_run_speed_y_diagonal">.264</term>
+	<!--  Jump  -->
+	<term key="ben_jump_init_z_speed">1.05</term>
+	<term key="ben_jump_gravity">.0028</term>
+	<term key="ben_jump_z_falling_max_speed">99999999</term>
+	<term key="ben_jump_walk_speed_x">.19</term>
+	<term key="ben_jump_walk_speed_x_diagonal">.1</term>
+	<term key="ben_jump_walk_speed_y">.05</term>
+	<term key="ben_jump_walk_speed_y_diagonal">.05</term>
+	<term key="ben_jump_run_speed_x">.8</term>
+	<term key="ben_jump_run_speed_x_diagonal">.8</term>
+	<term key="ben_jump_run_speed_y">.36</term>
+	<term key="ben_jump_run_speed_y_diagonal">.276</term>
+	<term key="ben_jumping_resistance_to_knock_down">0</term>
+	<!--  JumpAttack 1  -->
+	<term key="ben_jump_attack_1_multiple_attacks">false</term>
+	<term key="ben_attack_jump_1_power_to_knock_down">0</term>
+	<term key="ben_attack_jump_1_power">10</term>
+	<term key="ben_attack_jump_1_height">2</term>
+	<term key="ben_attack_jump_1_special_points_given">1</term>
+	<!--  JumpAttack 2  -->
+	<term key="ben_jump_attack_2_multiple_attacks">false</term>
+	<term key="ben_jump_attack_2_speed_z">.4</term>
+	<term key="ben_jump_attack_2_speed_x">.65</term>
+	<term key="ben_jump_attack_2_speed_x_diagonal">.15</term>
+	<term key="ben_jump_attack_2_speed_y">.15</term>
+	<term key="ben_jump_attack_2_speed_y_diagonal">.15</term>
+	<term key="ben_attack_jump_2_power_to_knock_down">5</term>
+	<term key="ben_attack_jump_2_power">10</term>
+	<term key="ben_attack_jump_2_height">2</term>
+	<term key="ben_attack_jump_2_special_points_given">1</term>
+	<!--  RunAttack 1  -->
+	<term key="ben_run_attack_1_init_speed">.4</term>
+	<term key="ben_run_attack_1_friction">.00045</term>
+	<term key="ben_attack_run_1_power_to_knock_down">100</term>
+	<term key="ben_attack_run_1_power">20</term>
+	<term key="ben_attack_run_1_height">2</term>
+	<term key="ben_attack_run_1_special_points_given">1</term>
+	<!--  RunAttack 2  -->
+	<term key="ben_run_attack_2_init_speed">.4</term>
+	<term key="ben_run_attack_2_friction">.00045</term>
+	<term key="ben_attack_run_2_power_to_knock_down">100</term>
+	<term key="ben_attack_run_2_power">20</term>
+	<term key="ben_attack_run_2_height">1</term>
+	<term key="ben_attack_run_2_special_points_given">1</term>
+	<!--  Attack 1  -->
+	<term key="ben_attack_1_power_to_knock_down">0</term>
+	<term key="ben_attack_1_power">15</term>
+	<term key="ben_attack_1_height">1</term>
+	<term key="ben_attack_1_special_points_given">1</term>
+	<!--  Attack 2  -->
+	<term key="ben_attack_2_power_to_knock_down">0</term>
+	<term key="ben_attack_2_power">20</term>
+	<term key="ben_attack_2_height">2</term>
+	<term key="ben_attack_2_special_points_given">1</term>
+	<!--  Attack 3  -->
+	<term key="ben_attack_3_power_to_knock_down">50</term>
+	<term key="ben_attack_3_power">25</term>
+	<term key="ben_attack_3_height">1</term>
+	<term key="ben_attack_3_special_points_given">2</term>
+	<!--  Attack 4  -->
+	<term key="ben_attack_4_power_to_knock_down">0</term>
+	<term key="ben_attack_4_power">15</term>
+	<term key="ben_attack_4_height">1</term>
+	<term key="ben_attack_4_special_points_given">1</term>
+	<!--  Attack 5  -->
+	<term key="ben_attack_5_power_to_knock_down">0</term>
+	<term key="ben_attack_5_power">20</term>
+	<term key="ben_attack_5_height">2</term>
+	<term key="ben_attack_5_special_points_given">1</term>
+	<!--  Attack 6  -->
+	<term key="ben_attack_6_power_to_knock_down">50</term>
+	<term key="ben_attack_6_power">25</term>
+	<term key="ben_attack_6_height">1</term>
+	<term key="ben_attack_6_special_points_given">2</term>
+	<!--  Attack 7  -->
+	<term key="ben_attack_7_power_to_knock_down">60</term>
+	<term key="ben_attack_7_power">125</term>
+	<term key="ben_attack_7_height">1</term>
+	<term key="ben_attack_7_special_points_given">0</term>
+	<!--  Attack 8  -->
+	<term key="ben_attack_8_power_to_knock_down">160</term>
+	<term key="ben_attack_8_power">125</term>
+	<term key="ben_attack_8_height">1</term>
+	<term key="ben_attack_8_special_points_given">0</term>
+	<!-- Knocked Down  -->
+	<term key="ben_resistance_to_knock_down">10</term>
+	<term key="ben_invulnerability_time_ms_after_knocked_down">1500</term>
+	<term key="ben_invulnerability_time_ms_after_killed">3000</term>
+	<term key="ben_invulnerability_tint_color">0xCCCCCC</term>
+	<term key="ben_invulnerability_tint_amount">0.5</term>
+	<term key="ben_invulnerability_fx_on_frames">2</term>
+	<term key="ben_invulnerability_fx_off_frames">2</term>
+	<term key="ben_knocked_down_init_speed_z">.45</term>
+	<term key="ben_knocked_down_gravity">.002</term>
+	<term key="ben_knocked_down_init_speed_x">.5</term>
+	<term key="ben_knocked_down_friction">.00001</term>
+	<!-- Knocked Down Killed  -->
+	<term key="ben_knocked_down_killed_init_speed_z">.45</term>
+	<term key="ben_knocked_down_killed_gravity">.002</term>
+	<term key="ben_knocked_down_killed_init_speed_x">.5</term>
+	<term key="ben_knocked_down_killed_friction">.00001</term>
+	<!-- Hit Killed  -->
+	<term key="ben_hit_killed_init_speed_z">.5</term>
+	<term key="ben_hit_killed_gravity">.0014</term>
+	<term key="ben_hit_killed_init_speed_x">.25</term>
+	<term key="ben_hit_killed_friction">.000011</term>
+	<!-- Combos (botón1, botón2, botón3,..-ataque1,ataque2,ataque3,...) -->
+	<term key="ben_combo_1">K1,K1,K1-1,2,3</term>
+	<term key="ben_combo_2">K2,K2,K2-4,5,6</term>
+	<term key="ben_combo_3">K1,K1,K2,K2,K1-1,2,4,5,3</term>
+	<term key="ben_combo_4">K1,K1,K2,K1,K1-1,2,4,2,3</term>
+	<term key="ben_combo_5">K1,K2,K1,K2-1,4,2,6</term>
+	<term key="ben_combo_6">K2,K1,K1,K1-4,1,2,3</term>
+	<term key="ben_combo_7">K2,K2,K1,K1,K2-4,5,1,2,6</term>
+	<term key="ben_combo_8">K2,K1,K2,K2,K1-4,1,5,5,3</term>
+	<term key="ben_combo_9">K1,K2,K1,K1,K2-1,4,2,2,6</term>
+	<!-- Default attacks  -->
+	<term key="ben_deffault_attack_1">1</term>
+	<term key="ben_deffault_attack_2">4</term>
+	<term key="ben_deffault_attack_1_2">7</term>
+	<!-- Special attacks  -->
+	<term key="ben_special_points_for_special_1">10</term>
+	<term key="ben_special_points_for_special_2">16</term>
+	<!--  Boards  -->
+	<term key="ben_boards_speed_factor_horizontal">2</term>
+	<term key="ben_boards_speed_factor_vertical">1.5</term>
+	
+	
+	
+	<!--  ENEMIES GENERAL  -->
+	<!--  =======  -->
+	<term key="enemy_destination_tolerance_x">5</term>
+	<term key="enemy_destination_tolerance_y">5</term>
+	<term key="enemy_invulnerability_time_ms_after_knocked_down">0</term>
+	
+	<!--  ENEMY 1  -->
+	<!--  =======  -->
+	<term key="enemy_1_max_energy">60</term>
+	<term key="enemy_1_max_energy_boards">1</term>
+	<!-- Knocked Down  -->
+	<term key="enemy_1_resistance_to_knock_down">10</term>
+	<term key="enemy_1_knocked_down_init_speed_z">.45</term>
+	<term key="enemy_1_knocked_down_gravity">.002</term>
+	<term key="enemy_1_knocked_down_init_speed_x">.5</term>
+	<term key="enemy_1_knocked_down_friction">.00001</term>
+	<!-- Knocked Down Killed  -->
+	<term key="enemy_1_knocked_down_killed_init_speed_z">.45</term>
+	<term key="enemy_1_knocked_down_killed_gravity">.002</term>
+	<term key="enemy_1_knocked_down_killed_init_speed_x">.5</term>
+	<term key="enemy_1_knocked_down_killed_friction">.00001</term>
+	<!-- Hit Killed  -->
+	<term key="enemy_1_hit_killed_init_speed_z">.5</term>
+	<term key="enemy_1_hit_killed_gravity">.0014</term>
+	<term key="enemy_1_hit_killed_init_speed_x">.25</term>
+	<term key="enemy_1_hit_killed_friction">.000011</term>
+	<!--  Walk  -->
+	<term key="enemy_1_walking_speed_x">.08</term>
+	<term key="enemy_1_walking_speed_y">.068</term>
+	<term key="enemy_1_walking_speed_x_diag">.045</term>
+	<term key="enemy_1_walking_speed_y_diag">.045</term>
+	<!--  Jump  -->
+	<term key="enemy_1_jumping_resistance_to_knock_down">0</term>
+	<term key="enemy_1_jump_gravity">.0028</term>
+	<term key="enemy_1_jump_z_falling_max_speed">99999999</term>
+	<!--  Attack 1  -->
+	<term key="enemy_1_attack_1_power_to_knock_down">0</term>
+	<term key="enemy_1_attack_1_power">10</term>
+	<term key="enemy_1_attack_1_height">1</term>
+	<!--  Attack 2  -->
+	<term key="enemy_1_attack_2_power_to_knock_down">100</term>
+	<term key="enemy_1_attack_2_power">20</term>
+	<term key="enemy_1_attack_2_height">1</term>
+	<!--  Attack 3  -->
+	<term key="enemy_1_attack_3_power_to_knock_down">100</term>
+	<term key="enemy_1_attack_3_power">30</term>
+	<term key="enemy_1_attack_3_height">2</term>
+	<!--  Attack 4  -->
+	<term key="enemy_1_attack_4_power_to_knock_down">100</term>
+	<term key="enemy_1_attack_4_power">40</term>
+	<term key="enemy_1_attack_4_height">2</term>
+	<!--  Attack 5  -->
+	<term key="enemy_1_attack_5_power_to_knock_down">100</term>
+	<term key="enemy_1_attack_5_power">40</term>
+	<term key="enemy_1_attack_5_height">2</term>
+	<!--  Combos  (id-ataque1,ataque2,ataque3,...) -->
+	<term key="enemy_1_combo_1">1234-1,1,2</term>
+	<!--  Boards  -->
+	<term key="enemy_1_boards_speed_factor_horizontal">5</term>
+	<term key="enemy_1_boards_speed_factor_vertical">3.5</term>
+	
+	<!--  ENEMY 2  -->
+	<!--  =======  -->
+	<term key="enemy_2_max_energy">120</term>
+	<!-- Knocked Down  -->
+	<term key="enemy_2_resistance_to_knock_down">10</term>
+	<term key="enemy_2_knocked_down_init_speed_z">.4</term>
+	<term key="enemy_2_knocked_down_gravity">.003</term>
+	<term key="enemy_2_knocked_down_init_speed_x">.3</term>
+	<term key="enemy_2_knocked_down_friction">.001</term>
+	<!-- Knocked Down Killed  -->
+	<term key="enemy_2_knocked_down_killed_init_speed_z">.4</term>
+	<term key="enemy_2_knocked_down_killed_gravity">.003</term>
+	<term key="enemy_2_knocked_down_killed_init_speed_x">.3</term>
+	<term key="enemy_2_knocked_down_killed_friction">.001</term>
+	<!-- Hit Killed  -->
+	<term key="enemy_2_hit_killed_init_speed_z">.4</term>
+	<term key="enemy_2_hit_killed_gravity">.003</term>
+	<term key="enemy_2_hit_killed_init_speed_x">.3</term>
+	<term key="enemy_2_hit_killed_friction">.000011</term>
+	<!--  Walk  -->
+	<term key="enemy_2_walking_speed_x">.066</term>
+	<term key="enemy_2_walking_speed_y">.064</term>
+	<term key="enemy_2_walking_speed_x_diag">.035</term>
+	<term key="enemy_2_walking_speed_y_diag">.035</term>
+	<!--  Jump  -->
+	<term key="enemy_2_jumping_resistance_to_knock_down">0</term>
+	<term key="enemy_2_jump_gravity">.0028</term>
+	<term key="enemy_2_jump_z_falling_max_speed">99999999</term>
+	<!--  Attack 1  -->
+	<term key="enemy_2_attack_1_power_to_knock_down">30</term>
+	<term key="enemy_2_attack_1_power">50</term>
+	<term key="enemy_2_attack_1_height">1</term>
+	<!--  Charge   -->
+	<term key="enemy_2_attack_charge_velocity">.50</term>
+	<term key="enemy_2_attack_charge_power_to_knock_down">30</term>
+	<term key="enemy_2_attack_charge_power">40</term>
+	<term key="enemy_2_attack_charge_height">1</term>
+	<term key="enemy_2_attack_charge_preparing_time_ms">1500</term>
+	<!--  Boards  -->
+	<term key="enemy_2_boards_speed_factor_horizontal">2</term>
+	<term key="enemy_2_boards_speed_factor_vertical">1.5</term>
+	
+	<!--  ENEMY 3  -->
+	<!--  =======  -->
+	<term key="enemy_3_max_energy">90</term>
+	<!-- Knocked Down  -->
+	<term key="enemy_3_resistance_to_knock_down">10</term>
+	<term key="enemy_3_knocked_down_init_speed_z">.4</term>
+	<term key="enemy_3_knocked_down_gravity">.003</term>
+	<term key="enemy_3_knocked_down_init_speed_x">.3</term>
+	<term key="enemy_3_knocked_down_friction">.001</term>
+	<!-- Knocked Down Killed  -->
+	<term key="enemy_3_knocked_down_killed_init_speed_z">.4</term>
+	<term key="enemy_3_knocked_down_killed_gravity">.003</term>
+	<term key="enemy_3_knocked_down_killed_init_speed_x">.3</term>
+	<term key="enemy_3_knocked_down_killed_friction">.001</term>
+	<!-- Hit Killed  -->
+	<term key="enemy_3_hit_killed_init_speed_z">.4</term>
+	<term key="enemy_3_hit_killed_gravity">.003</term>
+	<term key="enemy_3_hit_killed_init_speed_x">.3</term>
+	<term key="enemy_3_hit_killed_friction">.000011</term>
+	<!--  Walk  -->
+	<term key="enemy_3_walking_speed_x">.051</term>
+	<term key="enemy_3_walking_speed_y">.051</term>
+	<term key="enemy_3_walking_speed_x_diag">.020</term>
+	<term key="enemy_3_walking_speed_y_diag">.020</term>
+	<!--  Jump  -->
+	<term key="enemy_3_jumping_resistance_to_knock_down">0</term>
+	<term key="enemy_3_jump_gravity">.0028</term>
+	<term key="enemy_3_jump_z_falling_max_speed">99999999</term>
+	<!--  Attack 1  -->
+	<term key="enemy_3_attack_1_power_to_knock_down">0</term>
+	<term key="enemy_3_attack_1_power">40</term>
+	<term key="enemy_3_attack_1_height">1</term>
+	<!--  Shoot    -->
+	<term key="enemy_3_attack_shot_power_to_knock_down">30</term>
+	<term key="enemy_3_attack_shot_power">20</term>
+	<term key="enemy_3_attack_shot_height">1</term>
+	<term key="enemy_3_attack_shot_velocity">.7</term>
+	<!--  Boards  -->
+	<term key="enemy_3_boards_speed_factor_horizontal">2</term>
+	<term key="enemy_3_boards_speed_factor_vertical">1.5</term>
+	
+	
+	<!--  ENEMY BEN  -->
+	<!--  =========  -->
+	<term key="enemy_ben_max_energy">500</term>
+	<term key="enemy_ben_max_energy_boards">1</term>
+	<!-- Knocked Down  -->
+	<term key="enemy_ben_resistance_to_knock_down">10</term>
+	<term key="enemy_ben_knocked_down_init_speed_z">.45</term>
+	<term key="enemy_ben_knocked_down_gravity">.002</term>
+	<term key="enemy_ben_knocked_down_init_speed_x">.5</term>
+	<term key="enemy_ben_knocked_down_friction">.00001</term>
+	<!-- Knocked Down Killed  -->
+	<term key="enemy_ben_knocked_down_killed_init_speed_z">.45</term>
+	<term key="enemy_ben_knocked_down_killed_gravity">.002</term>
+	<term key="enemy_ben_knocked_down_killed_init_speed_x">.5</term>
+	<term key="enemy_ben_knocked_down_killed_friction">.00001</term>
+	<!-- Hit Killed  -->
+	<term key="enemy_ben_hit_killed_init_speed_z">.5</term>
+	<term key="enemy_ben_hit_killed_gravity">.0014</term>
+	<term key="enemy_ben_hit_killed_init_speed_x">.25</term>
+	<term key="enemy_ben_hit_killed_friction">.000011</term>
+	<!--  Walk  -->
+	<term key="enemy_ben_walking_speed_x">.12</term>
+	<term key="enemy_ben_walking_speed_y">.06</term>
+	<term key="enemy_ben_walking_speed_x_diag">.06</term>
+	<term key="enemy_ben_walking_speed_y_diag">.06</term>
+	<!--  Jump  -->
+	<term key="enemy_ben_jumping_resistance_to_knock_down">0</term>
+	<term key="enemy_ben_jump_gravity">.0028</term>
+	<term key="enemy_ben_jump_z_falling_max_speed">99999999</term>
+	<!--  Attack 1  -->
+	<term key="enemy_ben_attack_1_power_to_knock_down">0</term>
+	<term key="enemy_ben_attack_1_power">10</term>
+	<term key="enemy_ben_attack_1_height">1</term>
+	<!--  Attack 2  -->
+	<term key="enemy_ben_attack_2_power_to_knock_down">0</term>
+	<term key="enemy_ben_attack_2_power">10</term>
+	<term key="enemy_ben_attack_2_height">1</term>
+	<!--  Attack 3  -->
+	<term key="enemy_ben_attack_3_power_to_knock_down">100</term>
+	<term key="enemy_ben_attack_3_power">10</term>
+	<term key="enemy_ben_attack_3_height">2</term>
+	<!--  Attack 4  -->
+	<term key="enemy_ben_attack_4_power_to_knock_down">0</term>
+	<term key="enemy_ben_attack_4_power">10</term>
+	<term key="enemy_ben_attack_4_height">2</term>
+	<!--  Attack 5  -->
+	<term key="enemy_ben_attack_5_power_to_knock_down">0</term>
+	<term key="enemy_ben_attack_5_power">10</term>
+	<term key="enemy_ben_attack_5_height">2</term>
+	<!--  Attack 6  -->
+	<term key="enemy_ben_attack_6_power_to_knock_down">100</term>
+	<term key="enemy_ben_attack_6_power">10</term>
+	<term key="enemy_ben_attack_6_height">2</term>
+	<!--  Attack 7  -->
+	<term key="enemy_ben_attack_7_power_to_knock_down">100</term>
+	<term key="enemy_ben_attack_7_power">30</term>
+	<term key="enemy_ben_attack_7_height">2</term>
+	<!--  Combos  (id-ataque1,ataque2,ataque3,...) -->
+	<term key="enemy_ben_combo_1">123-1,2,3</term>
+	<!--  Boards  -->
+	<term key="enemy_ben_boards_speed_factor">2</term>
+	
+	
+	<!--  ENEMY REX  -->
+	<!--  =========  -->
+	<term key="enemy_rex_max_energy">500</term>
+	<term key="enemy_rex_max_energy_boards">1</term>
+	<!-- Knocked Down  -->
+	<term key="enemy_rex_resistance_to_knock_down">10</term>
+	<term key="enemy_rex_knocked_down_init_speed_z">.45</term>
+	<term key="enemy_rex_knocked_down_gravity">.002</term>
+	<term key="enemy_rex_knocked_down_init_speed_x">.5</term>
+	<term key="enemy_rex_knocked_down_friction">.00001</term>
+	<!-- Knocked Down Killed  -->
+	<term key="enemy_rex_knocked_down_killed_init_speed_z">.45</term>
+	<term key="enemy_rex_knocked_down_killed_gravity">.002</term>
+	<term key="enemy_rex_knocked_down_killed_init_speed_x">.5</term>
+	<term key="enemy_rex_knocked_down_killed_friction">.00001</term>
+	<!-- Hit Killed  -->
+	<term key="enemy_rex_hit_killed_init_speed_z">.5</term>
+	<term key="enemy_rex_hit_killed_gravity">.0014</term>
+	<term key="enemy_rex_hit_killed_init_speed_x">.25</term>
+	<term key="enemy_rex_hit_killed_friction">.000011</term>
+	<!--  Walk  -->
+	<term key="enemy_rex_walking_speed_x">.12</term>
+	<term key="enemy_rex_walking_speed_y">.06</term>
+	<term key="enemy_rex_walking_speed_x_diag">.06</term>
+	<term key="enemy_rex_walking_speed_y_diag">.06</term>
+	<!--  Jump  -->
+	<term key="enemy_rex_jumping_resistance_to_knock_down">0</term>
+	<term key="enemy_rex_jump_gravity">.0028</term>
+	<term key="enemy_rex_jump_z_falling_max_speed">99999999</term>
+	<!--  Attack 1  -->
+	<term key="enemy_rex_attack_1_power_to_knock_down">0</term>
+	<term key="enemy_rex_attack_1_power">10</term>
+	<term key="enemy_rex_attack_1_height">1</term>
+	<!--  Attack 2  -->
+	<term key="enemy_rex_attack_2_power_to_knock_down">0</term>
+	<term key="enemy_rex_attack_2_power">10</term>
+	<term key="enemy_rex_attack_2_height">1</term>
+	<!--  Attack 3  -->
+	<term key="enemy_rex_attack_3_power_to_knock_down">100</term>
+	<term key="enemy_rex_attack_3_power">10</term>
+	<term key="enemy_rex_attack_3_height">2</term>
+	<!--  Attack 4  -->
+	<term key="enemy_rex_attack_4_power_to_knock_down">0</term>
+	<term key="enemy_rex_attack_4_power">10</term>
+	<term key="enemy_rex_attack_4_height">2</term>
+	<!--  Attack 5  -->
+	<term key="enemy_rex_attack_5_power_to_knock_down">0</term>
+	<term key="enemy_rex_attack_5_power">10</term>
+	<term key="enemy_rex_attack_5_height">2</term>
+	<!--  Attack 6  -->
+	<term key="enemy_rex_attack_6_power_to_knock_down">100</term>
+	<term key="enemy_rex_attack_6_power">10</term>
+	<term key="enemy_rex_attack_6_height">2</term>
+	<!--  Attack 7  -->
+	<term key="enemy_rex_attack_7_power_to_knock_down">100</term>
+	<term key="enemy_rex_attack_7_power">30</term>
+	<term key="enemy_rex_attack_7_height">2</term>
+	<!--  Combos  (id-ataque1,ataque2,ataque3,...) -->
+	<term key="enemy_rex_combo_1">123-1,2,3</term>
+	<!--  Boards  -->
+	<term key="enemy_rex_boards_speed_factor">2</term>
+	
+	
+	<!--  ENEMY BOSS  -->
+	<!--  ==========  -->
+	<term key="enemy_boss_max_energy">780</term>
+	<term key="enemy_boss_max_energy_boards">1</term>
+	<!-- Knocked Down  -->
+	<term key="enemy_boss_resistance_to_knock_down">9999999</term>
+	<term key="enemy_boss_knocked_down_init_speed_z">.45</term>
+	<term key="enemy_boss_knocked_down_gravity">.002</term>
+	<term key="enemy_boss_knocked_down_init_speed_x">.5</term>
+	<term key="enemy_boss_knocked_down_friction">.00001</term>
+	<!-- Knocked Down Killed  -->
+	<term key="enemy_boss_knocked_down_killed_init_speed_z">.45</term>
+	<term key="enemy_boss_knocked_down_killed_gravity">.002</term>
+	<term key="enemy_boss_knocked_down_killed_init_speed_x">.5</term>
+	<term key="enemy_boss_knocked_down_killed_friction">.00001</term>
+	<!-- Hit Killed  -->
+	<term key="enemy_boss_hit_killed_init_speed_z">.5</term>
+	<term key="enemy_boss_hit_killed_gravity">.0014</term>
+	<term key="enemy_boss_hit_killed_init_speed_x">.25</term>
+	<term key="enemy_boss_hit_killed_friction">.000011</term>
+	<!--  Walk  -->
+	<term key="enemy_boss_walking_speed_x">.2</term>
+	<term key="enemy_boss_walking_speed_y">.13</term>
+	<term key="enemy_boss_walking_speed_x_diag">.13</term>
+	<term key="enemy_boss_walking_speed_y_diag">.13</term>
+	<!--  Enter Screen  -->
+	<term key="enemy_boss_enter_speed_x">.1</term>
+	<term key="enemy_boss_enter_speed_y">.8</term>
+	<term key="enemy_boss_enter_speed_x_diag">.75</term>
+	<term key="enemy_boss_enter_speed_y_diag">.75</term>
+	<!--  Jump  -->
+	<term key="enemy_boss_jumping_resistance_to_knock_down">9999999</term>
+	<term key="enemy_boss_jump_gravity">.0028</term>
+	<term key="enemy_boss_jump_z_falling_max_speed">99999999</term>
+	<!--  Attack 1  -->
+	<term key="enemy_boss_attack_1_power_to_knock_down">100</term>
+	<term key="enemy_boss_attack_1_power">50</term>
+	<term key="enemy_boss_attack_1_height">1</term>
+	<!--  Attack Fire  -->
+	<term key="enemy_boss_attack_fire_power_to_knock_down">10</term>
+	<term key="enemy_boss_attack_fire_power">50</term>
+	<term key="enemy_boss_attack_fire_height">2</term>
+	<!--  Boards  -->
+	<term key="enemy_boss_boards_speed_factor">2</term>
+	
+	
+	<!--  SEQUENCES  -->
+	<!--  =========  -->
+	<term key="run_sequence_max_time_before_release_ms">200</term>
+	<term key="run_sequence_max_time_before_press_again_ms">200</term>
+	
+	
+	<!--  COMBOS  -->
+	<!--  ======  -->
+	<term key="combo_max_time_before_reset_ms">2000</term>
+	
+	
+	<!--  OBSTACLES  -->
+	<!--  =========  -->
+	<term key="obstacle_fence_resistance_to_knock_down">10</term>
+	<term key="obstacle_barrel_resistance_to_knock_down">10</term>
+	<term key="obstacle_barrel_attack_power">20</term>
+	<term key="obstacle_barrel_attack_power_to_knock_down">10</term>
+	<term key="obstacle_barrel_attack_height">2</term>
+	<term key="obstacle_barrel_bounce_screen_limit_offset_to_start_bouncing">500</term>
+	<term key="obstacle_barrel_bounce_starting_height">200</term>
+	<term key="obstacle_barrel_bounce_speed_horizontal">.2</term>
+	<term key="obstacle_barrel_bounce_gravity">.0022</term>
+	<term key="obstacle_barrel_bounce_elasticity">.96</term>
+	
+	
+	
+</config>

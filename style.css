@@ -1,0 +1,288 @@
+body.dark {
+	
+  font-family: Minecraft, Cambria, sans-serif;
+  background-image: url("images/dirt.png");
+  background-repeat: repeat;
+  image-rendering: crisp-edges;
+  background-color: rgba(0, 0, 0, .2);
+  
+  color: white;
+}
+
+body.light {
+	
+	font-family: Minecraft, Cambria, sans-serif;
+	background-image: url("images/dirt-light.png");
+	background-repeat: repeat;
+	image-rendering: crisp-edges;
+	background-color: rgba(0, 0, 0, .2);
+	
+	color: black;
+}
+
+a {
+	color: rgb(203, 187, 255);
+	transition: background-color 0.3s, color 0.3s;
+}
+
+body.light a {
+	color: rgb(49, 12, 173);
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.headtag{
+  text-shadow: 4px 4px #000000A0;
+  background-image: url("images/grass.png");
+  background-repeat: repeat;
+  image-rendering: crisp-edges;
+  
+  padding-left: 7px;
+  padding-bottom: 5px;
+  
+  width: 100%;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.light .headtag {
+	text-shadow: 4px 4px #0000004f;
+	background-image: url("images/grass-light.png");
+	background-repeat: repeat;
+	image-rendering: crisp-edges;
+	
+	padding-left: 7px;
+	padding-bottom: 5px;
+	
+	width: 100%;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+	background-color: rgba(0, 0, 0, 0.471);
+	max-width: 800px;
+	margin: 0 auto; /* Centraliza o container */
+	padding: 20px; /* Espaçamento interno do container */
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s, color 0.3s;
+}
+
+body.light .container {
+	background-color: rgba(255, 255, 255, 0.471);
+	max-width: 800px;
+	margin: 0 auto; /* Centraliza o container */
+	padding: 20px; /* Espaçamento interno do container */
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.ret {
+	color: white;
+	text-decoration: none;
+}
+
+body.light .ret{
+	color: black;
+	text-decoration: none;
+}
+
+.linkbar {
+	background-image: url("images/stone.png");
+	padding-left: 4px;
+	padding-right: 4px;
+	display: inline-block;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+body.light .linkbar {
+	background-image: url("images/stone-light.png");
+	padding-left: 4px;
+	padding-right: 4px;
+	display: inline-block;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.notificacao{
+	background-color:rgba(0, 0, 0, .2);
+	width: 100%;
+	padding-bottom: 20px;
+}
+
+.mensagem {
+	color: #ffffff;
+	font-size: 18px;
+	padding-left: 80px;
+	margin-left: 10%;
+}
+
+.titulo{
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Press Start 2P";
+	font-size: 40px;
+	background: url("images/grass.png")
+		top;
+	-webkit-text-stroke-width: 0.25px;
+	-webkit-text-stroke-color: black;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+body.light .titulo{
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "Press Start 2P";
+	font-size: 40px;
+	background: url("images/grass-light.png")
+		top;
+	-webkit-text-stroke-width: 0.25px;
+	-webkit-text-stroke-color: black;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+.footer {
+	color:#a0a0a040;
+	font-size: 12px;
+	font-family: 'Arial';
+	position: fixed; 
+	bottom: 0;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+body.light .footer{
+	color:#000000da;
+	font-size: 12px;
+	font-family: 'Arial';
+	position: fixed; 
+	bottom: 0;
+	transition: background-color 0.3s, color 0.3s;
+}
+
+.image {
+	width: 800px;
+}
+
+h1 {
+  font-size: 28px;
+}
+
+h2 {
+	padding-bottom: 2px;
+	margin-bottom: 2px;
+}
+
+li {
+	padding: 2px;
+	font-size: 14px;
+}
+
+#key {
+    font-size: 20pt;
+    font-style: oblique;
+}
+
+/*Efeito do logo do flash*/
+@keyframes download-hover {
+	from {
+	  filter: hue-rotate(360deg);
+	}
+  
+	to {
+	  filter: hue-rotate(0deg);
+	}
+  }
+  
+  .home-media * {
+	width: 400px;
+	height: 225px;
+  }
+  
+  .home-download {
+	clear: both;
+	text-align: center;
+	padding-top: 5px;
+  }
+  
+  .home-download img {
+	border-radius: 0px;
+	animation: download-hover 30s linear infinite;
+  }
+  
+  @media (max-width: 12px) {
+	.home-media {
+	  float: none;
+	  text-align: center;
+	  margin: 0 0 12px 0;
+	}
+  
+	.home-media * {
+	  width: 480px;
+	  height: 270px;
+	}
+  
+	.home-download img {
+	  width: 480px;
+	}
+  }
+
+.transparent-button {
+    background-color: rgba(0, 0, 0, 0.171);
+    border: 2px solid white;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    /*border-radius: 4px;*/
+    transition: background-color 0.3s, color 0.3s;
+
+	white-space: normal;
+    word-wrap: break-word;
+    max-width: 200px;
+	height: 250px;
+    overflow-wrap: break-word;
+}
+
+.transparent-button:hover {
+    background-color: white;
+    color: black;
+}
+
+body.light .transparent-button {
+    background-color: rgba(255, 255, 255, 0.171);
+    border: 2px solid black;
+    color: black;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    /*border-radius: 4px;*/
+    transition: background-color 0.3s, color 0.3s;
+
+	white-space: normal;
+    word-wrap: break-word;
+    max-width: 200px;
+	height: 250px;
+    overflow-wrap: break-word;
+}
+
+body.light .transparent-button:hover {
+    background-color: black;
+    color: white;
+}
+
+#forms-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 16px;
+}
+
+.form-wrapper {
+	flex: 1 1 calc(16.66% - 200px);
+	box-sizing: border-box;
+	margin-bottom: 16px;
+}
+
+
+  

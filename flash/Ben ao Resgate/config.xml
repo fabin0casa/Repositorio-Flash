@@ -1,0 +1,15 @@
+<system>
+	<version type="String">2.0.3</version>
+	<versionSo type="String">1.0.2</versionSo>
+	<mainPath type="String"></mainPath>
+	<gateway type="String"></gateway>
+	<netDebug type="Boolean">false</netDebug>
+	<fps type="Boolean">false</fps>
+	<serverGet type="Boolean">false</serverGet>
+	<stage type="Number">1</stage>
+	<stages type="Number">4</stages>
+	<lives type="Number">3</lives>
+	<cheat type="Boolean">false</cheat>
+	<quality type="String">MEDIUM</quality>
+	<tracker type="String">http://www.cartoonnetwork.com/games/action/ben10/bentotherescue/tracker.swf</tracker>
+</system>

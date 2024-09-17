@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<texts>
+	
+	<!--  GENERAL  -->
+	<!--  =======  -->
+	<term key="ContextMenuItems">Purple Tree Studio</term>	<!--  �tem de men� contextual customizado (para que no haya men� customizado, borrar esta l�nea)  -->
+	<term key="frame_label_default">eng</term>
+	
+	<!--  SPLASH  -->
+	<!--  ======  -->
+	<term key="loading">LOADING...</term>
+	<term key="code">code</term>
+	<term key="input_code">enter your code</term>
+	<term key="send">submit</term>
+	<term key="click_to_continue">click to continue</term>
+	<term key="code_invincibility">invincible</term>
+	<term key="code_fragile">ultra-hard</term>
+	<term key="code_colossus">super-strength</term>
+	<term key="code_enemies">enemies</term>
+	<term key="code_double_energy">shield activated</term>
+	<term key="code_more_lives">extra lives</term>
+	<term key="code_all_powerups">more power-ups</term>
+	
+	
+	<!--  MAIN MENU  -->
+	<!--  =========  -->
+	<term key="new_game">new game</term>
+	<term key="continue_splash">continue</term>
+	<term key="vs">Versus</term>
+	<term key="num_players_1">1 player</term>
+	<term key="num_players_2">2 players</term>
+	<term key="back"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="ITC Machine" SIZE="28" LETTERSPACING="1" KERNING="1">&lt; back</FONT></P></TEXTFORMAT>]]></term>
+	
+	
+	<!--  TEAM SELECT  -->
+	<!--  ===========  -->
+	<term key="select_your_team">choose your team</term>
+	<term key="team">team</term>
+	<term key="rex">REX</term>
+	<term key="ben">BEN</term>
+	<term key="continue_button"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="ITC Machine" SIZE="28" LETTERSPACING="1" KERNING="1">continue &gt;</FONT></P></TEXTFORMAT>]]></term>
+	
+	
+	<!--  CHARACTER SELECT  -->
+	<!--  ================  -->
+	<term key="select_your_character">choose your character</term>
+	<term key="player_1">player 1</term>
+	<term key="player_2">player 2</term>
+	<term key="team_1">team 1</term>
+	<term key="team_2">team 2</term>
+	
+	
+	<!--  HUD  -->
+	<!--  ===  -->
+	<term key="combo">combo</term>
+	<term key="go">go!</term>
+	<term key="super_label">super</term>
+	<term key="pause">pause</term>
+	<term key="player">player</term>
+	<term key="enemy_1_name">evo 1</term>
+	<term key="enemy_1b_name">evo 1</term>
+	<term key="enemy_2_name">evo 2</term>
+	<term key="enemy_3_name">evo 3</term>
+	<term key="enemy_boss_name">alpha</term>
+	
+	
+	<!--  POWERUPS  -->
+	<!--  ========  -->
+	<term key="powerup_energy">energy</term>
+	<term key="powerup_special">super</term>
+	
+	
+	
+	
+	<!--  EXIT  -->
+	<!--  ====  -->
+	<term key="exit_confirm">are you sure you want to exit?</term>
+	<term key="exit_yes_txt"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="ITC Machine" SIZE="39" LETTERSPACING="1" KERNING="1">&lt; yes</FONT></P></TEXTFORMAT>]]></term>
+	<term key="exit_no_txt"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="ITC Machine" SIZE="39" LETTERSPACING="1" KERNING="1">no &gt;</FONT></P></TEXTFORMAT>]]></term>
+	
+	
+	<!--  GAME LOST  -->
+	<!--  =========  -->
+	<term key="glost_title">GAME OVER</term>
+	<term key="glost_score_label">evos destroyed:</term>
+	<term key="glost_play_again"><![CDATA[<TEXTFORMAT LEADING="-14"><P ALIGN="LEFT"><FONT FACE="ITC Machine" SIZE="32" LETTERSPACING="1" KERNING="1">play </FONT></P></TEXTFORMAT><TEXTFORMAT LEADING="-14"><P ALIGN="LEFT"><FONT FACE="ITC Machine" SIZE="32" LETTERSPACING="1" KERNING="1">again &gt;</FONT></P></TEXTFORMAT>]]></term>
+	<term key="glost_menu"><![CDATA[<TEXTFORMAT LEADING="2"><P ALIGN="CENTER"><FONT FACE="ITC Machine" SIZE="34" LETTERSPACING="1" KERNING="1">&lt; menu</FONT></P></TEXTFORMAT>
+]]></term>
+	
+	
+	<!--  GAME WON  -->
+	<!--  ========  -->
+	<term key="gwon_title">congratulations!</term>
+	<term key="gwon_score_label">evos destroyed:</term>
+	
+	<!--  VS RESULTS  -->
+	<!--  ==========  -->
+	<term key="winning_player_txt">Player 1</term>
+	<term key="winning_player_label">Player [number]</term>
+	<term key="wins_the_fight">wins</term>
+	
+	
+	<!--  TUTOR  -->
+	<!--  =====  -->
+	<term key="tutor1_1_title">move</term>
+	<term key="tutor1_1_text">use the arrow keys to move</term>
+	<term key="tutor1_2_title">attack</term>
+	<term key="tutor1_2_text">use Z and X to attack</term>
+	<term key="tutor1_3_title">jump</term>
+	<term key="tutor1_3_text">use C to jump</term>
+	<term key="tutor1_4_title">dash</term>
+	<term key="tutor1_4_text">press the side arrow twice and then press X</term>
+	<term key="tutor1_5_title">special attack</term>
+	<term key="tutor1_5_text">press Z+X to make a special attack</term>
+	<term key="tutor1_6_title">defeat your enemy!!</term>
+	
+	<term key="tutor21_1_title">move</term>
+	<term key="tutor21_1_text">use s, x, z and c to move</term>
+	<term key="tutor21_2_title">attack</term>
+	<term key="tutor21_2_text">use Q and W to attack</term>
+	<term key="tutor21_3_title">jump</term>
+	<term key="tutor21_3_text">use E to jump</term>
+	<term key="tutor21_4_title">dash</term>
+	<term key="tutor21_4_text">press Z or C twice and then press W</term>
+	<term key="tutor21_5_title">special attack</term>
+	<term key="tutor21_5_text">press Q+W to make a special attack</term>
+	<term key="tutor21_6_title">defeat your enemy!!</term>
+	
+	<term key="tutor22_1_title">move</term>
+	<term key="tutor22_1_text">use the arrow keys to move</term>
+	<term key="tutor22_2_title">attack</term>
+	<term key="tutor22_2_text">use J and K to attack</term>
+	<term key="tutor22_3_title">jump</term>
+	<term key="tutor22_3_text">use L to jump</term>
+	<term key="tutor22_4_title">dash</term>
+	<term key="tutor22_4_text">press the side arrow twice and then press K</term>
+	<term key="tutor22_5_title">special attack</term>
+	<term key="tutor22_5_text">press J+K to make a special attack</term>
+	<term key="tutor22_6_title">defeat your enemy!!</term>
+	
+	<term key="dialog_1">I must stop you, insane Evo</term>
+	<term key="dialog_2">Evo? I have no idea what an Evo is</term>
+	<term key="dialog_3">You are not gonna destroy our city!</term>
+	<term key="dialog_4">Get out of my way, Mech-Alien!</term>
+	
+	<term key="dialog_1_1">Who are you?</term>
+	<term key="dialog_1_2">I�m Ben 10! World's greatest Hero!</term>
+	<term key="dialog_1_3">Lets join our powers to protect this city!</term>
+	
+	
+	<!--  VS INSTRUCTIONS  -->
+	<!--  ===============  -->
+	<term key="punch">punch</term>
+	<term key="kick">kick</term>
+	<term key="jump">jump</term>
+	<term key="move">movement</term>
+	
+</texts>

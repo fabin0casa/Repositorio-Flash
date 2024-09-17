@@ -1,0 +1,90 @@
+<Cannonbolt>
+	<title>Cannonbolt Pinball: GhostFreak's Revenge</title>
+
+	<gameSettings>
+		<startingLives>		5	 </startingLives>
+		<maximumLives>		9	</maximumLives>
+		<startingScore>		0	</startingScore>
+		<ballsTopSpeed>		18	</ballsTopSpeed>
+
+		<activeLevel1>		1	</activeLevel1>
+		<activeLevel2>		1	</activeLevel2>
+		
+		<level1url>Cannonbolt_Level1.swf</level1url>
+		<level2url>Cannonbolt_Level2.swf</level2url>
+	
+	</gameSettings>
+
+	<specialModeTimes>
+		<multiBallTime>		30	</multiBallTime>
+		<stinkFlyGooTime>	15	</stinkFlyGooTime>
+		<stinkFlyForBonus>	10	</stinkFlyForBonus>
+		<fireRingTime>		20	</fireRingTime>
+		<circusFreakTime>	20	</circusFreakTime>
+		<sumoSlammerTime>	30	</sumoSlammerTime>
+		<sumoSlammer2Time>	20	</sumoSlammer2Time>
+		<bumperTransformTime>	15	</bumperTransformTime>
+		<omnitrixTime>		30	</omnitrixTime>
+		<freeTheSoulsTime>	20	</freeTheSoulsTime>
+		<multiplierTime>	20	</multiplierTime>
+
+		<securityHolderTime>	30	</securityHolderTime>
+		<securityHolder2Time>	20	</securityHolder2Time>
+		<alienDuplicatorTime>	30	</alienDuplicatorTime>
+		<powerRoomTime>		30	</powerRoomTime>
+
+	</specialModeTimes>
+
+	<bossHP>
+		<thumbSkull>		300	</thumbSkull>
+		<frightWig>		300	</frightWig>
+		<acidBreath>		300	</acidBreath>
+		<zombozo>		300	</zombozo>
+		<wolfAlien>		300	</wolfAlien>
+		<mummyAlien>		300	</mummyAlien>
+		<doctorVictor>		300	</doctorVictor>
+		<ghostFreak01>		300	</ghostFreak01>
+		<ghostFreak02>		300	</ghostFreak02>
+	</bossHP>
+	
+	<bossEliminationScore>
+		<thumbSkull>		10000	</thumbSkull>
+		<frightWig>		10000	</frightWig>
+		<acidBreath>		10000	</acidBreath>
+		<zombozo>		40000	</zombozo>
+		<wolfAlien>		10000	</wolfAlien>
+		<mummyAlien>		10000	</mummyAlien>
+		<doctorVictor>		10000	</doctorVictor>
+		<ghostFreak01>		40000	</ghostFreak01>
+		<ghostFreak02>		60000	</ghostFreak02>
+	</bossEliminationScore>
+	
+	<scoreMultipliers>
+		<omnitrixMultiplier>	10	</omnitrixMultiplier>
+		<endOfBallMultiplier>	0.5	</endOfBallMultiplier>
+	</scoreMultipliers>
+	
+	<scores>
+		<bumpers>		100	</bumpers>
+		<lightTarget>		50	</lightTarget>
+		<oneKline>		1000	</oneKline>
+		<bossHit>		200	</bossHit>
+		<dropTarget>		50	</dropTarget>
+		<dropTargetGroup>	500	</dropTargetGroup>
+		<slingShot>		50	</slingShot>
+		<sumoDoor>		0	</sumoDoor>
+		<multiplierDoor>	0	</multiplierDoor>
+		<rampCrossing>		100	</rampCrossing>
+		<sumoCard>		200	</sumoCard>
+		<sumoSpecialCard>	5000	</sumoSpecialCard>
+		<corrodium>		300	</corrodium>
+		<specialCorrodium>	6000	</specialCorrodium>
+
+		<bumperGoodExtra>	500	</bumperGoodExtra>
+		<bumperGreatExtra>	1000	</bumperGreatExtra>
+		<bumperCoolExtra>	1500	</bumperCoolExtra>
+		<bumperAwesomeExtra>	2000	</bumperAwesomeExtra>
+	</scores>
+	
+
+</Cannonbolt>

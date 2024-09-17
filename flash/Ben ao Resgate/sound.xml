@@ -1,0 +1,52 @@
+<sounds genvol="100" fxvol="100" musicvol="100">
+   <file id="main" hifi="sound.swf" lofi="">
+      <musics>
+         <_end volume="100"/>
+         <_intro volume="80"/>
+         <_lose volume="100"/>
+         <_stage1 volume="100"/>
+         <_stage2 volume="50"/>
+         <_stage3 volume="100"/>
+         <_stage4 volume="80"/>
+         <_transition volume="100"/>
+         <_win volume="100"/>
+      </musics>
+      <fx>
+         <_cmnbonuslife volume="100"/>
+         <_cmnbonusnrj volume="100"/>
+         <_cmnclickbtn volume="50"/>
+         <_cmntransformation volume="100"/>
+         <_st1boost volume="100"/>
+         <_st1bouncegrenade volume="100"/>
+         <_st1camion volume="100"/>
+         <_st1derap volume="100"/>
+         <_st1explogrenade volume="100"/>
+         <_st1gwen volume="100"/>
+         <_st1hitperso volume="100"/>
+         <_st1hitboss volume="100"/>
+         <_st1hoverboard volume="100"/>
+         <_st1hoverboardfinish volume="100"/>
+         <_st1hoverboardstart volume="100"/>
+         <_st1jump volume="100"/>
+         <_st2jump volume="100"/>
+         <_st2recept volume="100"/>
+         <_st2buzz volume="100"/>
+         <_st2closedoor volume="100"/>
+         <_st2drop volume="110"/>
+         <_st2electrocute volume="100"/>
+         <_st2hold volume="100"/>
+         <_st2opendoor volume="100"/>
+         <_st3fall volume="100"/>
+         <_st3hoverboard volume="100"/>
+         <_st3jump volume="100"/>
+         <_st3recept volume="100"/>
+         <_st3laserbig volume="100"/>
+         <_st3lasershort volume="100"/>
+         <_st3magma volume="100"/>
+         <_st3magmafall volume="100"/>
+         <_st3earthquake volume="100"/>
+         <_st4protect volume="100"/>
+         <_st4shoot volume="250"/>
+      </fx>
+   </file>
+</sounds>

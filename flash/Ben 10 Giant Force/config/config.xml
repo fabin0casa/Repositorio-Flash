@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<!--  CONFIGURATION VARIABLES  -->
+	<!--  =======================  -->
+	<term key="BenScaleUp">2.1</term>	<!--  TMP  -->
+	<term key="BenScaledY">420</term>	<!--  TMP  -->
+	<term key="BenCanGrow">false</term>	<!--  TMP  -->
+		
+	<term key="QuickStart">true</term>	<!--  "true": apenas termina la carga va al juego. "false": pasa por men principal e instrucciones  -->
+	<term key="DefaultLang">eng</term>	<!--  Idioma por defecto (si no se pasa por flashVar): eng, esp, por  -->
+	<term key="LangLabel">[LANG]</term>	<!--  Etiqueta que se reemplaza por el cdigo de idioma en las rutas de texto y sonido  -->
+	<term key="TextsPath">texts/texts-[LANG].xml</term>	<!--  Ruta al archivo con textos dinmicos (se puede usar "LangLabel" para armarlo)  -->
+	<term key="SndWeghtPct">10</term>	<!--  Porcentyaje del peso del archivo de sonidos respecto al peso total de la app (temporal, para el preloader)  -->
+	<term key="SoundsPath">sounds.swf</term>	<!--  Ruta al archivo con sonidos (se puede usar "LangLabel" para armarlo)  -->
+	<term key="Width">600</term>	<!--  Ancho de la aplicacin (necesario cuando se trabaja dentro de un contenedor)  -->
+	<term key="Height">400</term>	<!--  Alto de la aplicacin (necesario cuando se trabaja dentro de un contenedor)  -->
+	<term key="DebugMode">-</term>			<!--  Modo Debug? ("true o "false")  -->
+	<term key="UseFlashInspector">false</term>	<!--  Usar FlashInspector para Debug? ("true o "false")  -->
+	<term key="EventOnFocusLost">true</term>	<!--  Hacer algo cuando el cursor sale del stage? ("true o "false")  -->
+	<term key="Scale">1</term>	<!--  Escala del juego  -->
+	<term key="Y">0</term>		<!--  Y del juego  -->
+	<term key="StartingLevel">1</term>	<!--  NivelInicial  -->
+	
+	<!--  FLOW  -->
+	<!--  ====  -->
+	<term key="TransitionAfterPreloader">false</term>	<!--  Pasaje de preloader a main menu con transicin? ("true o "false")  -->
+	
+	<!--  HUD  -->
+	<!--  ===  -->
+	<term key="HUDNumDigitsScore">5</term>		<!--  Cant. de dgitos en el puntaje  -->
+	<term key="HUDNumDigitsTime">2</term>		<!--  Cant. de dgitos en el tiempo  -->
+	<term key="HUDEnergyBarXMax">35</term>		<!--  Pos. X de la barra de energia para 100% [px]  -->
+	<term key="HUDEnergyBarXMin">-106</term>	<!--  Pos. X de la barra de energia para 0% [px]  -->
+	
+	<!--  VOLUMES  -->
+	<!--  =======  -->
+	<term key="MasterVolume">1</term>
+	<term key="VolumeMusicIntro">1</term>
+	<term key="VolumeMusicInGame1">1</term>
+	<term key="VolumeMusicInGame2">.7</term>
+	<term key="VolumeMusicInGame3">.6</term>
+	<term key="VolumeMusicInGame4">.6</term>
+	<term key="VolumeMusicInGame5">1</term>
+		<term key="VolumeMusicInGamefinal">1</term>
+	<term key="VolumeMusicGameWon">1</term>
+	<term key="VolumeMusicGameLost">1</term>
+	<term key="VolumeRollOver">1</term>
+	<term key="VolumeLaserCharge1">.6</term>
+	<term key="VolumePunchCharge1">.6</term>
+	<term key="VolumeTailAttack1">.6</term>
+	<term key="VolumeJeepExplodes1">.6</term>
+	<term key="VolumeJeepHit">.6</term>
+	<term key="VolumeStep1">.21</term>
+	<term key="VolumeAlienHit">.6</term>
+	<term key="VolumeMetalHit">.6</term>
+	<term key="VolumeShipHit">.6</term>
+	<term key="VolumeLaser1">.6</term>
+	<term key="VolumeLaser2">.6</term>
+	<term key="VolumeLaser3">.6</term>
+	<term key="VolumeLaser4">.6</term>
+	<term key="VolumeLaser5">.6</term>
+	<term key="VolumeLaser6">.6</term>
+	<term key="VolumeLaser7">.6</term>
+	<term key="VolumePickUpRock">.6</term>
+	<term key="VolumeThrowRock">.6</term>
+	<term key="VolumeBenHit1">.6</term>
+	<term key="VolumeBenHit2">.6</term>
+	<term key="VolumeBenHit3">.6</term>
+	<term key="VolumeKick">.81</term>
+	<term key="VolumeFence2">.6</term>
+	<term key="VolumeFence3">.6</term>
+	<term key="VolumeWallHit1">.6</term>
+	<term key="VolumeWallHit2">.6</term>
+	<term key="VolumeWallHit3">.6</term>
+	<term key="VolumeWallHit3">.6</term>
+	<term key="VolumeWallHit4">.6</term>
+	<term key="VolumeBackground">10</term>
+	<term key="VolumePowerUpGrabbed">1</term>
+	<term key="VolumeInvincibility">1.2</term>
+	<term key="VolumeBenDies">1.2</term>
+	<term key="VolumePowerupShows">1.2</term>
+	<term key="VolumePowerupHitsGround">1</term>
+	<term key="VolumeVideoIntro">1</term>
+	
+	
+	<!--  GAME  -->
+	<!--  ====  -->
+	<term key="MaxLevels">7</term>							<!--  Cantidad de niveles  -->
+	<term key="SceneryNumberPerLevel">1,1,2,2,3,3</term>	<!--  Numero de escenario para cada nivel  -->
+		<!--  LEVEL 1  -->
+		<!--  =======  -->
+		<term key="Level1EndX">8600</term>	<!--  Largo del nivel 1 (px)  -->
+		<!--  LEVEL 2  -->
+		<!--  =======  -->
+		<term key="Level2EndX">8600</term>	<!--  Largo del nivel 2 (px)  -->
+		<!--  LEVEL 3  -->
+		<!--  =======  -->
+		<term key="Level3EndX">8900</term>	<!--  Largo del nivel 3 (px)  -->
+		<!--  LEVEL 4  -->
+		<!--  =======  -->
+		<term key="Level4EndX">8900</term>	<!--  Largo del nivel 4 (px)  -->
+		<!--  LEVEL 5  -->
+		<!--  =======  -->
+		<term key="Level5EndX">8900</term>	<!--  Largo del nivel 5 (px)  -->
+		<!--  LEVEL 6  -->
+		<!--  =======  -->
+		<term key="Level6EndX">999999</term>	<!--  Largo del nivel 6 (px)  -->
+	
+	<!--  BEN  -->
+	<!--  ===  -->
+	<term key="BenInitX">160</term>					<!--  Posicion X inicial (px)  -->
+	<term key="BenInitY">390</term>					<!--  Posicion Y inicial (px)  -->
+	<term key="SpeedForward">.16</term>				<!--  Velocidad caminando para adelante (px/ms)  -->
+	<term key="SpeedBackwards">.12</term>			<!--  Velocidad caminando para atrs (px/ms)  -->
+	<term key="SuperPunchChargeTime">500</term>		<!--  Tiempo de carga minimo para super golpe (ms)  -->
+	<term key="DefaultAttackStrength">100</term>	<!--  Fuerza de ataque por defecto  -->
+		
+	<!--  ENEMIES  -->
+	<!--  =======  -->
+	<term key="MaxAlienShotsOnScreen">15</term>	<!--  Cant. maxima de disparos de Aliens en pantalla a la vez  -->
+	<term key="MaxShipShotsOnScreen">10</term>	<!--  Cant. maxima de disparos de naves en pantalla a la vez  -->
+	<term key="ShotsLifeTime">2000</term>		<!--  Tiempo de vida de cada disparo (ms)  -->
+	<term key="EnemyDefaultAppearBehindDx">400</term>		<!--  Distancia que tiene que pasar Ben para que aparezca de atras [px]  -->
+	<!--  Para setear en nombre de instancia, por ejemplo: "runDxVV600_fireDxVV400" (nombre+"VV"+valor+"_"+nombre+"VV"+valor+"_"+...  -->
+		<!--  ALIEN  -->
+		<!--  =====  -->
+		<term key="AlienDefaultRunDx">600</term>	<!--  Distancia a Ben a partir de la cual empieza a acercarse (pixels) ["runDx"]  -->
+		<term key="AlienDefaultFireDx">200</term>	<!--  Distancia a Ben a partir de la cual empieza a disparar (pixels) ["fireDx"]  -->
+		<term key="AlienBehindDefaultFireDx">100</term>	<!--  Distancia a Ben a partir de la cual empieza a disparar desde atras (pixels) ["fireDx"]  -->
+		<term key="AlienDefaultFireDxMax">150</term>	<!--  Distancia a Ben a la cual deja de disparar desde atras (pixels) ["fireDx"]  -->
+		<term key="AlienDefaultActiveDx">600</term>	<!--  Distancia a Ben a partir de la cual se activa (pixels). Ms lejos, es como si no existiera ["activeDx"]  -->
+		<term key="AlienDefaultDisappearDx">-1500</term>		<!--  Distancia a Ben a partir de la cual desaparece el cadaver (pixels).  -->
+		<term key="AlienDefaultEscapeDx">50</term>				<!--  Distancia a Ben a partir de la cual se empieza a escapar ["escapeDx"]  -->
+		<term key="AlienDefaultEscapeFactorPercent">0</term>	<!--  Probabilidad de que un enemigo escape ["escapeFactor"]  -->
+		<term key="AlienDefaultSpeedForward">.3</term>			<!--  Velocidad corriendo para adelante (px/ms)  -->
+		<term key="AlienDefaultSpeedBackwards">.25</term>		<!--  Velocidad corriendo para atrs (px/ms)  -->
+		<term key="AlienDefaultSpeedEscape">.25</term>			<!--  Velocidad corriendo para atrs escapando (px/ms)  -->
+		<term key="AlienDefaultShotStrength">2</term>			<!--  Fuerza del disparo por defecto  -->
+		<term key="AlienDefaultShotStrengthLevel1">1</term>	<!--  Fuerza del disparo para Nivel 1  -->
+		<term key="AlienDefaultShotStrengthLevel2">1.5</term>		<!--  Fuerza del disparo para Nivel 2  -->
+		<term key="AlienDefaultShotStrengthLevel3">1.7</term>		<!--  Fuerza del disparo para Nivel 3  -->
+		<term key="AlienDefaultShotStrengthLevel4">2</term>		<!--  Fuerza del disparo para Nivel 4  -->
+		<term key="AlienDefaultShotStrengthLevel5">2</term>		<!--  Fuerza del disparo para Nivel 5  -->
+		<term key="AlienDefaultShotStrengthLevel6">2</term>		<!--  Fuerza del disparo para Nivel 6  -->
+		<term key="AlienDefaultShotSpeed">.7</term>				<!--  Velocidad del disparo  -->
+		<term key="AlienDefaultReloadTimesSequence">500,500,500,1500,1000</term>	<!--  Secuencia de tiempos de recarga (ms)  -->
+		<term key="AlienDefaultFireAngleRad">0</term>			<!--  Angulo de disparo (rad)  -->
+		<term key="AlienDefaultScoreGiven">50</term>			<!--  Puntos que da al matar  -->
+		<!--  JEEP  -->
+		<!--  ====  -->
+		<term key="JeepDefaultRunDx">600</term>		<!--  Distancia a Ben a partir de la cual empieza a acercarse (pixels) ["runDx"]  -->
+		<term key="JeepDefaultFireDx">100</term>	<!--  Distancia a Ben a partir de la cual empieza a disparar (pixels) ["fireDx"]  -->
+		<term key="JeepDefaultActiveDx">700</term>	<!--  Distancia a Ben a partir de la cual se activa (pixels). Ms lejos, es como si no existiera ["activeDx"]  -->
+		<term key="JeepDefaultEscapeDx">50</term>				<!--  Distancia a Ben a partir de la cual se empieza a escapar ["escapeDx"]  -->
+		<term key="JeepDefaultEscapeFactorPercent">100</term>	<!--  Probabilidad de que un enemigo escape ["escapeFactor"]  -->
+		<term key="JeepDefaultSpeedForward">.1</term>			<!--  Velocidad corriendo para adelante (px/ms)  -->
+		<term key="JeepDefaultSpeedBackwards">.25</term>		<!--  Velocidad corriendo para atrs (px/ms)  -->
+		<term key="JeepDefaultSpeedEscape">.25</term>			<!--  Velocidad corriendo para atrs escapando (px/ms)  -->
+		<term key="JeepDefaultShotStrength">10</term>			<!--  Fuerza del disparo  -->
+		<term key="JeepDefaultShotStrengthLevel1">2</term>		<!--  Fuerza del disparo para Nivel 1  -->
+		<term key="JeepDefaultShotStrengthLevel2">2</term>		<!--  Fuerza del disparo para Nivel 2  -->
+		<term key="JeepDefaultShotStrengthLevel3">2.5</term>		<!--  Fuerza del disparo para Nivel 3  -->
+		<term key="JeepDefaultShotStrengthLevel4">2</term>		<!--  Fuerza del disparo para Nivel 4  -->
+		<term key="JeepDefaultShotStrengthLevel5">2</term>		<!--  Fuerza del disparo para Nivel 5  -->
+		<term key="JeepDefaultShotStrengthLevel6">2</term>		<!--  Fuerza del disparo para Nivel 6  -->
+		<term key="JeepDefaultShotSpeed">.7</term>				<!--  Velocidad del disparo  -->
+		<term key="JeepDefaultReloadTimesSequence">600,1000,700,700,1000</term>	<!--  Secuencia de tiempos de recarga (ms)  -->
+		<term key="JeepDefaultFireAngleRad">0.8</term>			<!--  Angulo de disparo (rad)  -->
+		<term key="JeepDefaultScoreGiven">100</term>			<!-- Puntos que da al matar  -->
+		<!--  SHIP  -->
+		<!--  =====  -->
+		<term key="ShipDefaultRunDx">450</term>			<!--  Distancia a Ben a partir de la cual empieza a acercarse (pixels) ["runDx"]  -->
+		<term key="ShipDefaultFireDx">200</term>		<!--  Distancia a Ben a partir de la cual empieza a disparar (pixels) ["fireDx"]  -->
+		<term key="ShipDefaultActiveDx">700</term>		<!--  Distancia a Ben a partir de la cual se activa (pixels). Ms lejos, es como si no existiera ["activeDx"]  -->
+		<term key="ShipDefaultEscapeDx">50</term>		<!--  Distancia a Ben a partir de la cual se empieza a escapar ["escapeDx"]  -->
+		<term key="ShipDefaultSpeedForward">.2</term>	<!--  Velocidad volando para adelante acercandose a Ben (px/ms)  -->
+		<term key="ShipDefaultSpeedEscape">.25</term>	<!--  Velocidad volando para adelante uyna vez pasado Ben (px/ms)  -->
+		<term key="ShipDefaultShotStrength">10</term>	<!--  Fuerza del disparo  -->
+		<term key="ShipDefaultShotStrengthLevel1">2</term>		<!--  Fuerza del disparo para Nivel 1  -->
+		<term key="ShipDefaultShotStrengthLevel2">2</term>		<!--  Fuerza del disparo para Nivel 2  -->
+		<term key="ShipDefaultShotStrengthLevel3">2</term>		<!--  Fuerza del disparo para Nivel 3  -->
+		<term key="ShipDefaultShotStrengthLevel4">2</term>		<!--  Fuerza del disparo para Nivel 4  -->
+		<term key="ShipDefaultShotStrengthLevel5">2</term>		<!--  Fuerza del disparo para Nivel 5  -->
+		<term key="ShipDefaultShotStrengthLevel6">2</term>		<!--  Fuerza del disparo para Nivel 6  -->
+		<term key="ShipDefaultShotSpeed">.7</term>		<!--  Velocidad del disparo  -->
+		<term key="ShipDefaultReloadTimesSequence">600,1000,700,700,1000</term>	<!--  Secuencia de tiempos de recarga (ms)  -->
+		<term key="ShipDefaultFireAngleRad">2.3</term>	<!--  Angulo de disparo (rad)  -->
+		<term key="ShipDefaultHitSpeedX">.7</term>		<!--  Velocidad horizontal cuando es golpeada (px/ms)  -->
+		<term key="ShipDefaultHitSpeedY">-.9</term>		<!--  Velocidad vertical inicial cuando es golpeada (px/ms)  -->
+		<term key="ShipDefaultGravity">.004</term>		<!--  Gravedad para la caida cuando es golpeada y vuela (px/ms^2) -->
+		<term key="ShipDefaultUpGravity">.005</term>	<!--  "Gravedad para arriba" cuando, volando, baja y sube. Se logra movimiento parabolico. (px/ms^2)  -->
+		<term key="ShipDefaultMaxY">75</term>			<!--  Altura hasta la que puede descender (px)  -->
+		<term key="ShipDefaultFloorY">330</term>		<!--  Altura hasta la que cae y toca el suelo (px)  -->
+		<term key="ShipDefaultBurnSpotY">360</term>		<!--  Altura hasta la que cae y toca el suelo (px)  -->
+		<term key="ShipDefaultScoreGiven">200</term>	<!--  Puntos que da al matar  -->
+		<!--  WALL 1  -->
+		<!--  ======  -->
+		<term key="Wall1DefaultActiveDx">700</term>		<!--  Distancia a Ben a partir de la cual empieza a acercarse (pixels) ["runDx"]  -->
+		<term key="Wall1DefaultEnergyState3">200</term>	<!--  Energia del estado 3 de la pared (toda sana)  	-->
+		<term key="Wall1DefaultEnergyState2">200</term>	<!--  Energia del estado 2 de la pared (un toque rota)  -->
+		<term key="Wall1DefaultEnergyState1">200</term>	<!--  Energia del estado 1 de la pared (casi toda rota)	-->
+		<term key="Wall1DefaultScoreGiven">500</term>	<!--  Puntos que da al matar  -->
+		<!--  WALL 2  -->
+		<!--  ======  -->
+		<term key="Wall2DefaultActiveDx">700</term>		<!--  Distancia a Ben a partir de la cual empieza a acercarse (pixels) ["runDx"]  -->
+		<term key="Wall2DefaultEnergyState3">200</term>	<!--  Energia del estado 3 de la pared (toda sana)  	-->
+		<term key="Wall2DefaultEnergyState2">200</term>	<!--  Energia del estado 2 de la pared (un toque rota)  -->
+		<term key="Wall2DefaultEnergyState1">200</term>	<!--  Energia del estado 1 de la pared (casi toda rota)	-->
+		<term key="Wall2DefaultScoreGiven">1000</term>	<!--  Puntos que da al matar  -->
+		<!--  WALL 3 (FINAL BOSS)  -->
+		<!--  ===================  -->
+		<term key="Wall3DefaultScrollStopDx">390</term>		<!--  Distancia a Ben a partir de la cual se frena el scroll (px)  -->
+		<term key="Wall3DefaultActiveDx">600</term>			<!--  Distancia a Ben a partir de la cual se activa la pared (px)  -->
+		<term key="Wall3DefaultMaxEnergy">2400</term>		<!--  Energia total de la pared	-->
+		<term key="Wall3DefaultEnergyToBreak">1000</term>	<!--  Energia a	la que se rompe	-->
+		<term key="Wall3DefaultReloadTimesSequence">3000,300,300,6000,5000</term>	<!--  Secuencia de tiempos de recarga (ms)	-->
+		<term key="Wall3DefaultShotStrength">7</term>	<!--  Fuerza del disparo	-->
+		<term key="Wall3DefaultShotSpeed">.6</term>		<!--  Velocidad del disparo	-->
+		<term key="Wall3DefaultDoorOpenTimesSequence">5100,7000</term>	<!--  Secuencia de tiempos de apertura de puerta (ms)	-->
+		<term key="Wall3DefaultAliensTimesSequence">10000,12000,10000,5000,1000,10000</term>	<!--  Secuencia de tiempos de aparicion de aliens (ms)	-->
+		<term key="Wall3DefaultShipsTimesSequence">12000,15000</term>	<!--  Secuencia de tiempos de aparicion de ships (ms)	-->
+		<term key="Wall3FirstShipTime">5000</term>	<!--  Tiempo de aparicion de la primera nave (ms)	-->
+		<term key="Wall3FirstAlienTime">10000</term>	<!--  Tiempo de aparicion del primer alien (ms)	-->
+		<term key="Wall3FirstReloadTime">1000</term>	<!--  Tiempo de recarga del primer disparo (ms)	-->
+		<term key="Wall3DefaultMinYHit">210</term>			<!--  Pos. Y del golpe a partir del cual hace danio (px)	-->
+		<term key="Wall3DefaultAlienXOffset">-700</term>	<!--  Offset X para la aparicion de aliens (px)	-->
+		<term key="Wall3DefaultAlienFloorY">377</term>		<!--  Posicion Y para la aparicion de aliens en el suelo (px)	-->
+		<term key="Wall3DefaultAlienPlatformY">239</term>	<!--  Posicion Y para la aparicion de aliens en plataformas (px)	-->
+		<term key="Wall3DefaultShipXOffset">200</term>		<!--  Offset X para la aparicion de ships (px)	-->
+		<term key="Wall3DefaultShipY">39</term>				<!--  Posicion Y para la aparicion de ships (px)	-->
+		<term key="Wall3DefaultShipWithEnergyProbability">.2</term>	<!--  Probabilidad de que la nave apareida tenga powerup de energia (0..1)	-->
+		<term key="Wall3DefaultShipWithGwenProbability">.05</term>	<!--  Probabilidad de que la nave apareida tenga powerup de gwen (0..1)	-->
+		<term key="Wall3DefaultScoreGiven">3000</term>	<!--  Puntos que da al matar  -->
+			
+			
+	<!--  WEAPONS  -->
+	<!--  =======  -->
+	<!--  Para setear en nombre de instancia, por ejemplo: "runDxVV600_fireDxVV400" (nombre+"VV"+valor+"_"+nombre+"VV"+valor+"_"+...  -->
+		<!--  WEAPON ROCK  -->
+		<!--  ===========  -->
+		<term key="WeaponRockPickupDx">-98</term>				<!--  Distancia de Ben a la roca para agarrarla (px)  -->
+		<term key="WeaponRockDefaultStrength">300</term>		<!--  Fuerza del golpe de la roca  -->
+		<term key="WeaponRockMaxY">340</term>					<!--  Pos. Y de la roca al chocar el suelo (px) -->
+		<term key="WeaponRockHighDefaultSpeed">1.5</term>		<!--  Velocidad de la roca volando alto (px/ms)  -->
+		<term key="WeaponRockLowDefaultSpeed">1.5</term>		<!--  Velocidad de la roca volando bajo (px/ms)  -->
+		<term key="WeaponRockHighDefaultAngleRad">-.3</term>	<!--  Angulo de la roca volando alto (rad)  -->
+		<term key="WeaponRockLowDefaultAngleRad">-.3</term>		<!--  Angulo de la roca volando bajo (rad)  -->
+		<term key="WeaponRockHighDefaultGravity">.01</term>		<!--  Gravedad de la roca volando alto (px/ms^2)  -->
+		<term key="WeaponRockLowDefaultGravity">.009</term>		<!--  Gravedad de la roca volando bajo (px/ms^2)  -->
+		<term key="WeaponRockTimeToRespawn">4000</term>			<!--  Tiempo de reaparicion de piedra (ms)  -->
+		<!--  WEAPON JEEP  -->
+		<!--  ===========  -->
+		<term key="WeaponJeepPickupDx">-98</term>				<!--  Distancia de Ben al jeep para agarrarlo (px)  -->
+		<term key="WeaponJeepDefaultStrength">400</term>		<!--  Fuerza del golpe del jeep  -->
+		<term key="WeaponJeepMaxY">340</term>					<!--  Pos. Y del jeep al chocar el suelo (px) -->
+		<term key="WeaponJeepHighDefaultSpeed">1.2</term>		<!--  Velocidad del jeep volando alto (px/ms)  -->
+		<term key="WeaponJeepLowDefaultSpeed">1.2</term>		<!--  Velocidad del jeep volando bajo (px/ms)  -->
+		<term key="WeaponJeepHighDefaultAngleRad">-.3</term>	<!--  Angulo del jeep volando alto (rad)  -->
+		<term key="WeaponJeepLowDefaultAngleRad">-.3</term>		<!--  Angulo del jeep volando bajo (rad)  -->
+		<term key="WeaponJeepHighDefaultGravity">.01</term>		<!--  Gravedad del jeep volando alto (px/ms^2)  -->
+		<term key="WeaponJeepLowDefaultGravity">.009</term>		<!--  Gravedad del jeep volando bajo (px/ms^2)  -->
+			
+	<!--  POWERUPS  -->
+	<!--  ========  -->
+	<term key="PowerupsGravity">.004</term>		<!--  Gravedad de los powerups al caer (px/ms^2)  -->
+	<term key="PowerupsMaxY">348</term>			<!--  Pos. Y del powerup al chocar el suelo (px) -->
+	<term key="PowerupsInitSpeedY">-.6</term>	<!--  Velocidad en Y del powerup al aparecer (px/ms) -->
+	<term key="PowerupsInitSpeedX">.2</term>	<!--  Velocidad en X del powerup al aparecer (px/ms) -->
+		<!--  POWERUP ENERGY  -->
+		<!--  ==============  -->
+		<term key="PowerupEnergyValue">35</term>	<!--  Energia que da el powerup  -->
+		<!--  POWERUP GWEN  -->
+		<!--  ============  -->
+		<term key="PowerupGwenTime">9000</term>		<!--  Tiempo que dura el powerup (ms)  -->
+		<term key="GwenYPos">390</term>				<!--  Posicion Y de Gwen (px)  -->
+		<term key="GwenInitXOffset">200</term>		<!--  Posicion X relativa de Gwen al aparecer (px)  -->
+		<term key="GwenXOffset">-10</term>			<!--  Posicion X relativa de Gwen al seguir a Ben (px)  -->
+		<term key="GwenRunningSpeed">.3</term>		<!--  Velocidad de Gwen corriendo (px/ms)  -->
+		<term key="GwenWalkingSpeed">.155</term>	<!--  Velocidad de Gwen caminando (px/ms)  -->
+		<term key="GwenRunDx">20</term>				<!--  Distancia de Ben a la que deja de correr y empieza a caminar (px)  -->
+		
+			
+			
+	<!--  CAMERA & SCROLL  -->
+	<!--  ===============  -->
+	<term key="BenMinScreenX">50</term>					<!--  Pos. Mnima de Ben en X (relativa a la pantalla de juego)  -->
+	<term key="BenMaxScreenX">160</term>				<!--  Pos. Mxima de Ben en X (relativa a la pantalla de juego)  -->
+	<term key="Background1DepthHoizontal">.01</term>	<!--  Profundidad Para Scroll Horizontal de layer Background1 -->
+	<term key="Background1DepthVertical">.01</term>	<!--  Profundidad Para Scroll Vertical de layer Background1  -->
+	<term key="Background2DepthHoizontal">.2</term>	<!--  Profundidad Para Scroll Horizontal de layer Background2 -->
+	<term key="Background2DepthVertical">.2</term>	<!--  Profundidad Para Scroll Vertical de layer Background2  -->
+	<term key="Foreground1DepthHoizontal">4.5</term>		<!--  Profundidad Para Scroll Horizontal de layer Foreground1 -->
+	<term key="Foreground1DepthVertical">4.5</term>		<!--  Profundidad Para Scroll Vertical de layer Foreground1  -->
+			
+	<!--  GAME SCENERY (BACKGROUND, FOREGROUND...)  -->
+	<!--  ========================================  -->
+	<term key="PlatformLimitY">300</term>	<!--  Posicion Y limite (por encima, considero en plataforma) [px]  -->
+	<term key="PitsExtraWidthStart">200</term>	<!--  Ancho extra al comienzo de los pozos (porcion de plataforma que enemigos no pueden tocar) [px]  -->
+	<term key="PitsExtraWidthEnd">100</term>	<!--  Ancho extra al final de los pozos (porcion de plataforma que enemigos no pueden tocar) [px]  -->
+	<term key="LayerConfigLevel1Background1">Background1</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel1Background2">Background2</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel1Foreground1">Foreground1</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel1Decoration">GameScenery</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel1Platforms">GameScenery</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel2Background1">Background1</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel2Background2">Background2</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel2Foreground1">Foreground1</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel2Decoration">GameScenery</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel2Platforms">GameScenery</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel3Background1">Background1</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel3Background2">Background2</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel3Foreground1">Foreground1</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel3Decoration">GameScenery</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel3Platforms">GameScenery</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel4Background1">Background1</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel4Background2">Background2</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel4Foreground1">Foreground1</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel4Decoration">GameScenery</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel4Platforms">GameScenery</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel5Background1">Background1</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel5Background2">Background2</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel5Foreground1">Foreground1</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel5Decoration">GameScenery</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel5Platforms">GameScenery</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel6Background1">Background1</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel6Background2">Background2</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel6Foreground1">Foreground1</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel6Decoration">GameScenery</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	<term key="LayerConfigLevel6Platforms">GameScenery</term>		<!--  Configuracion de capa de fondo: [layerName]  -->
+	
+	<!--  MUSICS  -->
+	<!--  ======  -->
+		<!--  LEVEL 1  -->
+		<!--  =======  -->
+		<term key="MusicIdsLevel1">MusicInGame1,MusicInGame2</term>	<!--  Lista ordenada de temas para el nivel  -->
+		<term key="MusicXsLevel1">0,5970.35</term>	<!--  Posiciones a las que cambia la musica  -->
+		<term key="MusicFadesLevel1">4,4,.5</term>	<!--  Tiempo de fade entre musicas [segundos]  -->
+		<!--  LEVEL 2  -->
+		<!--  =======  -->
+		<term key="MusicIdsLevel2">MusicInGame1,MusicInGame2</term>	<!--  Lista ordenada de temas para el nivel  -->
+		<term key="MusicXsLevel2">0,6433.6</term>	<!--  Posiciones a las que cambia la musica  -->
+		<term key="MusicFadesLevel2">4,4,.5</term>	<!--  Tiempo de fade entre musicas [segundos]  -->
+		<!--  LEVEL 3  -->
+		<!--  =======  -->
+		<term key="MusicIdsLevel3">MusicInGame2,MusicInGame3</term>	<!--  Lista ordenada de temas para el nivel  -->
+		<term key="MusicXsLevel3">0,6423.8</term>	<!--  Posiciones a las que cambia la musica  -->
+		<term key="MusicFadesLevel3">4,4,.5</term>	<!--  Tiempo de fade entre musicas [segundos]  -->
+		<!--  LEVEL 4  -->
+		<!--  =======  -->
+		<term key="MusicIdsLevel4">MusicInGame2,MusicInGame3</term>	<!--  Lista ordenada de temas para el nivel  -->
+		<term key="MusicXsLevel4">0,4268.25</term>	<!--  Posiciones a las que cambia la musica  -->
+		<term key="MusicFadesLevel4">4,4,.5</term>	<!--  Tiempo de fade entre musicas [segundos]  -->
+		<!--  LEVEL 5  -->
+		<!--  =======  -->
+		<term key="MusicIdsLevel5">MusicInGame4,MusicInGame5</term>	<!--  Lista ordenada de temas para el nivel  -->
+		<term key="MusicXsLevel5">0,5600.8</term>	<!--  Posiciones a las que cambia la musica  -->
+		<term key="MusicFadesLevel5">0.40,0.40</term>	<!--  Tiempo de fade entre musicas [segundos]  -->
+		<!--  LEVEL 6  -->
+		<!--  =======  -->
+		<term key="MusicIdsLevel6">MusicInGame4,MusicInGame5,MusicInGame1,MusicFinal</term>	<!--  Lista ordenada de temas para el nivel  -->
+		<term key="MusicXsLevel6">0,5423.8,8500,12000</term>	<!--  Posiciones a las que cambia la musica  -->
+		<term key="MusicFadesLevel6">4,4,10,.5</term>	<!--  Tiempo de fade entre musicas [segundos]  -->
+			
+			
+	<!--  FX  -->
+	<!--  ==  -->
+		<!--  GOLPES  -->
+		<!--  ======  -->
+		<term key="FxHitLength">2</term>	<!--  Cant. de efectos de golpe para el pool  -->
+		<!--  MARCAS EN EL SUELO  -->
+		<!--  ==================  -->
+		<term key="FxBurnLength">4</term>	<!--  Cant. de efectos de suelo quemado para el pool  -->
+		<!--  SHAKE  -->
+		<!--  =====  -->
+		<term key="ShakeDefaultTimeMs">300</term>	<!--  Tiempo del "shake" por defecto (ej, al explotar un jeep). [ms]  -->
+		<term key="ShakeDefaultStrengthX">6</term>	<!--  Fuerza del shake en X por defecto [px]  -->
+		<term key="ShakeDefaultStrengthY">6</term>	<!--  Fuerza del shake en Y por defecto [px]  -->
+		<!--  JEEP TIRE MARKS  -->
+		<!--  ===============  -->
+			<!--  SCENERY 1  -->
+			<!--  =========  -->
+		<term key="JeepDefaultTireMarksWidthScenery1">4</term>			<!--  Huellas de Jeep: ancho [px]  -->
+		<term key="JeepDefaultTireMarksColorScenery1">0x9C5200</term>	<!--  Huellas de Jeep: color  -->
+		<term key="JeepDefaultTireMarksAlphaScenery1">.4</term>			<!--  Huellas de Jeep: alpha  -->
+			<!--  SCENERY 2  -->
+			<!--  =========  -->
+		<term key="JeepDefaultTireMarksWidthScenery2">4</term>			<!--  Huellas de Jeep: ancho [px]  -->
+		<term key="JeepDefaultTireMarksColorScenery2">0xE36500</term>	<!--  Huellas de Jeep: color  -->
+		<term key="JeepDefaultTireMarksAlphaScenery2">.4</term>			<!--  Huellas de Jeep: alpha  -->
+			<!--  SCENERY 3  -->
+			<!--  =========  -->
+		<term key="JeepDefaultTireMarksWidthScenery3">4</term>			<!--  Huellas de Jeep: ancho [px]  -->
+		<term key="JeepDefaultTireMarksColorScenery3">0x634471</term>	<!--  Huellas de Jeep: color  -->
+		<term key="JeepDefaultTireMarksAlphaScenery3">.4</term>			<!--  Huellas de Jeep: alpha  -->
+		<!--  ENERGY POWERUP - BEN TINT  -->
+		<!--  =========================  -->
+		<term key="EnergyGrabbedTintColor">0x00FF33</term>	<!--  Color  -->
+		<term key="EnergyGrabbedTintAmount">1</term>		<!--  Amount  -->
+		<term key="EnergyGrabbedTintBrightness">1.5</term>	<!--  Brightness  -->
+		<term key="EnergyGrabbedTintTime">.5</term>			<!--  Time (seconds)  -->
+		<!--  INVINCIBLE POWERUP - BEN GLOW  -->
+		<!--  =============================  -->
+		<term key="InvincibleGlowUpTime">.5</term>			<!--  Time 1 (seconds)  -->
+		<term key="InvincibleGlowUpColor">0xff3399</term>	<!--  Color 1  -->
+		<term key="InvincibleGlowUpAlpha">1.5</term>		<!--  Alpha 1  -->
+		<term key="InvincibleGlowUpBlurX">30</term>			<!--  BlurX 1  -->
+		<term key="InvincibleGlowUpBlurY">30</term>			<!--  BlurY 1  -->
+		<term key="InvincibleGlowUpStrength">.9</term>		<!--  Strength 1  -->
+		<term key="InvincibleGlowDownTime">.7</term>		<!--  Time 2 (seconds)  -->
+		<term key="InvincibleGlowDownColor">0xff3399</term>	<!--  Color 2  -->
+		<term key="InvincibleGlowDownAlpha">1</term>		<!--  Alpha 2  -->
+		<term key="InvincibleGlowDownBlurX">30</term>		<!--  BlurX 2  -->
+		<term key="InvincibleGlowDownBlurY">30</term>		<!--  BlurY 2  -->
+		<term key="InvincibleGlowDownStrength">1</term>		<!--  Strength 2  -->
+		<!--  DUST (BEN PUNCH)  -->
+		<!--  ================  -->
+		<term key="DustFxXOffset">189</term>	<!--  Offset X respecto a Ben (px)  -->
+		<term key="DustFxY">222</term>			<!--  Posicion Y (px)  -->
+		
+	<!--  Y POSITIONS  -->
+	<!--  ===========  -->
+	<term key="ShipYMin">50</term>				<!--  Posicion Y Minima (px)  -->
+	<term key="ShipYMax">60</term>				<!--  Posicion Y Maxima (px)  -->
+	<term key="AlienPlatformYMin">235</term>	<!--  Posicion Y Minima (px)  -->
+	<term key="AlienPlatformYMax">255</term>	<!--  Posicion Y Maxima (px)  -->
+	<term key="AlienFloorYMin">365</term>		<!--  Posicion Y Minima (px)  -->
+	<term key="AlienFloorYMax">375</term>		<!--  Posicion Y Maxima (px)  -->
+	<term key="JeepYMin">365</term>				<!--  Posicion Y Minima (px)  -->
+	<term key="JeepYMax">370</term>				<!--  Posicion Y Maxima (px)  -->
+	<term key="Wall1YMin">400</term>			<!--  Posicion Y Minima (px)  -->
+	<term key="Wall1YMax">400</term>			<!--  Posicion Y Maxima (px)  -->
+	<term key="Wall2YMin">405</term>			<!--  Posicion Y Minima (px)  -->
+	<term key="Wall2YMax">405</term>			<!--  Posicion Y Maxima (px)  -->
+	<term key="Wall3YMin">360</term>			<!--  Posicion Y Minima (px)  -->
+	<term key="Wall3YMax">360</term>			<!--  Posicion Y Maxima (px)  -->
+	<term key="RockYMin">384</term>				<!--  Posicion Y Minima (px)  -->
+	<term key="RockYMax">384</term>				<!--  Posicion Y Maxima (px)  -->
+	
+	<!--  COLOR FX BEN  -->
+	<!--  ============  -->
+		<!--  SCENERY 1  -->
+		<!--  =========  -->
+			<!--  COLOR ADJUST  -->
+			<!--  ============  -->
+			<term key="Scenery1ColorAdjustDo">false</term>			<!--  Hacer ajuste de color? [true/false] -->
+			<term key="Scenery1ColorAdjustColor">0x663366</term>	<!--  Color -->
+			<term key="Scenery1ColorAdjustAmount">0.3</term>		<!--  Amount -->
+			<term key="Scenery1ColorAdjustContrast">1.1</term>		<!--  Contrast -->
+			<term key="Scenery1ColorAdjustBrightness">1.1</term>	<!--  Brightness -->
+			<term key="Scenery1ColorAdjustSaturation">1.1</term>	<!--  Saturation -->
+			<term key="Scenery1ColorAdjustHue">60</term>			<!--  Hue -->
+			<!--  BEVEL  -->
+			<!--  =====  -->
+			<term key="Scenery1BevelDo">false</term>					<!--  Hacer bevel? [true/false] -->
+			<term key="Scenery1BevelBlurX">10</term>					<!--  BlurX -->
+			<term key="Scenery1BevelBlurY">10</term>					<!--  BlurY -->
+			<term key="Scenery1BevelStrength">1</term>					<!--  Strength -->
+			<term key="Scenery1BevelAngle">45</term>					<!--  Angle -->
+			<term key="Scenery1BevelDistance">10</term>				<!--  Distance -->
+			<term key="Scenery1BevelHighlightAlpha">.9</term>			<!--  HighlightAlpha -->
+			<term key="Scenery1BevelHighlightColor">0x663366</term>	<!--  HighlightColor -->
+			<term key="Scenery1BevelShadowAlpha">.9</term>				<!--  ShadowAlpha -->
+		<!--  SCENERY 2  -->
+		<!--  =========  -->
+			<!--  COLOR ADJUST  -->
+			<!--  ============  -->
+			<term key="Scenery2ColorAdjustDo">true</term>			<!--  Hacer ajuste de color? [true/false] -->
+			<term key="Scenery2ColorAdjustColor">0x663366</term>	<!--  Color -->
+			<term key="Scenery2ColorAdjustAmount">0.3</term>		<!--  Amount -->
+			<term key="Scenery2ColorAdjustContrast">1.1</term>		<!--  Contrast -->
+			<term key="Scenery2ColorAdjustBrightness">1.1</term>	<!--  Brightness -->
+			<term key="Scenery2ColorAdjustSaturation">1.1</term>	<!--  Saturation -->
+			<term key="Scenery2ColorAdjustHue">60</term>			<!--  Hue -->
+			<!--  BEVEL  -->
+			<!--  =====  -->
+			<term key="Scenery2BevelDo">false</term>					<!--  Hacer bevel? [true/false] -->
+			<term key="Scenery2BevelBlurX">10</term>					<!--  BlurX -->
+			<term key="Scenery2BevelBlurY">10</term>					<!--  BlurY -->
+			<term key="Scenery2BevelStrength">1</term>					<!--  Strength -->
+			<term key="Scenery2BevelAngle">45</term>					<!--  Angle -->
+			<term key="Scenery2BevelDistance">10</term>				<!--  Distance -->
+			<term key="Scenery2BevelHighlightAlpha">.9</term>			<!--  HighlightAlpha -->
+			<term key="Scenery2BevelHighlightColor">0x663366</term>	<!--  HighlightColor -->
+			<term key="Scenery2BevelShadowAlpha">.9</term>				<!--  ShadowAlpha -->
+		<!--  SCENERY 3  -->
+		<!--  =========  -->
+			<!--  COLOR ADJUST  -->
+			<!--  ============  -->
+			<term key="Scenery3ColorAdjustDo">false</term>			<!--  Hacer ajuste de color? [true/false] -->
+			<term key="Scenery3ColorAdjustColor">0x663366</term>	<!--  Color -->
+			<term key="Scenery3ColorAdjustAmount">0.3</term>		<!--  Amount -->
+			<term key="Scenery3ColorAdjustContrast">1.1</term>		<!--  Contrast -->
+			<term key="Scenery3ColorAdjustBrightness">1.1</term>	<!--  Brightness -->
+			<term key="Scenery3ColorAdjustSaturation">1.1</term>	<!--  Saturation -->
+			<term key="Scenery3ColorAdjustHue">60</term>			<!--  Hue -->
+			<!--  BEVEL  -->
+			<!--  =====  -->
+			<term key="Scenery3BevelDo">false</term>					<!--  Hacer bevel? [true/false] -->
+			<term key="Scenery3BevelBlurX">10</term>					<!--  BlurX -->
+			<term key="Scenery3BevelBlurY">10</term>					<!--  BlurY -->
+			<term key="Scenery3BevelStrength">1</term>					<!--  Strength -->
+			<term key="Scenery3BevelAngle">45</term>					<!--  Angle -->
+			<term key="Scenery3BevelDistance">10</term>				<!--  Distance -->
+			<term key="Scenery3BevelHighlightAlpha">.9</term>			<!--  HighlightAlpha -->
+			<term key="Scenery3BevelHighlightColor">0x663366</term>	<!--  HighlightColor -->
+			<term key="Scenery3BevelShadowAlpha">.9</term>				<!--  ShadowAlpha -->
+				
+	
+</config>

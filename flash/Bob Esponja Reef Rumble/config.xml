@@ -1,0 +1,7 @@
+<config>
+	<userPath>http://www.nick.com/games/common/user_name/getUserInfo.jhtml</userPath>
+	<scorePath>http://www.nick.com/common/score/Scoreboard.jhtml</scorePath>
+	<!--<gameID>fop_bots</gameID>-->
+	<!-- TEMP! -->
+	<gameID>sb_rumble</gameID>
+</config>

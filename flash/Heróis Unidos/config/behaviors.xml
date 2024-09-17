@@ -1,0 +1,3793 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+	
+	<behavior id="por-defecto" startingActionId="por-defecto">
+		
+		<action id="por-defecto" type="Wait">
+			<parm min="9999999" max="9999999" integer="true" />
+			
+			<onCompleteOk id="por-defecto" />
+		</action>
+		
+	</behavior>
+	
+	<behavior id="jefe-desplaza" startingActionId="por-defecto">
+		
+		<action id="por-defecto" type="Bridge">
+			<parm value="ubicarse"/>
+		</action>
+		
+		<action id="ubicarse" type="GoToScreenPos">
+			<parm min="200" max="650" integer="true" />
+			<parm min="300" max="400" integer="true" />
+			
+			<onCompleteOk id="esperar" />
+		</action>
+		
+		<action id="esperar" type="Wait">
+			<parm min="1000" max="2000" integer="true" />
+			
+			<onCompleteOk id="ubicarse" />
+		</action>
+		
+		<events>
+			<onEnemyLeaveState state="Fell" id="ubicarse" />
+			<onEnemyLeaveState state="Hit" id="ubicarse" />
+		</events>
+		
+	</behavior>
+	
+	
+	
+	
+	
+	
+	
+	<behavior id="jefe" startingActionId="por-defecto">
+		
+		
+		<action id="por-defecto" type="Bridge">
+			<parm value="wait-to-scroll-end"/>
+		</action>
+		
+		
+		<action id="wait-to-scroll-end" type="WaitToScrollEnd">
+			<parm value="true"/>
+			<onCompleteOk id="enter" />
+		</action>
+		
+		
+		<action id="enter" type="BossEnter">
+			<parm value="-100"/>
+			<parm value="330"/>
+			<parm value="210"/>
+			<onCompleteOk id="wait-and-attack" />
+		</action>
+		
+		
+		<action id="wait-and-attack" type="Wait">
+			<parm min="10000" max="20000" integer="true" />
+			
+			<onCompleteOk id="first-attack" />
+			<onWithinRectRange back="30" front="345" up="60" down="60" id="first-attack" />
+		</action>
+		
+		
+		<action id="first-attack" type="Attack">
+			<parm value="1" />
+			<onCompleteOk id="ubicarse" />
+			<onCompleteNo id="ubicarse" />
+		</action>
+		
+		
+		<action id="ubicarse" type="GoToScreenPos">
+			<parm min="300" max="650" integer="true" />
+			<parm min="300" max="400" integer="true" />
+			
+			<onCompleteOk id="esperar" />
+		</action>
+		
+		
+		<action id="esperar" type="Wait">
+			<parm min="1000" max="2000" integer="true" />
+			
+			<onCompleteOk id="puente" />
+		</action>
+		
+		
+		<action id="follow_1" type="FollowTPRelative">
+			<parm>
+				<option min="-270" max="-160" integer="true" prob=".5" />
+                <option min="160" max="270" integer="true" prob=".5" />
+			</parm>
+			
+			<parm>
+				<option min="-100" max="0" integer="true" prob=".5" />
+				<option min="0" max="200" integer="true" prob=".5" />
+			</parm>
+			
+			<onWithinRectRange back="130" front="150" up="130" down="130" id="puente-ataque" />
+			<onCompleteOk id="puente-fire" />
+			<onIncomplete id="puente" min="2500" max="4000"/>
+			
+		</action>
+		
+		
+		<action id="puente-ataque" type="Bridge">
+			<parm>
+				<option value="puente-fire" prob=".7" />
+				<option value="agresivo" prob=".3" />
+			</parm>
+		</action>				
+		
+		
+		<action id="puente" type="Bridge">
+			<parm>
+				<option value="agresivo" prob=".3" />
+				<option value="puente-fire" prob=".4" />
+				<option value="puente-movimiento" prob=".3" />
+			</parm>
+		</action>
+		
+		
+		<action id="agresivo" type="FollowTPRelative">
+			<parm value="0" />
+            <parm value="0" />
+            
+			<onWithinRectRange back="160" front="160" up="30" down="30" id="atacar-golpe" />
+			<onIncomplete id="puente-movimiento" min="3000" max="4000"/>
+		</action>
+		
+		
+		<action id="alejarse-a-borde-mas-cercano" type="CheckScreenPosXGreaterThan">
+			<parm value="425" />
+			<onCompleteOk id="alejarse-derecha" />
+			<onCompleteNo id="alejarse-izquierda" />
+		</action>
+		
+		
+		<action id="alejarse-derecha" type="GoToScreenPos">
+			<parm value="800" />
+			<parm value="350" />
+			
+			<onIncomplete id="disparar-seguir" min="2000" max="4000"/>
+			<onCompleteOk id="disparar" />
+		</action>
+		
+		
+		<action id="alejarse-izquierda" type="GoToScreenPos">
+			<parm value="100" />
+			<parm value="350" />
+			
+			<onIncomplete id="disparar-seguir" min="3000" max="4500"/>
+			<onCompleteOk id="disparar" />
+		</action>
+		
+		
+		<action id="atacar-golpe" type="Attack">
+			<parm value="1" />
+			<onCompleteOk id="puente-movimiento" />
+			<onCompleteNo id="ubicarse" />
+		</action>
+		
+		
+		<action id="disparar" type="BossFire">
+			<parm  min="1" max="3" integer="true" />
+			<onCompleteOk id="puente-movimiento" />
+			<onCompleteNo id="ubicarse" />
+		</action>
+		
+		
+		<action id="disparar-seguir" type="BossFire">
+			<parm value="special_follow" />
+			<onCompleteOk id="puente-movimiento" />
+			<onCompleteNo id="ubicarse" />
+		</action>
+		
+		
+		<action id="disparar-encerrar" type="BossFire">
+			<parm value="special_circle" />
+			<onCompleteOk id="puente-movimiento" />
+			<onCompleteNo id="ubicarse" />
+		</action>
+		
+		
+		<action id="summon-1" type="SummonEnemies">
+			<!-- Cantidad - IdEnemigo - Behavior - FirstAction - TimeLimitMs - Agresividad -->
+			<parm value="1" />
+			<parm value="1" />
+			<parm value="agresivo1" />
+			<parm value="por-defecto1" />
+			<parm value="-1" />
+			<parm value="1" />
+			<onCompleteOk id="puente-movimiento" />
+		</action>
+		
+		
+		<action id="summon-2" type="SummonEnemies">
+			<!-- Cantidad - IdEnemigo - Behavior - FirstAction - TimeLimitMs - Agresividad -->
+			<parm value="1" />
+			<parm value="2" />
+			<parm value="charge-1" />
+			<parm value="por-defecto1" />
+			<parm value="-1" />
+			<parm value="1" />
+			<onCompleteOk id="puente-movimiento" />
+		</action>
+		
+		
+		<action id="summon-3" type="SummonEnemies">
+			<!-- Cantidad - IdEnemigo - Behavior - FirstAction - TimeLimitMs - Agresividad -->
+			<parm value="1" />
+			<parm value="3" />
+			<parm value="shoot-1" />
+			<parm value="por-defecto1" />
+			<parm value="-1" />
+			<parm value="1" />
+			<onCompleteOk id="puente-movimiento" />
+		</action>
+		
+		
+		<action id="summon-4" type="SummonEnemies">
+			<!-- Cantidad - IdEnemigo - Behavior - FirstAction - TimeLimitMs - Agresividad -->
+			<parm value="1" />
+			<parm value="1b" />
+			<parm value="agresivo1" />
+			<parm value="por-defecto1" />
+			<parm value="-1" />
+			<parm value="1" />
+			<onCompleteOk id="puente-movimiento" />
+		</action>
+		
+		
+		<action id="summon" type="Bridge">
+			<parm>
+				<option value="summon-1" prob=".4" />
+				<option value="summon-2" prob=".2" />
+				<option value="summon-3" prob=".2" />
+				<option value="summon-4" prob=".2" />
+			</parm>
+		</action>
+		
+		
+		<action id="try-summon" type="CheckNumEnemiesGreaterThan">
+			<parm value="4" />
+			
+			<onCompleteOk id="ubicarse" />
+			<onCompleteNo id="summon" />
+		</action>
+		
+		
+		<action id="puente-fire" type="Bridge">
+			<parm>
+				<option value="disparar-seguir" prob=".4" />
+				<option value="disparar-encerrar" prob=".4" />
+				<option value="disparar" prob=".2" />
+			</parm>
+		</action>
+		
+		
+		<action id="puente-movimiento" type="Bridge">
+			<parm>
+				<option value="ubicarse" prob=".4" />
+				<option value="follow_1" prob=".3" />
+				<option value="alejarse-a-borde-mas-cercano" prob=".3" />
+			</parm>
+		</action>
+		
+		
+		<action id="atacar-segun-energia-jugador" type="CheckTargetEnergyPctGreaterThan">
+			<parm value="50" />
+			
+			<onCompleteOk id="puente-movimiento" />
+			<onCompleteNo id="puente-fire" />
+		</action>
+		
+		
+		<action id="summon-o-atacar-segun-energia" type="CheckEnergyPctGreaterThan">
+			<parm value="100" />
+			
+			<onCompleteOk id="puente" />
+			<onCompleteNo id="try-summon" />
+		</action>
+		
+		
+		<action id="devolver-o-summon-con-poca-energia" type="Bridge">
+			<parm>
+				<option value="try-summon" prob=".5" />
+				<option value="atacar-golpe" prob=".5" />
+			</parm>
+		</action>
+		
+		
+		<action id="devolver-o-summon-con-mucha-energia" type="Bridge">
+			<parm>
+				<option value="try-summon" prob=".8" />
+				<option value="atacar-golpe" prob=".2" />
+			</parm>
+		</action>
+		
+		
+		<action id="devolver-o-summon-con-distinta-proba-segun-energia" type="CheckEnergyPctGreaterThan">
+			<parm value="30" />
+			
+			<onCompleteOk id="devolver-o-summon-con-mucha-energia" />
+			<onCompleteNo id="devolver-o-summon-con-poca-energia" />
+		</action>
+		
+		
+		<action id="esperar-puente" type="Wait">
+			<parm value="1" integer="true" />
+			
+			<onCompleteOkOLD id="summon-o-atacar-segun-energia" />
+			<onCompleteOk id="devolver-o-summon-con-distinta-proba-segun-energia" />
+		</action>
+		
+		
+		<events>
+			<onEnemyLeaveState state="Fell" id="esperar-puente" />
+			<onEnemyLeaveState state="Hit" id="esperar-puente" />
+		</events>
+		
+	</behavior>
+	
+	
+	
+	
+	
+	
+	
+	<behavior id="tutor-quieto" startingActionId="ubicarse">
+		
+		<action id="por-defecto" type="Bridge">
+			<parm value="ubicarse"/>
+		</action>
+		
+		<action id="ubicarse" type="GoToScreenPos">
+			<parm min="200" max="650" integer="true" />
+			<parm min="300" max="400" integer="true" />
+			
+			<onCompleteOk id="esperar" />
+		</action>
+		
+		<action id="esperar" type="Wait">
+			<parm min="3000" max="5000" integer="true" />
+			
+			<onCompleteOk id="ubicarse" />
+		</action>
+		
+		<events>
+			<onEnemyLeaveState state="Fell" id="ubicarse" />
+			<onEnemyLeaveState state="Hit" id="ubicarse" />
+		</events>
+		
+	</behavior>
+	
+	<behavior id="prueba-follow-con-rect" startingActionId="seguir-a-exacto-y-pasar-a-rect">
+		
+		<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="check_1" prob="1" />
+			</parm>
+		</action>
+		
+		
+		<action id="seguir-a-exacto-y-pasar-a-rect" type="FollowTPRelative">
+			<parm value="0" />
+            <parm value="0" />
+            
+			<onIncomplete id="seguir-a-rect" min="5000" max="5000"/>
+		</action>
+		
+		
+		<action id="seguir-a-rect" type="FollowTPRelative">
+			<parm value="0" />
+            <parm value="0" />
+			
+            <onWithinRectRange back="700" front="700" up="50" down="50" id="disparar-esperar-seguir-a-exacto" />
+			<onCompleteOk id="disparar-esperar-seguir-a-exacto" />
+		</action>
+		
+		<action id="disparar-esperar-seguir-a-exacto" type="Shoot">
+			<onCompleteOk id="esperar-ir-a-exacto" />
+		</action>
+		
+		<action id="esperar-ir-a-exacto" type="Wait">
+			<parm min="1000" max="1000" integer="true" />
+			
+			<onCompleteOk id="seguir-a-exacto-y-pasar-a-rect" />
+		</action>
+
+		
+		<events>
+			<onEnemyLeaveState state="Fell" id="esperar-ir-a-exacto" />
+			<onEnemyLeaveState state="Hit" id="esperar-ir-a-exacto" />
+		</events>
+		
+	</behavior>
+	
+	
+	
+	
+	<behavior id="shoot-1" >
+		
+		<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="puente" prob="1" />
+			</parm>
+		</action>
+		
+		
+			 <action id="por-defecto1" type="Wait">
+			<parm min="1000" max="3000" integer="true" />
+			
+		
+			
+			<onCompleteOk id="puente" />
+			
+	</action>
+		
+		
+		
+		<action id="seguir-a-rect" type="FollowTPRelative">
+			<parm value="0" />
+            <parm value="0" />
+			
+            <onWithinRectRange back="700" front="700" up="50" down="50" id="disparar" />
+			<onCompleteOk id="disparar" />
+		</action>
+	
+     
+	 
+	 <action id="incial" type="Wait">
+			<parm min="2000" max="3000" integer="true" />
+			
+			<onWithinRectRange back="700" front="700" up="50" down="50" id="wait_3" />
+			
+			<onCompleteOk id="puente" />
+			
+	</action>
+	 
+	 
+	 
+	 
+	 
+				
+		<action id="puente" type="Bridge">
+			<parm>
+				<option value="follow_1" prob=".4" />
+				<option value="follow_2" prob=".4" />
+				<option value="alejarse-a-borde-mas-lejano" prob=".1" />
+			</parm>
+		</action>
+
+		
+		<action id="puente_2" type="Bridge">
+			<parm>
+				<option value="wait_4" prob=".6" />
+				<option value="follow_3" prob=".2" />
+				<option value="alejarse-a-borde-mas-lejano" prob=".2" />
+			</parm>
+		</action>
+		
+		
+		<action id="follow_1" type="FollowTPRelative">
+			<parm>
+							<option min="400" max="600" integer="true" prob=".9" />
+                                <option min="0" max="0" integer="true" prob=".0" />
+			</parm>
+	
+	<parm>
+				<option value="0" prob=".4" />
+				<option min="50" max="100" integer="true" prob=".2" />
+				<option min="-100" max="-50" integer="true" prob=".5" />
+	</parm>
+			
+			<onWithinRectRange back="700" front="700" up="50" down="50" id="puente_2" />
+			
+			
+			<onCompleteOk id="wait_4" />
+				<onIncomplete id="wait_4" min="4000" max="6000"/>
+	
+	
+	</action>
+	
+	
+	
+		
+		
+			<action id="follow_2" type="FollowTPRelative">
+			<parm>
+							<option min="-600" max="-400" integer="true" prob=".9" />
+                                <option min="0" max="0" integer="true" prob=".0" />
+			</parm>
+	
+	<parm>
+				<option value="0" prob=".4" />
+				<option min="50" max="100" integer="true" prob=".2" />
+				<option min="-100" max="-50" integer="true" prob=".5" />
+	</parm>
+			
+			<onWithinRectRange back="700" front="700" up="50" down="50" id="puente_2" />
+			
+			
+			<onCompleteOk id="wait_4" />
+				<onIncomplete id="wait_4" min="5000" max="8000"/>
+	
+	
+	</action>		
+	
+
+     <action id="follow_3" type="FollowTPRelative">
+			<parm>
+							<option min="-600" max="-400" integer="true" prob=".5" />
+                                <option min="400" max="600" integer="true" prob=".5" />
+			</parm>
+	
+	<parm>
+				<option value="0" prob=".8" />
+				<option min="50" max="100" integer="true" prob=".2" />
+				<option min="-100" max="-50" integer="true" prob=".5" />
+	</parm>
+			
+						
+			
+			<onCompleteOk id="wait_4" />
+				<onIncomplete id="wait_4" min="5000" max="8000"/>
+	
+	
+	</action>			
+
+
+	
+		
+			<action id="wait_3" type="Wait">
+			<parm min="3000" max="6000" integer="true" />
+			
+			<onWithinRectRange back="700" front="700" up="50" down="50" id="disparar" />
+			
+			<onCompleteOk id="disparar" />
+			
+		</action>
+		
+		
+		
+			<action id="wait_4" type="Wait">
+			<parm min="3000" max="5000" integer="true" />
+			
+			<onWithinRectRange back="700" front="700" up="50" down="50" id="wait_3" />
+			
+			<onCompleteOk id="puente" />
+			
+		</action>
+		
+		
+		
+		<action id="disparar" type="Shoot">
+			<onCompleteOk id="esperar-chequear" />
+		</action>
+		
+		<action id="esperar-chequear" type="Wait">
+			<parm min="2000" max="3000" integer="true" />
+			
+			<onCompleteOk id="puente_2" />
+		</action>
+		
+		<action id="alejarse-a-borde-mas-lejano" type="CheckScreenPosXGreaterThan">
+			<parm value="425" />
+			<onCompleteOk id="alejarse-izquierda" />
+			<onCompleteNo id="alejarse-derecha" />
+		</action>
+		
+		<action id="alejarse-derecha" type="GoToScreenPos">
+			<parm>
+							<option min="700" max="800" integer="true" prob=".5" />
+                                <option min="500" max="600" integer="true" prob=".5" />
+			</parm>
+	
+				<parm>
+							<option min="100" max="250" integer="true" prob=".5" />
+                                <option min="250" max="400" integer="true" prob=".5" />
+			</parm>
+			
+			<onWithinRectRange back="700" front="700" up="50" down="50" id="wait_3" />
+			
+			<onIncomplete id="wait_4" min="4000" max="7000"/>
+			<onCompleteOk id="wait_4" />
+		</action>
+		
+		<action id="alejarse-izquierda" type="GoToScreenPos">
+				
+				<parm>
+							<option min="100" max="150" integer="true" prob=".5" />
+                                <option min="150" max="200" integer="true" prob=".5" />
+			</parm>
+	
+				<parm>
+							<option min="50" max="250" integer="true" prob=".5" />
+                                <option min="250" max="400" integer="true" prob=".5" />
+			</parm>
+			
+			<onWithinRectRange back="700" front="700" up="50" down="50" id="puente_2" />
+			
+			<onIncomplete id="wait_4" min="5000" max="5500"/>
+			<onCompleteOk id="wait_4" />
+		</action>
+		
+	<action id="wait_2" type="Wait">
+			<parm min="2000" max="3500" integer="true" />
+			
+			
+			
+			<onCompleteOk id="disparar" />
+			
+		</action>
+		
+	
+		
+				
+		<action id="congelarse" type="Wait">
+			<parm value="9999999" />
+		</action>
+		
+		<events>
+			<onEnemyLeaveState state="Fell" id="puente" />
+			<onEnemyLeaveState state="Hit" id="puente" />
+		</events>
+	</behavior>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<behavior id="charge-1">
+	
+	
+	
+			 <action id="por-defecto1" type="Wait">
+			<parm min="1000" max="3000" integer="true" />
+			
+		
+			
+			<onCompleteOk id="check_1" />
+			
+	</action>
+		
+		
+		<action id="seguir-a-rect" type="FollowTPRelative">
+			<parm value="0" />
+            <parm value="0" />
+			
+            <onWithinRectRange back="700" front="700" up="50" down="50" id="embestir" />
+			<onCompleteOk id="embestir" />
+		</action>
+	
+	
+		
+		<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="check_1" prob="1" />
+			</parm>
+		</action>
+	
+	
+	
+		<action id="check_1" type="CheckRange">
+			<parm value="180" /> 
+			
+			<onCompleteOk id="puente" />
+                        <onCompleteNo id="puente_1" />
+		</action>
+		
+		
+		<action id="puente" type="Bridge">
+			<parm>
+				<option value="agresivo" prob=".4" />
+				<option value="escapar" prob=".4" />
+				<option value="embestir" prob=".2" />
+			</parm>
+		</action>
+		
+		
+		
+		
+		<action id="puente_1" type="Bridge">
+			<parm>
+				<option value="embestir" prob=".5" />
+				<option value="follow_1" prob=".2" />	
+				<option value="follow_2" prob=".3" />	
+				
+			</parm>
+		</action>
+		
+		
+		<action id="puente_2" type="Bridge">
+			<parm>
+				<option value="alejarse-a-borde-mas-cercano" prob=".3" />
+				<option value="follow_2" prob=".4" />	
+                <option value="esperar-y-embestir" prob=".3" />				
+			</parm>
+		</action>
+		
+		<action id="puente_3" type="Bridge">
+			<parm>
+				<option value="puente" prob=".5" />
+				<option value="puente_2" prob=".5" />	
+                			
+			</parm>
+		</action>
+		
+		
+		<action id="agresivo" type="FollowTPRelative">
+
+				 <parm value="0" />
+                        
+                 <parm value="0" />
+              
+			  <onWithinRectRange back="120" front="120" up="30" down="30" id="ataque" />
+		
+		</action>
+		
+		<action id="ataque" type="Attack">
+			<parm value="1" />
+			
+			<onCompleteOk>
+				<option id="esperar-y-embestir" prob=".4"/>
+				<option id="follow_1" prob=".6"/>
+			</onCompleteOk>
+			<onCompleteNo id="esperar-y-random" />
+		</action>
+		
+		<action id="esperar-y-embestir" type="Wait">
+			<parm min="1000" max="2000" integer="true" />
+			
+			<onCompleteOk id="embestir" />
+		</action>
+		
+		
+			<action id="embestir" type="Charge">
+			<onCompleteOk id="wait_2" />
+		
+		
+		</action>
+		
+			<action id="wait_2" type="Wait">
+			<parm min="1500" max="2000" integer="true" />
+			
+			<onCompleteOk id="check_1" />
+			
+		</action>
+		
+		
+		
+		<action id="esperar-y-random" type="Wait">
+			<parm min="1000" max="1500" integer="true" />
+			
+			<onCompleteOk>
+				<option id="alejarse-a-borde-mas-cercano" prob=".5" />
+				<option id="agresivo" prob=".3" />
+				<option id="escapar" prob=".2" />
+			</onCompleteOk>
+		</action>
+		
+		
+		
+		<action id="alejarse-a-borde-mas-cercano" type="CheckScreenPosXGreaterThan">
+			<parm value="425" />
+			<onCompleteOk id="alejarse-derecha" />
+			<onCompleteNo id="alejarse-izquierda" />
+		</action>
+		
+		<action id="alejarse-derecha" type="GoToScreenPos">
+			<parm value="800" />
+			<parm value="300" />
+			
+			<onIncomplete id="embestir" min="2000" max="4000"/>
+			<onCompleteOk id="embestir" />
+		</action>
+		
+		<action id="alejarse-izquierda" type="GoToScreenPos">
+			<parm value="100" />
+			<parm value="50" />
+			
+			<onIncomplete id="embestir" min="3000" max="4500"/>
+			<onCompleteOk id="embestir" />
+		</action>
+		
+		
+				
+				
+		
+			<action id="escapar" type="FollowTPRelative">
+			<parm>
+				
+				<option min="-300" max="-600" integer="true" prob=".7" />
+                                <option min="300" max="600" integer="true" prob=".3" />
+			</parm>
+		
+		   <parm>
+				
+				<option min="-300" max="0" integer="true" prob=".7" />
+                                <option min="0" max="300" integer="true" prob=".3" />
+			</parm>
+		
+		<onWithinRectRange back="130" front="180" up="130" down="130"  id="puente_2" />
+			
+			<onCompleteOk id="wait_1" />
+				<onIncomplete id="embestir" min="3000" max="5000"/>
+				
+						
+		</action>
+				
+			<action id="wait_1" type="Wait">
+			<parm min="1500" max="2500" integer="true" />
+			
+			<onCompleteOk>
+			<option id="agresivo" prob=".3"/>
+			<option id="embestir" prob=".4"/>
+			<option id="follow_1" prob=".3"/>
+			</onCompleteOk>
+			
+		</action>
+		
+		
+		
+	<action id="follow_2" type="FollowTPRelative">
+			<parm>
+							<option min="-200" max="-280" integer="true" prob=".7" />
+                                <option min="200" max="250" integer="true" prob=".3" />
+			</parm>
+	
+	<parm>
+				<option value="0" prob=".2" />
+				<option min="-300" max="-100" integer="true" prob=".4" />
+				<option min="100" max="300" integer="true" prob=".4" />
+	</parm>
+	<onWithinRectRange back="130" front="180" up="130" down="130" id="puente_2" />
+			
+			<onCompleteOk id="check_1" />
+				<onIncomplete id="check_1" min="2000" max="4000"/>
+	
+	
+	</action>
+	
+	
+	<action id="follow_1" type="FollowTPRelative">
+			<parm>
+				<option value="400" prob=".2" />
+				<option min="-270" max="-200" integer="true" prob=".5" />
+                                <option min="-200" max="-250" integer="true" prob=".3" />
+			</parm>
+	
+	<parm>
+				<option value="300" prob=".7" />
+				<option min="-300" max="300" integer="true" prob=".3" />
+	</parm>
+	
+	<onWithinRectRange back="130" front="150" up="130" down="130" id="puente_2" />
+			
+			<onCompleteOk>
+			<option id="check_1" prob=".4"/>
+			<option id="follow_2" prob=".6"/>
+				</onCompleteOk>
+				<onIncomplete id="check_1" min="3000" max="5000"/>
+	
+	
+	</action>
+		
+		<events>
+			<onEnemyLeaveState state="Fell" id="esperar-y-random" />
+			<onEnemyLeaveState state="Hit" id="esperar-y-random" />
+		</events>
+	</behavior>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<behavior id="charge-2" startingActionId="check_1">
+		
+		<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="check_1" prob="1" />
+			</parm>
+		</action>
+	
+	
+	
+	
+		
+	
+			 <action id="por-defecto1" type="Wait">
+			<parm min="2000" max="4000" integer="true" />
+			
+		
+			
+			<onCompleteOk id="check_1" />
+			
+	</action>
+	
+	
+	
+	
+		<action id="check_1" type="CheckRange">
+			<parm value="180" /> 
+			
+			<onCompleteOk id="puente" />
+                        <onCompleteNo id="puente_1" />
+		</action>
+		
+		
+		<action id="puente" type="Bridge">
+			<parm>
+				<option value="agresivo" prob=".6" />
+				<option value="escapar" prob=".2" />
+				<option value="embestir" prob=".2" />
+			</parm>
+		</action>
+		
+		
+		
+		
+		<action id="puente_1" type="Bridge">
+			<parm>
+				<option value="embestir" prob=".4" />
+				<option value="follow_1" prob=".2" />	
+				<option value="follow_2" prob=".4" />	
+				
+			</parm>
+		</action>
+		
+		
+		<action id="puente_2" type="Bridge">
+			<parm>
+				<option value="alejarse-a-borde-mas-cercano" prob=".3" />
+				<option value="follow_2" prob=".3" />	
+                <option value="esperar-y-embestir" prob=".4" />				
+			</parm>
+		</action>
+		
+		
+		
+		
+		<action id="agresivo" type="FollowTPRelative">
+
+				 <parm value="0" />
+                        
+                 <parm value="0" />
+              
+			  <onWithinRectRange back="120" front="120" up="30" down="30" id="ataque" />
+		
+		<onIncomplete id="check_1" min="3000" max="5000"/>
+		
+		</action>
+		
+		<action id="ataque" type="Attack">
+			<parm value="1" />
+			<onCompleteOk>
+			<option id="esperar-y-embestir" prob=".4"/>
+			<option id="follow_1" prob=".6"/>
+			</onCompleteOk>
+			<onCompleteNo id="esperar-y-random" />
+			
+		</action>
+		
+		<action id="esperar-y-embestir" type="Wait">
+			<parm min="1000" max="2000" integer="true" />
+			
+			<onCompleteOk id="embestir" />
+		</action>
+		
+		
+			<action id="embestir" type="Charge">
+			<onCompleteOk id="wait_2" />
+			
+			<onIncomplete id="wait_2" min="3000" max="5000"/>
+		
+		
+		</action>
+		
+			<action id="wait_2" type="Wait">
+			<parm min="1500" max="2000" integer="true" />
+			
+			<onCompleteOk id="check_1" />
+			
+		</action>
+		
+		
+		
+		<action id="esperar-y-random" type="Wait">
+			<parm min="1000" max="2000" integer="true" />
+			
+			<onCompleteOk>
+				<option id="alejarse-a-borde-mas-cercano" prob=".2" />
+				<option id="agresivo" prob=".6" />
+				<option id="escapar" prob=".1" />
+			</onCompleteOk>
+		</action>
+		
+		
+		
+		<action id="alejarse-a-borde-mas-cercano" type="CheckScreenPosXGreaterThan">
+			<parm value="425" />
+			<onCompleteOk id="alejarse-derecha" />
+			<onCompleteNo id="alejarse-izquierda" />
+		</action>
+		
+		<action id="alejarse-derecha" type="GoToScreenPos">
+			<parm value="800" />
+			<parm value="50" />
+			
+			<onIncomplete id="embestir" min="2000" max="4000"/>
+			<onCompleteOk id="embestir" />
+		</action>
+		
+		<action id="alejarse-izquierda" type="GoToScreenPos">
+			<parm value="100" />
+			<parm value="450" />
+			
+			<onIncomplete id="embestir" min="5000" max="5500"/>
+			<onCompleteOk id="embestir" />
+		</action>
+		
+		
+				
+				
+		
+			<action id="escapar" type="FollowTPRelative">
+			<parm>
+				
+				<option min="-300" max="-600" integer="true" prob=".3" />
+                                <option min="300" max="600" integer="true" prob=".7" />
+			</parm>
+		
+		   <parm>
+				
+				<option min="-280" max="0" integer="true" prob=".3" />
+                                <option min="0" max="280" integer="true" prob=".7" />
+			</parm>
+		
+		<onWithinRectRange back="130" front="150" up="130" down="130" id="puente_1" />
+			
+			<onCompleteOk id="wait_1" />
+				<onIncomplete id="embestir" min="3000" max="5000"/>
+				
+						
+		</action>
+				
+			<action id="wait_1" type="Wait">
+			<parm min="1500" max="2500" integer="true" />
+			
+			<onCompleteOk>
+			<option id="agresivo" prob=".3"/>
+			<option id="embestir" prob=".4"/>
+			<option id="follow_1" prob=".3"/>
+			</onCompleteOk>
+			
+		</action>
+		
+		
+		
+	<action id="follow_2" type="FollowTPRelative">
+			<parm>
+							<option min="-200" max="-280" integer="true" prob=".3" />
+                                <option min="200" max="250" integer="true" prob=".7" />
+			</parm>
+	
+	<parm>
+				<option value="0" prob=".2" />
+				<option min="-260" max="-100" integer="true" prob=".3" />
+				<option min="100" max="260" integer="true" prob=".6" />
+	</parm>
+	<onWithinRectRange back="130" front="180" up="130" down="130"  id="puente_1" />
+			
+			<onCompleteOk id="check_1" />
+				<onIncomplete id="check_1" min="3000" max="5000"/>
+	
+	
+	</action>
+	
+	
+	<action id="follow_1" type="FollowTPRelative">
+			<parm>
+				<option value="400" prob=".2" />
+				<option min="-270" max="-200" integer="true" prob=".3" />
+                                <option min="-200" max="-250" integer="true" prob=".5" />
+			</parm>
+	
+	<parm>
+				<option value="300" prob=".3" />
+				<option min="-300" max="300" integer="true" prob=".7" />
+	</parm>
+	<onWithinRectRange back="130" front="180" up="130" down="130"  id="check_1" />
+			
+			<onCompleteOk>
+			<option id="check_1" prob=".4"/>
+			<option id="follow_2" prob=".6"/>
+				</onCompleteOk>
+				<onIncomplete id="check_1" min="3000" max="5000"/>
+	
+	</action>
+		
+		<events>
+			<onEnemyLeaveState state="Fell" id="esperar-y-random" />
+			<onEnemyLeaveState state="Hit" id="esperar-y-random" />
+		</events>
+	</behavior>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<behavior id="charge-3" startingActionId="check_1">
+	
+		
+			<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="check_1" prob="1" />
+			</parm>
+		</action>
+		
+	
+	
+		
+		 <action id="por-defecto1" type="Wait">
+			<parm min="1000" max="4000" integer="true" />
+			
+		
+			
+			<onCompleteOk id="check_1" />
+			
+	</action>
+	
+	
+	
+	
+	
+	
+	
+	
+		<action id="check_1" type="CheckRange">
+			<parm value="280" /> 
+			
+			<onCompleteOk id="puente" />
+                        <onCompleteNo id="puente_1" />
+		</action>
+		
+		
+		<action id="puente" type="Bridge">
+			<parm>
+				<option value="agresivo" prob=".6" />
+				<option value="escapar" prob=".2" />
+				<option value="embestir" prob=".2" />
+			</parm>
+		</action>
+		
+		
+		
+		
+		<action id="puente_1" type="Bridge">
+			<parm>
+				<option value="embestir" prob=".4" />
+				<option value="follow_1" prob=".3" />	
+				<option value="follow_2" prob=".3" />	
+				
+			</parm>
+		</action>
+		
+		
+		<action id="puente_2" type="Bridge">
+			<parm>
+				<option value="alejarse-a-borde-mas-cercano" prob=".3" />
+				<option value="follow_2" prob=".4" />	
+                <option value="esperar-y-embestir" prob=".3" />				
+			</parm>
+		</action>
+		
+		
+		
+		
+		<action id="agresivo" type="FollowTPRelative">
+
+				 <parm value="0" />
+                        
+                 <parm value="0" />
+              
+			   <onWithinRectRange back="120" front="120" up="30" down="30" id="ataque" />
+		
+		<onIncomplete id="check_1" min="5000" max="7000"/>
+		
+		</action>
+		
+		<action id="ataque" type="Attack">
+			<parm value="1" />
+			<onCompleteOk>
+			<option id="esperar-y-embestir" prob=".5"/>
+			<option id="follow_1" prob=".5"/>
+			</onCompleteOk>
+			<onCompleteNo id="esperar-y-random" />
+			
+		</action>
+		
+		<action id="esperar-y-embestir" type="Wait">
+			<parm min="1000" max="3000" integer="true" />
+			
+			<onCompleteOk id="embestir" />
+		</action>
+		
+		
+			<action id="embestir" type="Charge">
+			<onCompleteOk id="wait_2" />
+		
+		
+		</action>
+		
+			<action id="wait_2" type="Wait">
+			<parm min="1500" max="2000" integer="true" />
+			
+			<onCompleteOk id="check_1" />
+			
+		</action>
+		
+		
+		
+		<action id="esperar-y-random" type="Wait">
+			<parm min="1000" max="2000" integer="true" />
+			
+			<onCompleteOk>
+				<option id="alejarse-a-borde-mas-cercano" prob=".2" />
+				<option id="agresivo" prob=".7" />
+				<option id="escapar" prob=".3" />
+			</onCompleteOk>
+		</action>
+		
+		
+		
+		<action id="alejarse-a-borde-mas-cercano" type="CheckScreenPosXGreaterThan">
+			<parm value="425" />
+			<onCompleteOk id="alejarse-derecha" />
+			<onCompleteNo id="alejarse-izquierda" />
+		</action>
+		
+		<action id="alejarse-derecha" type="GoToScreenPos">
+			<parm value="800" />
+			<parm value="450" />
+			
+			<onIncomplete id="embestir" min="2000" max="4000"/>
+			<onCompleteOk id="embestir" />
+		</action>
+		
+		<action id="alejarse-izquierda" type="GoToScreenPos">
+			<parm value="100" />
+			<parm value="250" />
+			
+			<onIncomplete id="embestir" min="3000" max="5000"/>
+			<onCompleteOk id="embestir" />
+		</action>
+		
+		
+				
+				
+		
+			<action id="escapar" type="FollowTPRelative">
+			<parm>
+				
+				<option min="-500" max="-200" integer="true" prob=".5" />
+                                <option min="200" max="600" integer="true" prob=".5" />
+			</parm>
+		
+		   <parm>
+				
+				<option min="-240" max="0" integer="true" prob=".5" />
+                                <option min="0" max="240" integer="true" prob=".5" />
+			</parm>
+		<onWithinRectRange back="130" front="180" up="130" down="130"  id="puente_1" />
+			
+			<onCompleteOk id="wait_1" />
+				<onIncomplete id="embestir" min="3000" max="5000"/>
+				
+						
+		</action>
+				
+			<action id="wait_1" type="Wait">
+			<parm min="1500" max="2500" integer="true" />
+			
+			<onCompleteOk>
+			<option id="agresivo" prob=".3"/>
+			<option id="embestir" prob=".4"/>
+			<option id="follow_1" prob=".3"/>
+			</onCompleteOk>
+			
+		</action>
+		
+		
+		
+	<action id="follow_2" type="FollowTPRelative">
+			<parm>
+							<option min="-250" max="-180" integer="true" prob=".3" />
+                                <option min="180" max="270" integer="true" prob=".7" />
+			</parm>
+	
+	<parm>
+				<option value="0" prob=".2" />
+				<option min="-280" max="-160" integer="true" prob=".3" />
+				<option min="160" max="280" integer="true" prob=".6" />
+	</parm>
+	<onWithinRectRange back="130" front="180" up="130" down="130"  id="puente_1" />
+			
+			<onCompleteOk id="check_1" />
+				<onIncomplete id="check_1" min="3000" max="5000"/>
+	
+	
+	</action>
+	
+	
+	<action id="follow_1" type="FollowTPRelative">
+			<parm>
+				<option value="300" prob=".2" />
+				<option min="-220" max="-320" integer="true" prob=".3" />
+                                <option min="-200" max="-250" integer="true" prob=".5" />
+			</parm>
+	
+	<parm>
+				<option value="0" prob=".3" />
+				<option min="-300" max="300" integer="true" prob=".7" />
+	</parm>
+	<onWithinRectRange back="130" front="180" up="130" down="130"  id="check_1" />
+			
+			<onCompleteOk>
+			<option id="check_1" prob=".4"/>
+			<option id="follow_2" prob=".6"/>
+				</onCompleteOk>
+				<onIncomplete id="check_1" min="3000" max="5000"/>
+	
+	
+	</action>
+		
+		<events>
+			<onEnemyLeaveState state="Fell" id="check_1" />
+			<onEnemyLeaveState state="Hit" id="esperar-y-random" />
+		</events>
+	</behavior>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<behavior id="patineta">
+
+		<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="alejarse-derecha" prob="1" />
+			</parm>
+		</action>
+		
+		
+		
+			 <action id="por-defecto1" type="Wait">
+			<parm min="1000" max="4500" integer="true" />
+			
+		
+			
+			<onCompleteOk id="alejarse-derecha" />
+			
+	</action>
+
+	
+                           
+						  
+						   
+		
+		
+	<action id="alejarse-derecha" type="GoToScreenPos">
+			
+			<parm min="-800" max="-200" integer="true" />
+	
+			<parm min="200" max="500" integer="true" />
+			
+			<onWithinRectRange back="0" front="110" up="50" down="50" id="puenteA" />
+			
+			
+			<onCompleteOk id="wait_3" />
+		</action>
+		
+					<action id="wait_3" type="Wait">
+			<parm value="2500" /> 
+			
+			
+                        <onCompleteOk id="puenteA" />
+		</action>
+				
+		
+		
+		<action id="alejarse" type="GoToScreenPos">
+			
+			<parm min="-800" max="-200" integer="true" />
+	
+			<parm min="200" max="500" integer="true" />
+			
+			
+			
+			<onCompleteOk id="wait_3" />
+		</action>
+		
+					<action id="wait_3" type="Wait">
+			<parm value="2500" /> 
+			
+			
+                        <onCompleteOk id="puenteA" />
+		</action>
+				
+		
+		
+		<action id="puenteA" type="Bridge">
+			<parm>
+				<option value="ataque1" prob=".4" />
+				<option value="ataque2" prob=".4" />
+				<option value="combo1" prob=".2" />
+								
+
+			</parm>
+		</action>
+		
+			<action id="ataque1" type="Attack">
+				<parm value="1" />
+			
+					<onCompleteOk id="alejarse" />
+					<onCompleteNo id="alejarse" />
+		</action>
+		
+		<action id="ataque2" type="Attack">
+				<parm value="2" />
+			
+					<onCompleteOk id="alejarse" />
+					<onCompleteNo id="alejarse" />
+		</action>
+		
+		
+		
+		<action id="combo1" type="Combo">
+			<parm value="1234" />
+			
+				<onCompleteOk id="alejarse" />
+				
+				
+			
+			<onCompleteNo id="alejarse" />
+				
+			
+			
+			
+				
+			<onIncomplete id="wait_3" timeLimitMs="5000" />
+			
+					
+		</action>
+		
+			
+		
+		
+		<eventsOld>
+			<onEnemyEnterState state="KnockedDown" id="wait_forever" />
+			<onEnemyLeaveState state="Fell" id="wait_forever" />
+		</eventsOld>
+		
+	</behavior>
+	
+	<behavior id="patineta1">
+
+		<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="agresivo" prob="1" />
+			</parm>
+		</action>
+		
+		
+		
+			 <action id="por-defecto1" type="Wait">
+			<parm min="1000" max="4500" integer="true" />
+			
+		
+			
+			<onCompleteOk id="agresivo" />
+			
+	</action>
+	
+		
+		<action id="wait_3" type="Wait">
+			<parm value="2500" /> 
+			
+			
+                        <onCompleteOk id="escapar" />
+		</action>
+						
+		
+		
+		<action id="escapar" type="FollowTPRelative">
+			<parm>
+				<option min="-1000" max="-900" integer="true" prob=".1" />
+                
+                                
+			</parm>
+                        
+                <option min="200" max="300" integer="true" prob=".3" />
+                <option min="-250" max="-100" integer="true" prob=".7" />
+                        
+			<onCompleteOk id="wait_3" />
+                           
+						  
+						   
+		</action>
+		
+				
+				
+		
+		
+		<action id="agresivo" type="FollowTPRelative">
+
+				<parm>
+				<option value="0" prob=".3" />
+				<option min="-200" max="0" integer="true" prob=".7" />
+                              
+			</parm>
+	
+	<parm>
+				<option value="0" prob=".3" />
+				<option min="-300" max="300" integer="true" prob=".7" />
+	</parm>
+	
+              
+			  	<onWithinRectRange back="110" front="110" up="0" down="0" id="puenteA" />
+                        
+			<onCompleteOk id="escapar" />
+         			
+		</action>
+		
+		
+		
+		<action id="puenteA" type="Bridge">
+			<parm>
+				<option value="ataque1" prob=".4" />
+				<option value="ataque2" prob=".4" />
+				<option value="combo1" prob=".2" />
+								
+
+			</parm>
+		</action>
+		
+			<action id="ataque1" type="Attack">
+				<parm value="1" />
+			
+					<onCompleteOk id="escapar" />
+					<onCompleteNo id="escapar" />
+		</action>
+		
+		<action id="ataque2" type="Attack">
+				<parm value="2" />
+			
+					<onCompleteOk id="escapar" />
+					<onCompleteNo id="escapar" />
+		</action>
+		
+		
+		
+		<action id="combo1" type="Combo">
+			<parm value="1234" />
+			
+				<onCompleteOk id="escapar" />
+				
+				
+			
+			<onCompleteNo id="escapar" />
+				
+			
+			
+			
+				
+			<onIncomplete id="wait_3" timeLimitMs="5000" />
+			
+					
+		</action>
+		
+			
+		
+		
+		<eventsOld>
+			<onEnemyEnterState state="KnockedDown" id="wait_forever" />
+			<onEnemyLeaveState state="Fell" id="wait_forever" />
+		</eventsOld>
+		
+	</behavior>
+	<behavior id="agresivo">
+
+		<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="agresivo" prob="1" />
+			</parm>
+		</action>
+		
+		
+		
+			 <action id="por-defecto1" type="Wait">
+			<parm min="1000" max="4500" integer="true" />
+			
+		
+			
+			<onCompleteOk id="agresivo" />
+			
+	</action>
+	
+		
+		<action id="wait_3" type="Wait">
+			<parm value="2500" /> 
+			
+			
+                        <onCompleteOk id="escapar" />
+		</action>
+						
+		
+		
+		<action id="escapar" type="FollowTPRelative">
+			<parm>
+				<option min="-1000" max="-900" integer="true" prob=".1" />
+                
+                                
+			</parm>
+                        
+                <option min="200" max="300" integer="true" prob=".3" />
+                <option min="-250" max="-100" integer="true" prob=".7" />
+                        
+			<onCompleteOk id="wait_3" />
+                           
+						  
+						   
+		</action>
+		
+				
+				
+		
+		
+		<action id="agresivo" type="FollowTPRelative">
+
+				 <parm value="0" />
+                        
+                 <parm value="0" />
+              
+			  	<onWithinRectRange back="110" front="110" up="30" down="30" id="puenteA" />
+                        
+			<onCompleteOk id="puenteA" />
+         			
+		</action>
+		
+		
+		
+		<action id="puenteA" type="Bridge">
+			<parm>
+				<option value="ataque1" prob=".4" />
+				<option value="ataque2" prob=".4" />
+				<option value="combo1" prob=".2" />
+								
+
+			</parm>
+		</action>
+		
+			<action id="ataque1" type="Attack">
+				<parm value="1" />
+			
+					<onCompleteOk id="escapar" />
+					<onCompleteNo id="escapar" />
+		</action>
+		
+		<action id="ataque2" type="Attack">
+				<parm value="2" />
+			
+					<onCompleteOk id="escapar" />
+					<onCompleteNo id="escapar" />
+		</action>
+		
+		
+		
+		<action id="combo1" type="Combo">
+			<parm value="1234" />
+			
+				<onCompleteOk id="escapar" />
+				
+				
+			
+			<onCompleteNo id="escapar" />
+				
+			
+			
+			
+				
+			<onIncomplete id="wait_3" timeLimitMs="5000" />
+			
+					
+		</action>
+		
+			
+		
+		
+		<eventsOld>
+			<onEnemyEnterState state="KnockedDown" id="wait_forever" />
+			<onEnemyLeaveState state="Fell" id="wait_forever" />
+		</eventsOld>
+		
+	</behavior>
+	
+	
+	
+	
+	
+	
+	<behavior id="agresivo1">
+
+		<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="agresivo" prob="1" />
+			</parm>
+		</action>
+		
+		
+		
+			 <action id="por-defecto1" type="Wait">
+			<parm min="1000" max="4500" integer="true" />
+			
+		
+			
+			<onCompleteOk id="agresivo" />
+			
+	</action>
+	
+	
+	
+	
+	
+	
+	<action id="check_1" type="CheckRange">
+			<parm value="250" /> 
+			
+			<onCompleteOk id="wait_1" />
+                        <onCompleteNo id="follow_1" />
+		</action>
+		
+		<action id="follow_1" type="FollowTPRelative">
+			<parm>
+				<option value="300" prob=".2" />
+				<option min="-270" max="-200" integer="true" prob=".3" />
+                                <option min="-200" max="-250" integer="true" prob=".5" />
+			</parm>
+                        
+                        <parm>
+				<option value="0" prob=".3" />
+				<option min="-100" max="-180" integer="true" prob=".7" />
+			</parm>
+			
+			<onWithinRectRange back="180" front="180" up="90" down="90" id="agresivo" />
+			
+			<onCompleteOk id="wait_1" />
+				<onIncomplete id="wait_3" min="5000" max="9000"/>
+				
+				
+			
+		</action>
+		
+		<action id="wait_3" type="Wait">
+			<parm value="2500" /> 
+			
+			
+                        <onCompleteOk id="follow_1" />
+		</action>
+		
+		
+		<action id="wait_1" type="Wait">
+			<parm min="1000" max="1500" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+		</action>
+		
+		
+		
+		<action id="follow_2" type="FollowTPRelative">
+			<parm>
+				<option value="110" prob=".8" />
+				<option value="-110" prob=".2" />
+                                
+			</parm>
+                        
+                        <parm value="0" />
+                        
+							<onWithinRectRange back="110" front="110" up="30" down="30" id="combo1" />
+						
+			<onCompleteOk id="combo1" />
+							                    
+                     <onIncomplete id="wait_1" min="5000" max="7000" />
+					 
+					
+		</action>
+		
+		<action id="follow_3" type="FollowTPRelative">
+			<parm>
+				<option min="-200" max="-150" integer="true" prob=".3" />
+                <option min="150" max="300" integer="true" prob=".7" />
+                                
+			</parm>
+               <parm>         
+                <option min="200" max="300" integer="true" prob=".3" />
+                <option min="-250" max="-100" integer="true" prob=".7" />
+                    </parm>    
+			<onCompleteOk id="follow_1" />
+                           
+		</action>
+		
+		
+		
+		<action id="escapar" type="FollowTPRelative">
+			<parm>
+				<option min="-600" max="-200" integer="true" prob=".3" />
+                <option min="150" max="600" integer="true" prob=".7" />
+                                
+			</parm>
+                   
+
+<parm>				   
+                <option min="200" max="300" integer="true" prob=".3" />
+                <option min="-250" max="-100" integer="true" prob=".7" />
+                  </parm>
+                         
+			<onCompleteOk id="follow_1" />
+                           
+						   	<onIncomplete id="follow_1" min="2000" max="4000"/>
+						   
+		</action>
+		
+		
+		
+		
+		<action id="combo1" type="Combo">
+			<parm value="1234" />
+			
+			<onCompleteOk>
+			<option id="wait_3" prob=".1" />
+			<option id="follow_3" prob=".0" />
+			<option id="agresivo" prob=".9" />
+			<option id="escapar" prob=".0" />
+			
+			
+			</onCompleteOk>
+			
+			<onCompleteNo>
+				
+			<option id="wait_3" prob=".6" />
+			<option id="follow_3" prob=".3" />
+			<option id="agresivo" prob=".1" />
+			
+			</onCompleteNo>
+				
+			<onIncomplete id="wait_1" timeLimitMs="5000" />
+			
+					
+		</action>
+		
+		
+		<action id="wait_forever" type="Wait">
+			<parm value="9999999" />
+		</action>
+			
+			
+	<action id="wait_2" type="Wait">
+			<parm min="2000" max="4000" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+                        
+		</action>	
+		
+				<action id="wait_4" type="Wait">
+			<parm min="2000" max="3500" integer="true" />
+			
+			
+                        <onCompleteOk id="agresivo" />
+		</action>
+		
+		<action id="agresivo" type="FollowTPRelative">
+
+				 <parm value="0" />
+                        
+                 <parm value="0" />
+              
+			  	<onWithinRectRange back="110" front="110" up="30" down="30" id="combo1" />
+                        
+			<onCompleteOk id="follow_1" />
+            <onIncomplete id="wait_3" min="7000" max="9000"/>
+			
+		</action>
+		
+			<action id="puente" type="Bridge">
+			<parm>
+				<option value="agresivo" prob=".4" />
+				<option value="follow_3" prob=".2" />
+				<option value="wait_2" prob=".3" />
+				<option value="escapar" prob=".1" />
+
+			</parm>
+		</action>
+		
+		
+		<eventsOld>
+			<onEnemyEnterState state="KnockedDown" id="wait_forever" />
+			<onEnemyLeaveState state="Fell" id="wait_forever" />
+		</eventsOld>
+		
+	</behavior>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<behavior id="1">
+
+		<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="follow_1" prob="1" />
+			</parm>
+		</action>
+		
+		
+		
+		
+			
+			 <action id="por-defecto1" type="Wait">
+			<parm min="1000" max="4000" integer="true" />
+			
+		
+			
+			<onCompleteOk id="follow_1" />
+			
+	</action>
+	
+		
+		
+		
+	
+	<action id="check_1" type="CheckRange">
+			<parm value="250" /> 
+			
+			<onCompleteOk id="wait_1" />
+                        <onCompleteNo id="follow_1" />
+		</action>
+		
+		<action id="follow_1" type="FollowTPRelative">
+			<parm>
+				<option value="300" prob=".2" />
+				<option min="-270" max="-200" integer="true" prob=".3" />
+                                <option min="-200" max="-250" integer="true" prob=".5" />
+			</parm>
+                        
+                        <parm>
+				<option value="0" prob=".3" />
+				<option min="-100" max="-180" integer="true" prob=".7" />
+			</parm>
+			
+			<onWithinRectRange back="110" front="110" up="30" down="30" id="puente" />
+			
+			<onCompleteOk id="wait_1" />
+				<onIncomplete id="wait_3" min="5000" max="9000"/>
+				
+				
+			
+		</action>
+		
+		<action id="wait_3" type="Wait">
+			<parm value="2500" /> 
+			
+			
+                        <onCompleteOk id="follow_1" />
+		</action>
+		
+		
+		<action id="wait_1" type="Wait">
+			<parm min="1000" max="1500" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+		</action>
+		
+		
+		
+		<action id="follow_2" type="FollowTPRelative">
+			<parm>
+				<option value="110" prob=".8" />
+				<option value="-110" prob=".2" />
+                                
+			</parm>
+                        
+                        <parm value="0" />
+                        
+							<onWithinRectRange back="110" front="110" up="30" down="30" id="combo1" />
+						
+			<onCompleteOk id="combo1" />
+							                    
+                     <onIncomplete id="wait_1" min="5000" max="7000" />
+					 
+					
+		</action>
+		
+		<action id="follow_3" type="FollowTPRelative">
+			<parm>
+				<option min="-200" max="-150" integer="true" prob=".3" />
+                <option min="150" max="300" integer="true" prob=".7" />
+                                
+			</parm>
+                        
+                <option min="200" max="300" integer="true" prob=".3" />
+                <option min="-250" max="-100" integer="true" prob=".7" />
+                        
+			<onCompleteOk id="follow_1" />
+                           
+		</action>
+		
+		
+		
+		<action id="escapar" type="FollowTPRelative">
+			<parm>
+				<option min="-600" max="-200" integer="true" prob=".3" />
+                <option min="150" max="600" integer="true" prob=".7" />
+                                
+			</parm>
+                        
+                <option min="200" max="300" integer="true" prob=".3" />
+                <option min="-250" max="-100" integer="true" prob=".7" />
+                        
+			<onCompleteOk id="follow_1" />
+                           
+						   	<onIncomplete id="follow_1" min="2000" max="4000"/>
+						   
+		</action>
+		
+		
+		
+		
+		<action id="combo1" type="Combo">
+			<parm value="1234" />
+			
+			<onCompleteOk>
+			<option id="wait_3" prob=".4" />
+			<option id="follow_3" prob=".3" />
+			<option id="agresivo" prob=".3" />
+			<option id="escapar" prob=".0" />
+			
+			
+			</onCompleteOk>
+			
+			<onCompleteNo>
+				
+			<option id="wait_3" prob=".6" />
+			<option id="follow_3" prob=".3" />
+			<option id="agresivo" prob=".1" />
+			
+			</onCompleteNo>
+				
+			<onIncomplete id="wait_1" timeLimitMs="5000" />
+			
+					
+		</action>
+		
+		
+		<action id="wait_forever" type="Wait">
+			<parm value="9999999" />
+		</action>
+			
+			
+	<action id="wait_2" type="Wait">
+			<parm min="2000" max="4000" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+                        
+		</action>	
+		
+				<action id="wait_4" type="Wait">
+			<parm min="2000" max="3500" integer="true" />
+			
+			
+                        <onCompleteOk id="agresivo" />
+		</action>
+		
+		<action id="agresivo" type="FollowTPRelative">
+
+				 <parm value="0" />
+                        
+                 <parm value="0" />
+              
+			  	<onWithinRectRange back="110" front="110" up="30" down="30" id="combo1" />
+                        
+			<onCompleteOk id="follow_1" />
+            <onIncomplete id="wait_3" min="7000" max="9000"/>
+			
+		</action>
+		
+			<action id="puente" type="Bridge">
+			<parm>
+				<option value="agresivo" prob=".4" />
+				<option value="follow_3" prob=".2" />
+				<option value="wait_2" prob=".3" />
+				<option value="escapar" prob=".1" />
+
+			</parm>
+		</action>
+		
+		
+		<eventsOld>
+			<onEnemyEnterState state="KnockedDown" id="wait_forever" />
+			<onEnemyLeaveState state="Fell" id="wait_forever" />
+		</eventsOld>
+		
+	</behavior>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<behavior id="2" startingActionId="wait_3">
+		
+			<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="check_1" prob="1" />
+			</parm>
+		</action>
+		
+		
+		
+			
+		 <action id="por-defecto1" type="Wait">
+			<parm min="1000" max="3000" integer="true" />
+			
+		
+			
+			<onCompleteOk id="check_1" />
+			
+	</action>
+	
+		
+		
+		
+		
+	
+	<action id="check_1" type="CheckRange">
+			<parm value="500" /> 
+			
+			<onCompleteOk id="wait_1" />
+                        <onCompleteNo id="follow_1" />
+		</action>
+		
+		<action id="follow_1" type="FollowTPRelative">
+			<parm>
+				<option value="-200" prob=".5" />
+				<option min="-200" max="-240" integer="true" prob=".4" />
+                                <option min="210" max="50" integer="true" prob=".3" />
+			</parm>
+                        
+                        <parm>
+			    <option min="180" max="250" integer="true" prob=".4" />
+				<option min="-150" max="-300" integer="true" prob=".2" />
+				<option min="250" max="300" integer="true" prob=".4" />
+			</parm>
+			
+			<onWithinRectRange back="110" front="110" up="30" down="30" id="puente" />
+			
+			<onCompleteOk id="wait_1" />
+				<onIncomplete id="wait_3" min="5000" max="9000"/>
+				
+				
+			
+		</action>
+		
+		<action id="wait_3" type="Wait">
+				<parm min="1400" max="2700" integer="true" />
+			
+			
+                        <onCompleteOk id="follow_1" />
+		</action>
+		
+		
+		<action id="wait_1" type="Wait">
+			<parm min="2000" max="3000" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+		</action>
+		
+		
+		
+		<action id="follow_2" type="FollowTPRelative">
+			<parm>
+				<option value="110" prob=".3" />
+				<option value="-110" prob=".7" />
+                                
+			</parm>
+                        
+                        <parm value="0" />
+                        
+						<onWithinRectRange back="110" front="110" up="30" down="30" id="combo1" />
+						
+			<onCompleteOk id="combo1" />
+							                    
+                     <onIncomplete id="wait_1" min="5000" max="7000" />
+					 
+					
+		</action>
+		
+		<action id="follow_3" type="FollowTPRelative">
+			<parm>
+				<option min="-200" max="-150" integer="true" prob=".6" />
+                <option min="150" max="200" integer="true" prob=".4" />
+                                
+			</parm>
+                        
+                <option min="-190" max="-0" integer="true" prob=".4" />
+                <option min="140" max="190" integer="true" prob=".6" />
+                        
+			<onCompleteOk id="follow_1" />
+                           
+		</action>
+		
+		<action id="combo1" type="Combo">
+			<parm value="1234" />
+			
+			<onCompleteOk>
+			<option id="wait_3" prob=".4" />
+			<option id="follow_3" prob=".1" />
+			<option id="agresivo" prob=".5" />
+			
+			</onCompleteOk>
+			
+			<onCompleteNo>
+				
+			<option id="wait_3" prob=".10" />
+			<option id="follow_3" prob=".0" />
+			<option id="agresivo" prob=".0" />
+			
+			</onCompleteNo>
+				
+			<onIncomplete id="wait_2" min="2500" max="4000"/>
+			
+					
+		</action>
+		
+		
+		<action id="wait_forever" type="Wait">
+			<parm value="9999999" />
+		</action>
+			
+			
+	<action id="wait_2" type="Wait">
+			<parm min="1000" max="2000" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+                        
+		</action>	
+		
+				<action id="wait_4" type="Wait">
+			<parm min="1000" max="1500" integer="true" />
+			
+			
+                        <onCompleteOk id="agresivo" />
+		</action>
+		
+		<action id="agresivo" type="FollowTPRelative">
+
+				 <parm value="0" />
+                        
+                 <parm value="0" />
+              
+			  <onWithinRectRange back="110" front="110" up="30" down="30" id="combo1" />
+                        
+			<onCompleteOk id="wait_3" />
+            <onIncomplete id="wait_3" min="2000" max="5000"/>
+			
+		</action>
+		
+		<action id="puente" type="Bridge">
+			<parm>
+				<option value="follow_3" prob=".2" />
+				<option value="follow_2" prob=".2" />
+				<option value="wait_1" prob=".1" />
+	            <option value="agresivo" prob=".5" />
+			</parm>
+		</action>
+		
+			<action id="escapar" type="FollowTPRelative">
+			<parm>
+				<option min="-600" max="-200" integer="true" prob=".3" />
+                <option min="150" max="600" integer="true" prob=".7" />
+                                
+			</parm>
+                        
+                <option min="200" max="300" integer="true" prob=".3" />
+                <option min="-250" max="-100" integer="true" prob=".7" />
+                        
+			<onCompleteOk id="follow_1" />
+                           
+						   	<onIncomplete id="follow_1" min="2000" max="4000"/>
+						   
+		</action>
+		
+		
+		
+		<eventsOld>
+			<onEnemyEnterState state="KnockedDown" id="wait_forever" />
+			<onEnemyLeaveState state="Fell" id="wait_forever" />
+		</eventsOld>
+		
+	</behavior>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<behavior id="3" startingActionId="wait_3">
+		
+		<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="check_1" prob="1" />
+			</parm>
+		</action>
+		
+		<action id="check_1" type="CheckRange">
+			<parm value="250" /> 
+			
+			<onCompleteOk id="wait_1" />
+                        <onCompleteNo id="follow_1" />
+		</action>
+		
+		<action id="follow_1" type="FollowTPRelative">
+			<parm>
+				<option value="210" prob=".5" />
+				<option min="-210" max="-180" integer="true" prob=".2" />
+                                <option min="170" max="280" integer="true" prob=".3" />
+			</parm>
+                        
+                        <parm>
+				<option min="-200" max="-150" integer="true" prob=".7" />
+			
+				<option min="150" max="200" integer="true" prob=".3" />
+			</parm>
+			
+			<onWithinRange min="130" max="150" id="puente" />
+			
+			<onCompleteOk id="wait_1" />
+				<onIncomplete id="wait_3" min="5000" max="9000"/>
+				
+				
+			
+		</action>
+		
+		
+		<action id="follow_6" type="FollowTPRelative">
+			<parm>
+				<option value="-180" prob=".5" />
+				<option min="-180" max="-150" integer="true" prob=".2" />
+                                <option min="170" max="200" integer="true" prob=".3" />
+			</parm>
+                        
+                        <parm>
+				<option min="-100" max="0" integer="true" prob=".2" />
+				<option min="0" max="150" integer="true" prob=".4" />
+				<option min="150" max="200" integer="true" prob=".4" />
+			</parm>
+			
+			<onWithinRectRange back="110" front="110" up="30" down="30" id="puente" />
+			
+			<onCompleteOk id="follow_2" />
+				<onIncomplete id="wait_3" min="5000" max="9000"/>
+				
+				
+			
+		</action>
+		
+		<action id="wait_3" type="Wait">
+			<parm min="2500" max="3000" integer="true" />
+			
+			
+                        <onCompleteOk id="follow_1" />
+		</action>
+		
+		
+		<action id="wait_1" type="Wait">
+			<parm min="2500" max="3000" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+		</action>
+		
+		
+		
+		<action id="follow_2" type="FollowTPRelative">
+			<parm>
+				<option value="110" prob=".5" />
+				<option value="-110" prob=".5" />
+                                
+			</parm>
+                        
+                        <parm value="0" />
+                        
+						<onWithinRectRange back="110" front="110" up="30" down="30" id="combo1" />
+						
+			<onCompleteOk id="combo1" />
+							                    
+                     <onIncomplete id="wait_1" min="5000" max="7000" />
+					 
+					
+		</action>
+		
+		<action id="follow_3" type="FollowTPRelative">
+			<parm>
+				<option min="-190" max="-150" integer="true" prob=".5" />
+                <option min="160" max="240" integer="true" prob=".5" />
+                                
+			</parm>
+			
+			<parm>
+                        
+                <option min="-180" max="-150" integer="true" prob=".5" />
+                <option min="150" max="210" integer="true" prob=".5" />
+			</parm>
+                        
+			<onCompleteOk id="follow_1" />
+			
+			<onIncomplete id="wait_3" min="5000" max="9000"/>
+                           
+		</action>
+		
+		
+		
+		<action id="combo1" type="Combo">
+			<parm value="1234" />
+			
+			<onCompleteOk>
+			<option id="wait_3" prob=".4" />
+			<option id="follow_3" prob=".5" />
+			<option id="agresivo" prob=".1" />
+			
+			</onCompleteOk>
+			
+			<onCompleteNo>
+				
+			<option id="wait_3" prob=".4" />
+			<option id="follow_3" prob=".2" />
+			<option id="agresivo" prob=".4" />
+			
+			
+			
+			</onCompleteNo>
+				
+			<onIncomplete id="wait_1" timeLimitMs="3000" />
+			
+					
+		</action>
+		
+		
+		<action id="wait_forever" type="Wait">
+			<parm value="9999999" />
+		</action>
+			
+			
+	<action id="wait_2" type="Wait">
+			<parm min="1800" max="3000" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+                        
+		</action>	
+		
+				<action id="wait_4" type="Wait">
+			<parm min="2000" max="3500" integer="true" />
+			
+			
+                        <onCompleteOk id="agresivo" />
+		</action>
+		
+		<action id="agresivo" type="FollowTPRelative">
+
+				 <parm value="0" />
+                        
+                 <parm value="0" />
+              
+			  <onWithinRectRange back="110" front="110" up="30" down="30" id="combo1" />
+                        
+			<onCompleteOk id="follow_1" />
+            <onIncomplete id="wait_3" min="2000" max="3000"/>
+			
+		</action>
+		
+		<action id="puente" type="Bridge">
+			<parm>
+				<option value="agresivo" prob=".1" />
+				<option value="follow_3" prob=".2" />
+				<option value="wait_1" prob=".2" />
+				<option value="follow_2" prob=".3" />
+				<option value="follow_6" prob=".2" />
+				
+
+			</parm>
+		</action>
+		
+		
+		<eventsOld>
+			<onEnemyEnterState state="KnockedDown" id="wait_forever" />
+			<onEnemyLeaveState state="Fell" id="wait_forever" />
+		</eventsOld>
+		
+	</behavior>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<behavior id="4" startingActionId="wait_3">
+		
+		<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="follow_1" prob="1" />
+			</parm>
+		</action>
+		
+		<action id="check_1" type="CheckRange">
+			<parm value="250" /> 
+			
+			<onCompleteOk id="wait_1" />
+                        <onCompleteNo id="follow_1" />
+		</action>
+		
+		<action id="follow_1" type="FollowTPRelative">
+			<parm>
+				<option value="-170" prob=".5" />
+				<option min="-200" max="-180" integer="true" prob=".2" />
+                                <option min="160" max="200" integer="true" prob=".3" />
+			</parm>
+                        
+                        <parm>
+				<option value="100" prob=".3" />
+				<option min="150" max="200" integer="true" prob=".4" />
+				<option min="-100" max="140" integer="true" prob=".3" />
+			</parm>
+			
+			<onWithinRectRange back="110" front="110" up="30" down="30" id="puente" />
+			
+			<onCompleteOk id="wait_1" />
+				<onIncomplete id="wait_3" min="4000" max="8000"/>
+				
+				
+			
+		</action>
+		
+		<action id="wait_3" type="Wait">
+			<parm min="1300" max="2400" integer="true" />
+			
+			
+                        <onCompleteOk id="follow_1" />
+		</action>
+		
+		
+		<action id="wait_1" type="Wait">
+			<parm min="2000" max="3500" integer="true" />
+			
+			<onCompleteOk id="follow_3" />
+		</action>
+		
+		
+		
+		<action id="follow_2" type="FollowTPRelative">
+			<parm>
+				<option value="100" prob=".3" />
+				<option value="-100" prob=".7" />
+                                
+			</parm>
+                        
+                        <parm value="0" />
+                        
+												
+			<onCompleteOk id="combo1" />
+							                    
+                     <onIncomplete id="wait_1" min="3000" max="7000" />
+					 
+					
+		</action>
+		
+		<action id="follow_3" type="FollowTPRelative">
+			<parm>
+				<option min="-200" max="-170" integer="true" prob=".5" />
+                <option min="180" max="230" integer="true" prob=".5" />
+                                
+			</parm>
+                        
+                <option min="-180" max="-50" integer="true" prob=".6" />
+                <option min="100" max="20" integer="true" prob=".4" />
+                        
+			<onCompleteOk id="follow_2" />
+                           
+		</action>
+		
+		
+		
+		<action id="combo1" type="Combo">
+			<parm value="1234" />
+			
+			<onCompleteOk>
+			<option id="wait_3" prob=".2" />
+			<option id="follow_1" prob=".6" />
+			<option id="agresivo" prob=".2" />
+			
+			</onCompleteOk>
+			
+			<onCompleteNo>
+				
+			<option id="wait_3" prob=".3" />
+			<option id="follow_3" prob=".2" />
+			<option id="agresivo" prob=".2" />
+			
+			
+			
+			</onCompleteNo>
+				
+			<onIncomplete id="wait_1" timeLimitMs="4000" />
+			
+					
+		</action>
+		
+		
+		<action id="wait_forever" type="Wait">
+			<parm value="9999999" />
+		</action>
+			
+			
+	<action id="wait_2" type="Wait">
+			<parm min="2500" max="4000" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+                        
+		</action>	
+		
+				<action id="wait_4" type="Wait">
+			<parm min="2000" max="3500" integer="true" />
+			
+			
+                        <onCompleteOk id="agresivo" />
+		</action>
+		
+		<action id="agresivo" type="FollowTPRelative">
+
+				 <parm value="0" />
+                        
+                 <parm value="0" />
+              
+			  <onWithinRange dist="110" id="combo1" />
+                        
+			<onCompleteOk id="follow_1" />
+            <onIncomplete id="wait_3" min="7000" max="9000"/>
+			
+		</action>
+		
+		<action id="puente" type="Bridge">
+			<parm>
+				<option value="agresivo" prob=".1" />
+				<option value="follow_3" prob=".4" />
+				<option value="escapar" prob=".2" />
+				<option value="follow_2" prob=".3" />
+
+			</parm>
+		</action>
+		
+		
+			<action id="escapar" type="FollowTPRelative">
+			<parm>
+				<option min="-600" max="-200" integer="true" prob=".3" />
+                <option min="150" max="600" integer="true" prob=".7" />
+                                
+			</parm>
+                        
+                <option min="200" max="300" integer="true" prob=".3" />
+                <option min="-250" max="-100" integer="true" prob=".7" />
+                        
+			<onCompleteOk id="follow_1" />
+                           
+						   	<onIncomplete id="follow_1" min="2000" max="4000"/>
+						   
+		</action>
+		
+		<eventsOld>
+			<onEnemyEnterState state="KnockedDown" id="wait_forever" />
+			<onEnemyLeaveState state="Fell" id="wait_forever" />
+		</eventsOld>
+		
+	</behavior>
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<behavior id="5" startingActionId="wait_3">
+		
+	<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="puente_1" prob="1" />
+			</parm>
+		</action>
+		
+		
+		
+		<action id="follow_1" type="FollowTPRelative">
+		
+				<parm value="250" />
+		
+                                            
+				<parm value="-100" />
+				
+		
+			
+		
+			
+			<onCompleteOk id="puente_1" />
+				<onIncomplete id="wait_3" min="4000" max="8000"/>
+				
+				
+				</action>
+				
+				<action id="follow_8" type="FollowTPRelative">
+		
+				<parm value="-250" />
+		
+                                            
+				<parm value="130" />
+				
+					
+						
+			<onCompleteOk id="puente_1" />
+				<onIncomplete id="wait_3" min="4000" max="8000"/>
+				
+				
+			
+		</action>
+		
+		
+		<action id="follow_9" type="FollowTPRelative">
+		
+				<parm value="-250" />
+		
+                                            
+				<parm value="0" />
+				
+					
+						
+			<onCompleteOk id="wait_1" />
+				<onIncomplete id="wait_3" min="4000" max="8000"/>
+				
+				
+			
+		</action>
+		
+			<action id="follow_10" type="FollowTPRelative">
+		
+				<parm value="180" />
+		
+                                            
+				<parm value="0" />
+				
+					
+						
+			<onCompleteOk id="wait_1" />
+				<onIncomplete id="wait_3" min="4000" max="8000"/>
+				
+				
+			
+		</action>
+		
+		
+		
+		
+		<action id="puente" type="Bridge">
+			<parm>
+				
+				<option value="follow_1" prob=".5" />
+				<option value="follow_8" prob=".5" />
+			
+			</parm>
+		</action>
+		
+		<action id="puente_1" type="Bridge">
+			<parm>
+				
+				<option value="follow_10" prob=".5" />
+				<option value="follow_9" prob=".5" />
+			
+			</parm>
+		</action>
+		
+		
+		
+		
+		
+		
+		<action id="wait_3" type="Wait">
+			<parm min="1000" max="2000" integer="true" />
+			
+			
+                        <onCompleteOk id="puente" />
+		</action>
+		
+		
+		<action id="wait_1" type="Wait">
+			<parm min="2000" max="3500" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+		</action>
+		
+		
+		
+		<action id="follow_2" type="FollowTPRelative">
+			<parm>
+				<option value="100" prob=".3" />
+				<option value="-100" prob=".7" />
+                                
+			</parm>
+                        
+                        <parm value="0" />
+                        
+												
+			<onCompleteOk id="combo1" />
+							                    
+                     <onIncomplete id="wait_1" min="2000" max="4000" />
+					 
+					
+		</action>
+		
+		<action id="follow_3" type="FollowTPRelative">
+			<parm>
+				<option min="-110" max="-160" integer="true" prob=".3" />
+                <option min="150" max="180" integer="true" prob=".7" />
+                                
+			</parm>
+                        
+                <option min="-160" max="-50" integer="true" prob=".3" />
+                <option min="-100" max="20" integer="true" prob=".7" />
+                        
+			<onCompleteOk id="wait_3" />
+                           
+		</action>
+		
+		
+		
+		<action id="combo1" type="Combo">
+			<parm value="1234" />
+			
+			<onCompleteOk>
+			<option id="wait_3" prob=".6" />
+			<option id="follow_3" prob=".3" />
+			<option id="agresivo" prob=".1" />
+			
+			</onCompleteOk>
+			
+			<onCompleteNo>
+				
+			<option id="wait_3" prob=".3" />
+			<option id="follow_3" prob=".2" />
+			<option id="agresivo" prob=".3" />
+			
+			
+			
+			</onCompleteNo>
+				
+			<onIncomplete id="wait_1" timeLimitMs="5000" />
+			
+					
+		</action>
+		
+		
+		<action id="wait_forever" type="Wait">
+			<parm value="9999999" />
+		</action>
+			
+			
+	<action id="wait_2" type="Wait">
+			<parm min="2500" max="4000" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+                        
+		</action>	
+		
+				<action id="wait_4" type="Wait">
+			<parm min="2000" max="3500" integer="true" />
+			
+			
+                        <onCompleteOk id="agresivo" />
+		</action>
+		
+		<action id="agresivo" type="FollowTPRelative">
+
+				 <parm value="0" />
+                        
+                 <parm value="0" />
+              
+			  <onWithinRectRange back="110" front="110" up="30" down="30" id="combo1" />
+                        
+			<onCompleteOk id="follow_1" />
+            <onIncomplete id="follow_2" min="2000" max="3000"/>
+			
+		</action>
+		
+		
+		
+		
+		<eventsOld>
+			<onEnemyEnterState state="KnockedDown" id="wait_forever" />
+			<onEnemyLeaveState state="Fell" id="wait_forever" />
+		</eventsOld>
+		
+	</behavior>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<behavior id="6" startingActionId="wait_3">
+		
+		<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="puente" prob="1" />
+			</parm>
+		</action>
+		
+		
+		<action id="follow_1" type="FollowTPRelative">
+		
+				<parm value="300" />
+		
+                                            
+				<parm value="-190" />
+				
+		
+			
+		
+			
+			<onCompleteOk id="puente_1" />
+				<onIncomplete id="wait_3" min="4000" max="8000"/>
+				
+				
+				</action>
+				
+				<action id="follow_8" type="FollowTPRelative">
+		
+				<parm value="-270" />
+		
+                                            
+				<parm value="170" />
+				
+					
+						
+			<onCompleteOk id="puente_1" />
+				<onIncomplete id="wait_3" min="4000" max="8000"/>
+				
+				
+			
+		</action>
+		
+		
+		<action id="follow_9" type="FollowTPRelative">
+		
+				<parm value="-220" />
+		
+                                            
+				<parm value="50" />
+				
+					
+						
+			<onCompleteOk id="wait_1" />
+				<onIncomplete id="wait_3" min="4000" max="8000"/>
+				
+				
+			
+		</action>
+		
+			<action id="follow_10" type="FollowTPRelative">
+		
+				<parm value="210" />
+		
+                                            
+				<parm value="-70" />
+				
+					
+						
+			<onCompleteOk id="wait_1" />
+				<onIncomplete id="wait_3" min="4000" max="8000"/>
+				
+				
+			
+		</action>
+		
+		
+		
+		
+		<action id="puente" type="Bridge">
+			<parm>
+				
+				<option value="follow_1" prob=".5" />
+				<option value="follow_8" prob=".5" />
+			
+			</parm>
+		</action>
+		
+		<action id="puente_1" type="Bridge">
+			<parm>
+				
+				<option value="follow_10" prob=".5" />
+				<option value="follow_9" prob=".5" />
+			
+			</parm>
+		</action>
+		
+		
+		
+		
+		
+		
+		<action id="wait_3" type="Wait">
+			<parm min="1000" max="2000" integer="true" />
+			
+			
+                        <onCompleteOk id="puente" />
+		</action>
+		
+		
+		<action id="wait_1" type="Wait">
+			<parm min="2000" max="3500" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+		</action>
+		
+		
+		<action id="puente_2" type="Bridge">
+			<parm>
+				
+				<option value="follow_2" prob=".5" />
+				<option value="follow_20" prob=".5" />
+			
+			</parm>
+		</action>
+		
+		
+		
+		
+		
+		<action id="follow_2" type="FollowTPRelative">
+			
+				  <parm value="110" />
+                                
+			
+                        
+                        <parm value="0" />
+                        
+												
+			<onCompleteOk id="puente_3" />
+							                    
+                     <onIncomplete id="wait_1" min="2000" max="4000" />
+					 
+					
+		</action>
+		
+		
+		<action id="follow_20" type="FollowTPRelative">
+			
+				  <parm value="0" />
+                                
+		
+                        
+                        <parm value="-150" />
+                        
+												
+			<onCompleteOk id="puente_4" />
+							                    
+                     <onIncomplete id="wait_1" min="2000" max="4000" />
+					 
+					
+		</action>
+		
+		<action id="puente_3" type="Bridge">
+			<parm>
+				
+				<option value="combo1" prob=".3" />
+				<option value="follow_20" prob=".7" />
+			
+			</parm>
+		</action>
+		
+		<action id="puente_3" type="Bridge">
+			<parm>
+				
+				<option value="combo1" prob=".3" />
+				<option value="follow_2" prob=".7" />
+			
+			</parm>
+		</action>
+		
+		
+		<action id="follow_3" type="FollowTPRelative">
+			<parm>
+				<option min="-110" max="-160" integer="true" prob=".3" />
+                <option min="150" max="180" integer="true" prob=".7" />
+                                
+			</parm>
+                        
+                <option min="-160" max="-50" integer="true" prob=".3" />
+                <option min="-100" max="20" integer="true" prob=".7" />
+                        
+			<onCompleteOk id="wait_3" />
+                           
+		</action>
+		
+		
+		
+		<action id="combo1" type="Combo">
+			<parm value="1234" />
+			
+			<onCompleteOk>
+			<option id="wait_3" prob=".6" />
+			<option id="follow_3" prob=".3" />
+			<option id="agresivo" prob=".0" />
+			
+			</onCompleteOk>
+			
+			<onCompleteNo>
+				
+			<option id="wait_3" prob=".3" />
+			<option id="follow_3" prob=".2" />
+			<option id="agresivo" prob=".3" />
+			
+			
+			
+			</onCompleteNo>
+				
+			<onIncomplete id="wait_1" timeLimitMs="5000" />
+			
+					
+		</action>
+		
+		
+		<action id="wait_forever" type="Wait">
+			<parm value="9999999" />
+		</action>
+			
+			
+	<action id="wait_2" type="Wait">
+			<parm min="2500" max="4000" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+                        
+		</action>	
+		
+				<action id="wait_4" type="Wait">
+			<parm min="2000" max="3500" integer="true" />
+			
+			
+                        <onCompleteOk id="agresivo" />
+		</action>
+		
+		<action id="agresivo" type="FollowTPRelative">
+
+				 <parm value="0" />
+                        
+                 <parm value="0" />
+              
+			  <onWithinRange dist="110" id="combo1" />
+                        
+			<onCompleteOk id="follow_1" />
+            <onIncomplete id="follow_2" min="2000" max="3000"/>
+			
+		</action>
+		
+		
+		
+		
+		<eventsOld>
+			<onEnemyEnterState state="KnockedDown" id="wait_forever" />
+			<onEnemyLeaveState state="Fell" id="wait_forever" />
+		</eventsOld>
+		
+	</behavior>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		<behavior id="7" startingActionId="wait_6">
+		
+		<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="wait_6" prob="1" />
+			</parm>
+		</action>
+		
+		
+	
+	<action id="wait_6" type="Wait">
+			<parm min="2000" max="3000" integer="true" />
+			
+			<onCompleteOk id="follow_1" />
+                        
+		</action>	
+		
+		
+		<action id="follow_1" type="FollowTPRelative">
+			<parm>
+				<option value="300" prob=".6" />
+				<option min="-270" max="-200" integer="true" prob=".2" />
+                                <option min="-200" max="-250" integer="true" prob=".2" />
+			</parm>
+                        
+                        <parm>
+				<option value="200" prob=".6" />
+				<option min="-100" max="-180" integer="true" prob=".4" />
+			</parm>
+			
+			<onWithinRectRange back="110" front="110" up="30" down="30" id="puente" />
+			
+			<onCompleteOk id="wait_1" />
+				<onIncomplete id="wait_3" min="5000" max="9000"/>
+				
+				
+			
+		</action>
+		
+		
+		<action id="follow_10" type="FollowTPRelative">
+					
+        <parm min="-200" max="-100" integer="true" />
+			                                             
+			<parm value="0" />
+			
+			<onWithinRectRange back="110" front="110" up="30" down="30" id="puente" />
+			
+			<onCompleteOk id="wait_2" />
+				<onIncomplete id="wait_3" min="5000" max="9000"/>
+				
+				
+			
+		</action>
+		
+		
+		
+		
+		
+		<action id="wait_3" type="Wait">
+			<parm value="2500" /> 
+			
+			
+                        <onCompleteOk id="follow_1" />
+		</action>
+		
+		
+		<action id="wait_1" type="Wait">
+			<parm min="2000" max="2500" integer="true" />
+			
+			<onCompleteOk id="follow_10" />
+		</action>
+		
+		
+		
+		
+		
+		<action id="follow_2" type="FollowTPRelative">
+			<parm>
+				<option value="110" prob=".8" />
+				<option value="-110" prob=".2" />
+                                
+			</parm>
+                        
+                        <parm value="0" />
+                        
+						<onWithinRectRange back="110" front="110" up="30" down="30" id="combo1" />
+						
+			<onCompleteOk id="combo1" />
+							                    
+                     <onIncomplete id="wait_1" min="3000" max="4000" />
+					 
+					
+		</action>
+		
+		<action id="follow_3" type="FollowTPRelative">
+			<parm>
+				<option min="-200" max="-150" integer="true" prob=".6" />
+                <option min="150" max="300" integer="true" prob=".4" />
+                                
+			</parm>
+                        
+                <option min="200" max="300" integer="true" prob=".6" />
+                <option min="-250" max="-100" integer="true" prob=".5" />
+                        
+			<onCompleteOk id="wait_6" />
+                           
+						   <onIncomplete id="wait_1" min="3000" max="4000" />
+		</action>
+		
+		
+		
+		<action id="escapar" type="FollowTPRelative">
+			<parm>
+				<option min="-300" max="-200" integer="true" prob=".6" />
+                <option min="200" max="300" integer="true" prob=".4" />
+                                
+			</parm>
+                        
+                <option min="250" max="300" integer="true" prob=".6" />
+                <option min="-300" max="-180" integer="true" prob=".5" />
+                        
+			<onCompleteOk id="wait_6" />
+                           
+		</action>
+		
+		
+		<action id="combo1" type="Combo">
+			<parm value="1234" />
+			
+			<onCompleteOk>
+			<option id="follow_3" prob=".5"  />
+			<option id="wait_6" prob=".3" />
+			<option id="escapar" prob=".1" />
+	
+			
+			
+			</onCompleteOk>
+			
+			<onCompleteNo>
+				
+			<option id="wait_3" prob=".6" />
+			<option id="follow_3" prob=".3" />
+			<option id="escapar" prob=".1" />
+		
+			
+			</onCompleteNo>
+				
+			<onIncomplete id="wait_1" timeLimitMs="5000" />
+			
+					
+		</action>
+		
+		
+		<action id="wait_forever" type="Wait">
+			<parm value="9999999" />
+		</action>
+			
+			
+	<action id="wait_2" type="Wait">
+			<parm min="2000" max="4000" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+                        
+		</action>	
+		
+				<action id="wait_4" type="Wait">
+			<parm min="2000" max="3500" integer="true" />
+			
+			
+                        <onCompleteOk id="agresivo" />
+		</action>
+		
+		<action id="agresivo" type="FollowTPRelative">
+
+				 <parm value="0" />
+                        
+                 <parm value="0" />
+              
+			  <onWithinRectRange back="110" front="110" up="30" down="30" id="combo1" />
+                        
+			<onCompleteOk id="follow_1" />
+            <onIncomplete id="wait_3" min="7000" max="9000"/>
+			
+		</action>
+		
+			<action id="puente" type="Bridge">
+			<parm>
+				<option value="follow_10" prob=".3" />
+				<option value="follow_3" prob=".3" />
+				<option value="wait_2" prob=".1" />
+			    <option value="escapar" prob=".2" />
+				<option value="agresivo" prob=".1" />
+				
+
+			</parm>
+		</action>
+		
+		
+		<eventsOld>
+			<onEnemyEnterState state="KnockedDown" id="wait_forever" />
+			<onEnemyLeaveState state="Fell" id="wait_forever" />
+		</eventsOld>
+		
+	</behavior>
+	
+	
+		
+	
+	
+	<behavior id="gen">
+
+		<action id="por-defecto" type="Bridge">
+			<parm>
+				<option value="wait_10" prob="1" />
+			</parm>
+		</action>
+		
+		
+		
+			 <action id="por-defecto1" type="Wait">
+			<parm min="1000" max="4500" integer="true" />
+			
+		
+			
+			<onCompleteOk id="agresivo" />
+			
+	</action>
+	
+	
+			
+	
+	<action id="check_1" type="CheckRange">
+			<parm value="250" /> 
+			
+			<onCompleteOk id="wait_1" />
+                        <onCompleteNo id="follow_1" />
+		</action>
+		
+		<action id="follow_1" type="FollowTPRelative">
+			<parm>
+				<option value="160" prob=".2" />
+				<option min="-180" max="-160" integer="true" prob=".3" />
+                                <option min="-180" max="-160" integer="true" prob=".5" />
+			</parm>
+                        
+                        <parm>
+				<option value="0" prob=".7" />
+				<option min="-100" max="-180" integer="true" prob=".3" />
+			</parm>
+			
+			<onWithinRectRange back="110" front="110" up="90" down="90" id="puente" />
+			
+			<onCompleteOk id="wait_1" />
+				<onIncomplete id="wait_4" min="4000" max="5000"/>
+				
+						
+		</action>
+		
+		<action id="wait_3" type="Wait">
+			<parm value="1500" /> 
+			
+			
+                        <onCompleteOk id="follow_1" />
+		</action>
+		
+		
+			<action id="wait_4" type="Wait">
+			<parm value="1500" /> 
+			
+			
+                        <onCompleteOk id="follow_2" />
+		</action>
+		
+		
+		
+		
+		<action id="wait_1" type="Wait">
+			<parm min="1000" max="1500" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+		</action>
+		
+		
+		
+		<action id="follow_2" type="FollowTPRelative">
+			<parm>
+				<option value="110" prob=".8" />
+				<option value="-110" prob=".2" />
+                                
+			</parm>
+                        
+                        <parm value="0" />
+                        
+							<onWithinRectRange back="110" front="110" up="30" down="30" id="puente1" />
+						
+			<onCompleteOk id="combo1" />
+							                    
+                     <onIncomplete id="wait_1" min="5000" max="7000" />
+					 
+					
+		</action>
+		
+		<action id="follow_3" type="FollowTPRelative">
+			<parm>
+				<option min="-200" max="-150" integer="true" prob=".3" />
+                <option min="150" max="300" integer="true" prob=".7" />
+                                
+			</parm>
+                        
+                <option min="200" max="300" integer="true" prob=".3" />
+                <option min="-250" max="-100" integer="true" prob=".7" />
+                        
+						
+						<onWithinRectRange back="110" front="110" up="30" down="30" id="puente1" />
+						
+						
+						
+			<onCompleteOk id="follow_1" />
+                           
+						   <onIncomplete id="follow_1" min="3000" max="5000"/>
+						   
+		</action>
+		
+		
+		
+
+		
+		
+		
+		<action id="combo1" type="Combo">
+			<parm value="123" />
+			
+			<onCompleteOk>
+			<option id="wait_3" prob=".4" />
+			<option id="follow_3" prob=".4" />
+			<option id="agresivo" prob=".2" />
+		
+			
+			
+			</onCompleteOk>
+			
+			<onCompleteNo>
+				
+			<option id="wait_3" prob=".6" />
+			<option id="follow_3" prob=".3" />
+			<option id="agresivo" prob=".1" />
+			
+			</onCompleteNo>
+				
+			<onIncomplete id="wait_1" timeLimitMs="5000" />
+			
+					
+		</action>
+		
+		
+		<action id="wait_forever" type="Wait">
+			<parm value="9999999" />
+		</action>
+			
+			
+	<action id="wait_2" type="Wait">
+			<parm min="2000" max="4000" integer="true" />
+			
+			<onCompleteOk id="follow_2" />
+                        
+		</action>	
+		
+				<action id="wait_4" type="Wait">
+			<parm min="2000" max="3500" integer="true" />
+			
+			
+                        <onCompleteOk id="agresivo" />
+		</action>
+		
+		<action id="agresivo" type="FollowTPRelative">
+
+				 <parm value="0" />
+                        
+                 <parm value="0" />
+              
+			  	<onWithinRectRange back="90" front="90" up="30" down="30" id="puente1" />
+                        
+			<onCompleteOk id="follow_1" />
+            <onIncomplete id="wait_3" min="7000" max="9000"/>
+			
+		</action>
+		
+			<action id="puente" type="Bridge">
+			<parm>
+				<option value="agresivo" prob=".2" />
+				<option value="follow_3" prob=".3" />
+				<option value="wait_2" prob=".2" />
+				<option value="follow_1" prob=".3" />
+
+			</parm>
+		</action>
+		
+		
+			<action id="puente1" type="Bridge">
+			<parm>
+				<option value="combo1" prob=".2" />
+				<option value="attack_1" prob=".8" />
+			
+
+			</parm>
+		</action>
+		
+		
+		
+		<action id="check_2" type="CheckRange">
+			<parm value="110" /> 
+			
+			<onCompleteOk id="puente_5" />
+                        <onCompleteNo id="follow_1" />
+		</action>
+		
+			<action id="puente_5" type="Bridge">
+			<parm>
+				<option value="wait_5" prob=".4" />
+				<option value="follow_1" prob=".6" />
+			
+
+			</parm>
+		</action>
+		
+		
+			<action id="attack_1" type="Attack">
+			<parm>
+				<option value="7" prob=".2" />
+			
+				<option min="1" max="6" integer="true" prob=".8" />
+			</parm>
+			
+			<onCompleteOk id="check_2" />
+			<onIncomplete id="puente" min="3000" max="4000"/>
+		</action>
+		
+		
+		<action id="wait_5" type="Wait">
+			<parm min="1000" max="2000" integer="true" />
+			
+			<onCompleteOk id="agresivo" />
+                        
+		</action>	
+		
+		
+		
+		
+		<events>
+			<onEnemyLeaveState state="Fell" id="check_2" />
+		</events>
+		
+		
+			<action id="follow_4" type="FollowTPRelative">
+			<parm>
+				<option value="190" prob=".2" />
+				<option min="-220" max="-140" integer="true" prob=".5" />
+                                <option min="110" max="460" integer="true" prob=".3" />
+			</parm>
+                        
+                        <parm>
+				<option  min="100" max="200" integer="true" prob=".5" />
+				<option min="-180" max="0" integer="true" prob=".5" />
+			</parm>
+			
+			
+			
+			<onCompleteOk id="wait_11" />
+				<onIncomplete id="wait_10" min="4000" max="5000"/>
+				
+						
+		</action>
+		
+			<action id="follow_5" type="FollowTPRelative">
+			<parm>
+				<option min="-500" max="-110" integer="true" prob=".5" />
+                <option min="110" max="500" integer="true" prob=".5" />
+                                
+			</parm>
+                        
+                <option min="100" max="300" integer="true" prob=".5" />
+                <option min="-250" max="-100" integer="true" prob=".5" />
+                        
+						
+										
+						
+						
+			<onCompleteOk id="wait_10" />
+                           
+						   <onIncomplete id="wait_10" min="3000" max="5000"/>
+						   
+		</action>
+		<action id="wait_10" type="Wait">
+			<parm value="2000" /> 
+			
+			
+                        <onCompleteOk id="follow_4" />
+		</action>
+		
+			<action id="wait_11" type="Wait">
+			<parm value="3000" /> 
+			
+			
+                        <onCompleteOk id="follow_5" />
+		</action>
+		
+	</behavior>
+	
+	
+	
+</data>

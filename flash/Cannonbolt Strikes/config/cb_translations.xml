@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!-- Cannonbolt Strikes Translations File-->
+<lang>
+
+	<!-- TEXTOS EN ESPAÑOL -->
+	<text language="esp">	
+	
+		<!-- Main -->
+		<play_btn label="JUGAR"></play_btn>
+
+		<!-- Help -->
+		<move label="MOVERSE"></move>
+		<attack label="ATACAR"></attack>
+		<defense label="DEFENDERSE"></defense>
+		<objective label="OBJETIVO"></objective>
+		<basic_content label="¡Escapa de la nave alienígena antes de que explote! Debes recolectar todos los cristales para activar el portal que te llevará al siguiente nivel. Para moverte, utiliza las teclas de dirección. 
+¡Ten cuidado de no caerte de las plataformas porque perderás una vida!"></basic_content>
+		<attack_content label="Para atacar a los enemigos, debes chocarlos transformado en Cannonbolt. 
+Si mantienes apretada la tecla Z, rodarás más rápido e impactarás con mayor potencia a tus contrincantes."></attack_content>
+		<defense_content label="Puedes defenderte de los disparos enemigos presionando la tecla X. Cuando la presiones, Cannonbolt abandonará su forma de bola para cubrirse con sus poderosos brazos. 
+Suelta la X para que Cannonbolt continúe rodando."></defense_content>
+		<continue_btn label="CONTINUAR"></continue_btn>
+		
+		<!-- HUD / In Game -->
+		<scoreHud label="PUNTAJE"></scoreHud>
+		<level label="NIVEL"></level>
+		
+		<!-- Win / Lose-->
+		<game_over label="FIN DEL JUEGO"></game_over>
+		<game_win label="¡GANASTE!"></game_win>
+		<exit_btn label="SALIR"></exit_btn>
+		<play_again_btn label="VOLVER  A  JUGAR"></play_again_btn>
+		<score label="Puntaje"></score>
+		<bonus label="Bonus"></bonus>
+		<final_score label="Puntaje Final"></final_score>
+		<thanks label="¡Gracias por jugar!"></thanks>
+		
+		<!-- Results -->
+		<results_title label="RESULTADOS"></results_title>
+		<enemies label="Enemigos Eliminados"></enemies>
+		<total_score label="Puntaje Total"></total_score>
+		<rank label="Calificación"></rank>
+		
+	</text>
+	
+	
+	<!-- TEXTOS EN INGLES -->
+	<text language="eng">	
+	
+		<!-- Main -->
+		<play_btn label="PLAY"></play_btn>
+
+		<!-- Help -->
+		<move label="MOVE"></move>
+		<attack label="ATTACK"></attack>
+		<defense label="DEFEND"></defense>
+		<objective label="OBJECTIVES"></objective>
+		<basic_content label="Escape from the Alien ship before it explodes! You must collect all the crystals to activate the portal that takes you to the next level. To move, use the arrow keys. 
+Be careful not to fall off the platforms, you will lose a life!"></basic_content>
+		<attack_content label="To attack your enemies transform into Cannonbolt and hit them. If you press and hold Z, you will roll faster and hit your opponents with extra power."></attack_content>
+		<defense_content label="You can defend yourself from enemy fire by pressing X. By doing this, Cannonbolt will cover himself with his powerful arms. Release the X and Cannonbolt will continue rolling."></defense_content>
+		<continue_btn label="CONTINUE"></continue_btn>
+		
+		<!-- HUD / In Game -->
+		<scoreHud label="SCORE"></scoreHud>
+		<level label="LEVEL"></level>
+		
+		<!-- Win / Lose-->
+		<game_over label="GAME OVER"></game_over>
+		<game_win label="YOU WIN!"></game_win>
+		<exit_btn label="EXIT"></exit_btn>
+		<play_again_btn label="PLAY  AGAIN"></play_again_btn>
+		<score label="Score"></score>
+		<bonus label="Bonus"></bonus>
+		<final_score label="Final Score"></final_score>
+		<thanks label="Thanks for playing!"></thanks>
+		
+		<!-- Results -->
+		<results_title label="RESULTS"></results_title>
+		<enemies label="Eliminated Enemies"></enemies>
+		<total_score label="Total Score"></total_score>
+		<rank label="Rating"></rank>
+	</text>
+	
+	
+	<!-- TEXTOS EN PORTUGUES -->
+	<text language="por">	
+		
+		<!-- Main -->
+		<play_btn label="JOGAR"></play_btn>
+	
+		<!-- Help -->
+		<move label="MOVIMENTAR"></move>
+		<attack label="ATACAR"></attack>
+		<defense label="SE DEFENDER"></defense>
+		<objective label="OBJETIVO"></objective>
+		<basic_content label="Escape da nave alienígena antes que ela exploda! Você deve juntar todos os cristais para ativar o portal que o levará ao próximo nível. 
+		Use as setas para se movimentar. Tenha cuidado para não cair das plataformas e perder uma vida!"></basic_content>
+		<attack_content label="Para atacar os inimigos, você deve se transformar em Bala de Canhão. 
+		Se mantiver a tecla Z pressionada, girará mais rápido e atingirá seus adversários com maior potência."></attack_content>
+		<defense_content label="Você pode se defender dos disparos inimigos pressionando a tecla X. 
+		Quando fizer isso, Bala de Canhão se protegerá com seus braços poderosos. Solte a tecla para ele continuar girando."></defense_content>	
+		<continue_btn label="CONTINUAR"></continue_btn>
+		
+		<!-- HUD / In Game -->
+		<scoreHud label="PONTUAÇÃO"></scoreHud>
+		<level label="NÍVEL"></level>
+		
+		<!-- Win / Lose-->
+		<game_over label="FIM DE JOGO!"></game_over>
+		<game_win label="VOCÊ VENCEU!"></game_win>
+		<exit_btn label="SAIR"></exit_btn>
+		<play_again_btn label="JOGAR DE NOVO"></play_again_btn>
+		<score label="Pontuação"></score>
+		<bonus label="Bônus"></bonus>
+		<final_score label="Pontuação final"></final_score>
+		<thanks label="Obrigado por jogar!"></thanks>
+		
+		<!-- Results -->
+		<results_title label="RESULTADOS"></results_title>
+		<enemies label="Inimigos eliminados"></enemies>
+		<total_score label="Pontuação Total"></total_score>
+		<rank label="Classificação"></rank>
+	</text>
+	
+	
+</lang>
